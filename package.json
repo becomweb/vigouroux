@@ -1,0 +1,30 @@
+{
+  "name": "vigouroux",
+  "version": "1.0.0",
+  "description": "Theme enfant boutique Vigouroux (LCH)",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/becomweb/vigouroux.git"
+  },
+  "keywords": [
+    "theme",
+    "prestashop",
+    "enfant",
+    "vigouroux"
+  ],
+  "author": "BeComWeb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/becomweb/vigouroux/issues"
+  },
+  "homepage": "https://github.com/becomweb/vigouroux#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
