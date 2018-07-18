@@ -1,0 +1,104 @@
+/* pop-in add grade/advice */
+#new_comment_form {
+	overflow: hidden;
+	padding: 15px;
+	text-align: left;
+	h2{
+		font-size: 25px;
+		line-height: 1.1;
+		font-weight: 700;
+		margin-bottom: 40px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.grade_content {
+		list-style-type: none;
+		margin: 0 0 20px 0;
+		li{
+			width: 50%;
+		}
+		span{
+			display:inline-block;
+			padding: 0 10px;
+			width: 150px;
+			font-weight: bold;
+		}
+		.cancel {
+			margin-right: 5px;
+		}
+	}
+	.product {
+		margin-bottom: 40px;
+		.product_desc {
+			line-height: 1.7;
+			color: $clr-five;
+			.product_name {
+				color: $clr-four;
+				font-size: 18px;
+				line-height: 1.1;
+				text-transform: uppercase;
+			}
+		}
+	}
+	.new_comment_form_content {
+		.intro_form {
+			padding-bottom: 10px;
+			font-weight: bold;
+		}
+	}
+	.form-control{
+		margin-bottom: 25px;
+	}
+	label {
+		color: $clr-four;
+		display: block;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	textarea {
+		height: 80px;
+	}
+	.submit {
+		margin-top: 20px;
+		padding: 0;
+		font-size: 13px;
+		text-align: right;
+	}
+}
+#criterions_list {
+	margin-bottom: 40px;
+	label {
+		display: inline-block;
+		font-size: 18px;
+		margin: 0 10px 0 0;
+		vertical-align: middle;
+	}
+	.star_content {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+#new_comment_form_footer {
+	margin-top: 20px;
+}
+//max 768
+@include media-breakpoint-down(sm) {
+	#new_comment_form{
+		padding-left: 5px;
+		padding-right: 5px;
+		h2{
+			font-size: 20px;
+		}
+	}
+}
+//max 480
+@include media-breakpoint-down(xxs) {
+	.productcomments__footer__box {
+		.btn{
+			width: 100%;
+			&:first-child{
+				margin-right: 0;
+			}
+		}
+	}
+}

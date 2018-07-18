@@ -1,0 +1,71 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+.sidebar {
+	> div, > section{
+		margin-bottom: 40px;
+	}
+	.h6 {
+	    display: flex;
+	    align-items: center;
+	    background: $brand-primary;
+	    color: $white;
+	   	font-size: 17px;
+	   	font-weight: 500;
+	    line-height: 1;
+	    padding: 14px 15px;
+	    text-transform: none!important;
+	    margin-bottom: 15px;
+	    &:before {
+		    content: "\E5D2";
+		    display: inline-block;
+		    vertical-align: middle;
+		    font-family: $first-icon-font;
+		    font-size: 20px;
+		    padding-right: 8px;
+	    }
+	}
+	.btn {
+		font-size: 14px;
+		padding: 1.1em 1.2em;
+		&:after {
+			display: none;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.sidebar {
+		> div, > section{
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		.h6{
+			font-size: 18px;
+			position: relative;
+			cursor: pointer;
+			&:after{
+				font-family: $first-icon-font;
+				content: '\E313';
+				position: absolute;
+				right: 10px;
+				font-size: 18px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&.active {
+				&:after {
+					content: '\E316';
+				}
+			}
+		}
+		.toggle-block{
+			display: none;
+		}
+		.open {
+			.toggle-block{
+				display: block;
+			}
+		}
+	}
+}

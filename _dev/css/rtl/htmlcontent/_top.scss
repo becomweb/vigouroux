@@ -1,0 +1,27 @@
+.lang-rtl {
+	.top-banner {
+		.banner-description {
+			padding: 0 8.7% 0 0;
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.lang-rtl {
+		.top-banner {
+			&.text-in-right {
+				.banner-description {
+					padding: 0 0 0 19%;
+				}
+			}
+		}
+	}
+}
+@include media-breakpoint-down(xs) {
+	.lang-rtl {
+		.top-banner {
+			.banner-description {
+				padding: 0 15px 0 0;
+			}
+		}
+	}
+}

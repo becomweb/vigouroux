@@ -1,0 +1,42 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+
+.btn-to-top{
+	background: $brand-primary;
+	bottom: 90px;
+	color: $white;
+	cursor: pointer;
+	font-family: $first-icon-font;
+	font-size: 22px;
+	height: 40px;
+	line-height: 40px;
+	position: fixed;
+	right: 30px;
+	text-align: center;
+	width: 40px;
+	z-index: 2;
+	transition: background .4s ease;
+	border-radius: 3px;
+	&:before{
+		content: '\E316';
+	}
+	&:hover{
+		background: lighten($brand-primary, 10%);
+	}
+	&:active{
+		background: darken($brand-primary, 10%);
+	}
+}
+@include media-breakpoint-down(md) {
+	.btn-to-top {
+		right: 40px;
+		bottom: 70px;
+	}
+}
+@include media-breakpoint-down(xs) {
+	.btn-to-top {
+		right: 15px;
+		bottom: 30px;
+	}
+}

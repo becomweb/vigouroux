@@ -1,0 +1,45 @@
+.sidebar {
+	.product-miniature{
+	    padding: 0 0 18px 0;
+	    margin-bottom: 18px;
+	    text-align: inherit;
+	    .variant-links,.comments_note,.highlighted-informations,.product-flags, #add-to-cart-or-refresh{
+	    	display: none;
+	    }
+	}
+	.product-thumbnail {
+		padding-top: 0;
+	}
+	.thumbnail-container{
+		&:after{
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+	.thumbnail-wrapper {
+	    max-width: 80px;
+	    float: left;
+	    margin-right: 7px;
+    	padding: 10px 0;
+    	border-radius: 3px;
+	}
+	.product-desc {
+		overflow: hidden;
+	}
+	.product-title {
+	    font-size: 12px;
+		color: $black;
+		margin: 0 0 5px;
+	}
+	.product_desc{
+	    margin-bottom: 0;
+	    font-size: 13px;
+	    color: $clr-eight;
+	    max-height: 58px;
+	    overflow: hidden;
+	}
+	.price{
+		font-size: 18px;
+	}
+}

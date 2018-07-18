@@ -1,0 +1,21 @@
+.lang-rtl{
+	.block_newsletter {
+		.form-control {
+			padding-left: 183px;
+			padding-right: 21px;
+		}
+		.btn-submit {
+			right: auto;
+			left: 0;
+		}
+	}
+}
+@include media-breakpoint-down(lg) {
+	.lang-rtl{
+		.block_newsletter{
+			.btn-submit{
+			
+			}
+		}
+	}
+}

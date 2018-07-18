@@ -1,0 +1,39 @@
+.htmlcontent__item {
+	h1, h2, h3, h4, h5, h6{
+		color: inherit;
+	}
+}
+.htmlcontent__item__link{
+  display: block;
+}
+.htmlcontent__item__content{
+	position: relative;
+}
+.htmlcontent__html{
+	.overlap &{
+		padding: 15px;
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translate(0,-50%);
+	}
+	.overlap.overlap--bottom &{
+		top: auto;
+		bottom: 0;
+		transform: translate(0, 0);
+	}
+	.overlap.overlap--dark-background &{
+		background: rgba($black, 0.40);
+	}
+}
+.overlap-color{
+	.htmlcontent__html {
+		z-index: 2;
+	}
+}
+
+.img-rb img {
+	border-radius: 5px;
+}

@@ -1,0 +1,40 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+.breadcrumb {
+	background-color: transparent;
+	border-radius: 0;
+    border-bottom: 1px solid $clr-nineteen;
+    color: $clr-eight;
+    font-size: 14px;
+    margin-bottom: 25px;
+    padding: 0 0 24px;
+    position: relative;
+    &[data-depth="1"] {
+        display: none;
+    }
+    ol {
+        margin-bottom: 0;
+    }
+    li {
+        display: inline-block;
+        &:last-child{
+            a{
+                color: $brand-primary;
+            }
+        }
+        &:not(:last-child){
+        	&:after {
+        		display: inline-block;
+            	content: "/";
+            	margin: 0 4px;
+        	}
+        }
+    }
+}
+//max 768
+@include media-breakpoint-down(sm) {
+    .breadcrumb {
+        display: none;
+    }
+}

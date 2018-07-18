@@ -1,0 +1,23 @@
+.more-info {
+	font-family: $second-font;
+	max-width: 100%;
+	margin-top: 60px;
+	width: 100%;
+	.tab-pane-inner {
+    	border: 1px solid $clr-nineteen;
+    	padding: 20px 20px 15px;
+	}
+    .tab-pane, p {
+        line-height: 2;
+    }
+    .product-description {
+        font-style: italic;
+    }
+}
+@include media-breakpoint-down(xs) {
+	.more-info{
+		.tab-pane-inner {
+			padding: 15px;
+		}
+	}
+}

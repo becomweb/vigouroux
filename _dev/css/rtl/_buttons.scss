@@ -1,0 +1,10 @@
+.lang-rtl {
+	.btn,
+	.btn-primary,
+	.btn-secondary,
+	.btn-tertiary {
+		&:after {
+			transform: scale(-1, 1);
+		}
+	}
+}

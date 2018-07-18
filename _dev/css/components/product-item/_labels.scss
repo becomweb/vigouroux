@@ -1,0 +1,31 @@
+.product-flags{
+	margin-bottom: 0;
+	.new, .online-only, .on-sale, .discount-percentage, .pack {
+	    display: inline-block;
+	    vertical-align: top;
+	    padding: 7px 14px;
+	    color: $white;
+	    font-size: 12px;
+    	line-height: 1;
+    	text-transform: uppercase;
+	}
+	.new {
+		background: $new-label;
+	}
+	.discount-percentage, .on-sale{
+		background: $sale-label;
+	}
+	.discount {
+		display: none;
+	}
+	.online-only, .pack{
+		background: $online-label;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.product-flags {
+		.new, .online-only, .on-sale, .discount-percentage, .pack {
+			font-size: 11px;
+		}
+	}
+}

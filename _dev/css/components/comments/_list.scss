@@ -1,0 +1,82 @@
+/* TAB COMMENTS */
+.comment_details{
+	.btn{
+		font-size: 12px;
+		padding: 8px 15px;
+	}
+	.btn-primary{
+		margin: 10px 0 10px 5px;
+	}
+	ul{
+		margin-top: 15px;
+	}
+	li {
+		margin-bottom: 10px;
+	}
+}
+.comment__footer{
+	.star_content{
+		float: left;
+	}
+	.commen__date{
+		float: right;
+	}
+}
+#product_comments_block_tab {
+	.comment {
+		margin-bottom: 35px;
+		position: relative;
+		padding-left: 90px;
+		&:before{
+			font-size: 70px;
+			content: '\E7FD';
+			font-family: $first-icon-font;
+			position: absolute;
+			top: 0;
+			left: 10px;
+			line-height: 1;
+			height: auto;
+		}
+	}
+	.comment_author_infos {
+		strong{
+			color: $brand-primary;
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+	.title_block{
+		color: $clr-four;
+		font-size: 18px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	.comment__text {
+	    font-style: italic;
+		line-height: 1.7;
+	}
+	.align_center{
+		text-align: center;
+	}
+	span.report_btn {
+		cursor: pointer;
+	}
+	span.report_btn:hover {
+		text-decoration: underline;
+	}
+}
+.productcomments__footer__box{
+	text-align: center;
+	.btn{
+		font-size: 12px;
+		padding: 12px 30px;
+		margin-top: 10px;
+		&:after {
+			display: none;
+		}
+		&:first-child{
+			margin-right: 20px;
+		}
+	}
+}

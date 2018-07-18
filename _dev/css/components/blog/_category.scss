@@ -1,0 +1,31 @@
+.post-category{
+	.kr_blog_post_inner{
+		display: flex;
+		flex-wrap: wrap;
+		> .blog_post{
+			width: (100%/3);
+			padding: 0 $grid-gutter-width-base/2;
+			margin-bottom: 30px;
+		}
+	}
+}
+//max 768
+@include media-breakpoint-down(md) {
+	.post-category{
+		.kr_blog_post_inner{
+			> .blog_post{
+				width: 50%;
+			}
+		}
+	}
+}
+//max 480
+@include media-breakpoint-down(xs) {
+	.post-category{
+		.kr_blog_post_inner{
+			> .blog_post{
+				width: 100%;
+			}
+		}
+	}
+}

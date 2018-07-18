@@ -1,0 +1,30 @@
+.menu-thumbnails{
+	.thumbnail-img{
+		display: block;
+		overflow: hidden;
+		position: relative;
+		&:before {
+		    content: '';
+		    top: 0;
+		    left: -75%;
+		    display: block;
+		    z-index: 2;
+		    transform: skewX(-25deg);
+		    width: 50%;
+		    height: 100%;
+		    background: linear-gradient(to right,rgba($white,0) 0%, rgba($white,.3) 100%);
+		    position: absolute;
+		}
+		img{
+			transition: transform .5s;
+		}
+		&:hover{
+			&:before {
+			    animation: shine 1s;
+			}
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
+}

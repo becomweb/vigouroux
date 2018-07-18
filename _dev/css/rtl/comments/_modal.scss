@@ -1,0 +1,20 @@
+.lang-rtl{
+	#new_comment_form{
+		text-align: right;
+	}
+	#criterions_list{
+		label{
+			margin: 0 0 0 10px;
+		}
+	}
+}
+.lang-rtl{
+	.productcomments__footer__box{
+		.btn{
+			&:first-child{
+				margin-right: 0;
+				margin-left: 20px;
+			}
+		}
+	}
+}

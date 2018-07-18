@@ -1,0 +1,14 @@
+@include media-breakpoint-down(md) {
+	.lang-rtl {
+		.footer-container{
+			.links{
+				.title {
+					.pull-xs-right{
+						right: auto;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+}

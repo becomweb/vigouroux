@@ -1,0 +1,115 @@
+.products-selection {
+    font-family: $second-font;
+    border-top: 1px solid $clr-nineteen;
+    border-bottom: 1px solid $clr-nineteen;
+    margin: 30px 0;
+    padding-top: 5px;
+    label {
+        display: inline-block;
+        color: $clr-four;
+        font-size: 14px;
+        padding-right: 7px;
+        text-transform: uppercase;
+        vertical-align: middle;
+        margin-bottom: 0;
+    }
+}
+.products-sort-order{
+    padding: 0 15px;
+    .select-title{
+        border: 2px solid $clr-nineteen;
+        display: inline-block;
+        vertical-align: middle;
+        height: 30px;
+        line-height: 26px;
+        position: relative;
+        padding: 0 35px 0 12px;
+        cursor: pointer;
+        transition: none;
+        i {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            text-align: center;
+            line-height: 29px;
+            font-size: 18px;
+            height: 26px;
+        }
+    }
+    .show{
+        .select-title{
+            border-color: $brand-primary;
+            i{
+                background: $brand-primary;
+                color: $white;
+            }
+        }
+    }
+}
+.sort-by-row{
+    align-items: center;
+    > div, > nav {
+        margin-bottom: 5px;
+    }
+    .pagination{
+        padding: 0 15px;
+        margin-left: auto;
+    }
+}
+/* display view */
+.display-view{
+    padding: 0 15px;
+    .view-item{
+        color: $clr-nineteen;
+        display: inline-block;
+        font-size: 35px;
+        vertical-align: middle;
+        cursor: pointer;
+        &:hover{
+            color: $brand-primary;
+        }
+    }
+}
+.list {
+    .show_list {
+        color: $brand-primary;
+    }
+}
+.grid {
+    .show_grid {
+        color: $brand-primary;
+    }
+}
+#search_filter_toggler{
+    padding: 6.5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    &:after {
+        display: none;
+    }
+}
+@include media-breakpoint-down(sm) {
+    .sort-by-row{
+        margin: 0 -7px;
+        .pagination,.filter-button,.products-sort-order{
+            padding: 0 7px;
+        }
+    }
+    .products-selection {
+        padding: 15px $grid-gutter-width-base/2 10px;
+        margin: 20px (-$grid-gutter-width-base/2) 20px;
+        label{
+            display: none;
+        }
+    }
+    .products-sort-order {
+        .select-title {
+            padding: 0 28px 0 7px;
+            font-size: 12px;
+            height: 28px;
+            line-height: 24px;
+        }
+    }
+}

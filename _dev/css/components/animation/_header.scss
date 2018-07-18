@@ -1,0 +1,27 @@
+#header.fixed-top{
+	transition: .2s transform;
+	position: fixed;
+	&:before {
+		transition: 0.2s background;
+	}
+	.header-top {
+		transition: 0.2s background;
+	}
+	&.hide-bar {
+		.header-top {
+			background: rgba($black, .87);
+		}
+	}
+}
+.is-not-index {
+	#header.fixed-top{
+		&.hide-bar {
+			&:before {
+				background: rgba($black, .8);
+			}
+			.header-top {
+				background: transparent;
+			}
+		}
+	}
+}

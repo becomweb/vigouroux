@@ -1,0 +1,60 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+.modal{
+	.close{
+		background: $clr-eleven;
+		text-shadow: none;
+		cursor: pointer;
+		display: block;
+		font: 700 14px/45px $second-icon-font;
+		height: 45px;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 0;
+		width: 45px;
+		z-index: 1;
+		&:hover{
+			background: $brand-primary;
+			color: $white;
+			opacity: 1;
+		}
+		span {
+			display: none;
+		}
+		i{
+			display: none;
+		}
+		&:before{
+			content: '\36';
+		}
+	}
+	.modal-title{
+		font-size: 22px;
+		font-weight: 700;
+		margin: 0;
+		text-transform: uppercase;
+	}
+}
+.modal-header{
+	border: none;
+	padding: 6px 15px;
+}
+.modal-body{
+	padding: 30px 15px;
+}
+@include media-breakpoint-up(xl){
+	.modal.fade .modal-dialog {
+		top: 50%;
+		transform: translateY(-75%);
+	}
+	.modal.show .modal-dialog {
+		transform: translateY(-50%);
+	}
+}
+@include media-breakpoint-up(sm){
+	.modal-dialog{
+		max-width: 650px;
+	}
+}

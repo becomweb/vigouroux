@@ -1,0 +1,32 @@
+@keyframes shine
+	{
+		100%
+	{
+		left:125%
+	}
+}
+@keyframes animatedBackground {
+	from {
+		background-position: 0 50%;
+	}
+	to {
+		background-position: 100% 50%;
+ 	}
+}
+input[type="button"],
+input[type="submit"],
+a,
+button,.btn{
+    transition: background .4s, color .4s, border-color .4s;
+}
+
+.-default-arrows .owl-buttons > div {
+    transition: color .3s;
+}
+@media (min-width: $screen-mobile-min){
+	.features-home#htmlbanners10, .video-promo__poster.-scroll-background {
+		//background-position: 0 0 !important;
+	    //background-attachment: fixed !important;
+	    //animation: 12s linear 0s infinite running animatedBackground;
+	}
+}

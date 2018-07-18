@@ -1,0 +1,12 @@
+.lang-rtl{
+	#product_comments_block_tab{
+		.comment{
+			padding-left: $grid-gutter-width-base/2;
+			padding-right: 90px;
+			&:before{
+				left: auto;
+				right: 10px;
+			}
+		}
+	}
+}

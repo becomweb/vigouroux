@@ -1,0 +1,62 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "partials/_variables";
+
+/*** WRAPPER ***/
+
+#wrapper {
+    .banner {
+        margin-bottom: 24px;
+        display: block;
+        img {
+            box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+
+/*** MAIN ***/
+
+#notifications {
+    ul {
+        margin-bottom: 0;
+    }
+}
+
+
+/*** Responsive part ***/
+
+@include media-breakpoint-down(sm) {
+    #checkout-cart-summary {
+        float: none;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    section.checkout-step {
+        width: 100%;
+    }
+    .default-input {
+        min-width: 100%;
+    }
+    label {
+        clear: both;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .container {
+        max-width: 100%;
+    }
+    #product-availability {
+        margin-top: $small-space;
+    }
+    #search_filters .facet .facet-label {
+        text-align: left;
+    }
+    .block-category .category-cover {
+        position: relative;
+        text-align: center;
+    }
+    .block-category {
+        padding-bottom: 0;
+    }
+}

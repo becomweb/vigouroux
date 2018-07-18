@@ -1,0 +1,23 @@
+.footer-block {
+    font-size: 15px;
+    line-height: 1.8;
+}
+@include media-breakpoint-up(lg) {
+	.footer-logo {
+    	margin-bottom: 25px;
+		text-align: center;
+		.h3 {
+			display: none;
+		}
+		img {
+			display: inline-block;
+		}
+	}
+}
+@include media-breakpoint-down(md) {
+	.footer-logo {
+		img {
+			padding-top: 10px;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.lang-rtl {
+	.slick-slider{
+		direction: ltr !important;
+		*{
+			direction: ltr !important;
+		}
+	}
+	.home_blog_post_area {
+		.owl-nav {
+			right: auto;
+			left: -21px;
+		}
+	}
+	.general,.classic, .creative, .post-category {
+		.blog_post {
+			.read_more {
+				&:after {
+					transform: scale(-1, 1);
+					margin: 0 6px 0 0;
+				}
+			}
+		}
+	}
+	.post_meta {
+		span, a {
+			&:before, i {
+				margin: 0 0 0 4px;
+			}
+		}
+	}
+}

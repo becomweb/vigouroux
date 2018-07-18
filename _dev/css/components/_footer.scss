@@ -1,0 +1,155 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+#footer {
+	margin-top: 105px;
+}
+.footer-three {
+	.inner-wrapper {
+		align-items: flex-end;
+	}
+	> .container {
+		padding-top: 45px;
+		padding-bottom: 51px;
+		border-top: 1px solid rgba($white, .1);
+	}
+	h3 {
+    	font-size: 20px;
+    	font-weight: 500;
+    	color: $white;
+    	margin-bottom: 15px;
+	}
+}
+.footer-container {
+	background: $clr-twenty-one;
+	color: rgba($white, .7);
+	font-size: 15px;
+	p {
+		line-height: inherit;
+	}
+	.collapse{
+		display: block;
+	}
+}
+.links {
+	line-height: 2;
+	h3, .h3 {
+		color: $white;
+		margin-bottom: 26px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1;
+		text-transform: none!important;
+		cursor: pointer;
+	}
+	li {
+		position: relative;
+		a {
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
+.footer-one {
+	padding: 78px 0 36px;
+}
+.footer-two {
+	font-size: 13px;
+	font-weight: 300;
+	border-top: 1px solid rgba($white, .1);
+	padding: 16px 0;
+	.inner-wrapper{
+		align-items: center;
+	}
+	.aeuc_footer_info{
+		padding: 0 $grid-gutter-width-base/2;
+	}
+}
+//max 991
+@include media-breakpoint-down(lg) {
+	.links {
+		h3, .h3 {
+			font-size: 18px;
+		}
+	}
+}
+@include media-breakpoint-down(md) {
+	#footer {
+		margin-top: 30px;
+	}
+	.footer-one {
+		padding: 35px 0 10px;
+	}
+	.footer-two {
+		font-size: 12px;
+	}
+	.footer-three {
+		> .container {
+			padding-top: 10px;
+			padding-bottom: 25px;
+			border-top: none;
+		}
+	}
+	.footer-container {
+		.links {
+			.h3 {
+				line-height: 1.8;
+				font-size: 16px;
+				font-weight: 400;
+				margin: 0;
+			}
+			.title {
+				border-bottom: 1px solid rgba($white, 0.2);
+				padding-bottom: 5px;
+				margin-bottom: 7px;
+				cursor: pointer;
+				display: flex;
+				cursor: pointer;
+				position: relative;
+				.pull-xs-right{
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+				.collapse-icons .remove {
+					display: none;
+				}
+			}
+			.title[aria-expanded="true"] .collapse-icons {
+				.add {
+					display: none;
+				}
+				.remove {
+					display: block;
+				}
+			}
+			.navbar-toggler {
+				display: inline-block;
+				padding: 0;
+			}
+            .collapse{
+                display: none;
+                &.show{
+                    display: block;
+                }
+            }
+			ul {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(xs) {
+	#footer {
+		margin-top: 20px;
+	}
+	.footer-two {
+		text-align: center;
+	}
+}
+@include media-breakpoint-down(xxs) {
+	.footer-two {
+		font-size: 11px;
+	}
+}

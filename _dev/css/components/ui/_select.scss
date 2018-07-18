@@ -1,0 +1,30 @@
+select, select.form-control{
+    font-family: $second-font;
+    border: 2px solid $clr-three;
+    display: inline-block;
+    vertical-align: middle;
+    height: 44px!important;
+    padding: 0 20px 0 12px;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    background-color: $white;
+    background-image: url(../../../img/down-arrow.svg);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center right 5px;
+    -webkit-appearance: none;
+    &:focus{
+        border-color: $brand-primary;
+    }
+}
+.dropdown{
+    select,select.form-control{
+        background: none;
+        background-color: $white;
+        background-image: url(../../../img/down-arrow.svg);
+        background-size: 10px;
+        background-repeat: no-repeat;
+        background-position: center right 5px;
+    }
+}

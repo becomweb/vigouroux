@@ -1,0 +1,27 @@
+.-anim-left,.-anim-right{
+	position: relative;
+	transition: transform .6s, opacity .6s;
+}
+.video-promo__stop {
+	transition: opacity .5s;
+}
+.-anim-left {
+	right: 0;
+	.play & {
+		transform: translate(-200px, 0);
+		opacity: 0;
+	}
+}
+.-anim-right {
+	left: 0;
+	.play &{
+		transform: translate(200px, 0);
+		opacity: 0;
+	}
+}
+.-fade-out{
+	transition: opacity .8s, color .5s;
+	.play &{
+		opacity: 0;
+	}
+}

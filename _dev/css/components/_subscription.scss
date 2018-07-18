@@ -1,0 +1,77 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+
+.block_newsletter {
+	.input-wrapper {
+		position: relative;
+	}
+	.form-control {
+		font-weight: 300;
+		background: rgba($white, 0.071);
+		color: rgba($white, .7);
+		height: 54px;
+		width: 100%;
+		padding: 5px 183px 5px 21px;
+		border: none;
+		box-shadow: inset 0 0 0 0 rgba($white, .6);
+		transition: .3s box-shadow, .3s color;
+		&::placeholder {
+			color: inherit;
+		}
+		&:focus {
+			box-shadow: inset 0 0 4px 1px rgba($white, .6);
+		}
+	}
+	.btn-submit {
+		outline: none;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		display: flex;
+		align-items: center;
+		&:after {
+			margin-top: 3px;
+		}
+	}
+}
+@include media-breakpoint-down(md) {
+	.block_newsletter {
+		.form-control {
+			padding-right: 52px;
+		}
+		.btn-submit {
+			padding: 0;
+			width: 52px;
+			display: flex;
+			justify-content: center;
+			font-size: 25px;
+			&:after {
+				padding: 0;
+			}
+			span {
+				display: none;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	.footer-three {
+		.block_newsletter {
+			margin-bottom: 30px;
+		}
+	}
+}
+@include media-breakpoint-down(xs) {
+	.block_newsletter {
+		.form-control {
+			height: 45px;
+		}
+		.btn-submit {
+			width: 45px;
+		}
+	}
+}

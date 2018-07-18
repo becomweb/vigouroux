@@ -1,0 +1,77 @@
+.category-banner {
+	.owl-item &{
+	    flex: 0 0 100%;
+	    max-width: 100%;
+	}
+	font-size: 16px;
+	figure {
+		margin: 0;
+	}
+	p {
+		line-height: 1.2;
+		margin-bottom: 19px;
+		font-size: 1em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.title-one {
+		text-transform: uppercase;
+		font-size: 1em;
+		font-weight: 300;
+	}
+	.title-two {
+		font-size: 2.777em;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+	.banner-link {
+		display: block;
+		position: relative;
+		color: $white;
+        &:before {
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            background: rgba($black, .4);
+            z-index: 1;
+        }
+	}
+	.banner-description {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translate(0, -50%);
+		z-index: 2;
+	    padding-left: 5.7%;
+	}
+	.img-banner {
+		width: 100%;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.category-banner{
+		font-size: 14px;
+	}
+}
+@include media-breakpoint-down(xs) {
+	.category-banner{
+		font-size: 12px;
+		padding: 0;
+	}
+}
+@include media-breakpoint-down(xxs) {
+	.category-banner {
+		.title-one {
+			margin-bottom: 6px;
+		}
+		.title-two {
+			font-size: 2.1em;
+			margin-bottom: 6px;
+		}
+	}
+}

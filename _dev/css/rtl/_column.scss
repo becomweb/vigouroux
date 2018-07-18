@@ -1,0 +1,9 @@
+.lang-rtl {
+	.sidebar {
+		.h6 {
+			&:before {
+				padding: 0 0 0 8px;
+			}
+		}
+	}
+}

@@ -1,0 +1,78 @@
+.header-slide {
+    overflow: hidden;
+    p, h1, h2, h3, h4, h5,h6 {
+        position: relative;
+        opacity: 0;
+    }
+    p, h1, h2, h3, h4, h5,h6 {
+        &:nth-child(1){
+            transform: translate(-300px, 0);
+            transition: transform 0.9s 1.1s, opacity 0.9s 1.1s;
+        }
+        &:nth-child(2){
+            transform: translate(300px, 0);
+            transition: transform 0.9s 1.6s, opacity 0.9s 1.6s;
+        }
+        &:nth-child(3){
+            transform: translate(-300px, 0);
+            transition: transform 0.9s 2.1s, opacity 0.9s 2.1s;
+        }
+        &:nth-child(4){
+            transform: translate(300px, 0);
+            transition: transform 0.9s 2.6s, opacity 0.9s 2.6s;
+        }
+        &:nth-child(5){
+            transform: translate(-300px, 0);
+            transition: transform 0.9s 3.1s, opacity 0.9s 3.1s;
+        }
+        &:nth-child(6){
+            transform: translate(300px, 0);
+            transition: transform 0.9s 3.6s, opacity 0.9s 3.6s;
+        }
+    }
+    &.with-image {
+        .image {
+            transition: transform .7s 3s, opacity .7s 3s;
+            transform: translate(-50%, 0);
+            opacity: 0;
+        }
+    }
+}
+.active {
+    .header-slide {
+        p, h1, h2, h3, h4, h5,h6 {
+            &:nth-child(1), &:nth-child(3),
+            &:nth-child(2), &:nth-child(4){
+                transform: translate(0);
+                opacity: 1;
+            }
+        }
+        &.with-image {
+            .image {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+        }
+    }
+}
+@keyframes kenburns {
+    95% {
+        transform: scale3d(1.5, 1.5, 1.5) translate3d(190px, 120px, 0px);
+        animation-timing-function: ease-in;
+        //opacity: 1;
+    }
+    100% {
+        transform: scale3d(2, 2, 2) translate3d(170px, 100px, 0px);
+        //opacity: 0;
+    }
+}
+@media (min-width: $screen-mobile-min) {
+    //Ken burns effect
+    .active {
+        .zoom-in-effect {
+            .headerslider-img {
+                animation: kenburns 20s infinite 1s;
+            }
+        }
+    }
+}

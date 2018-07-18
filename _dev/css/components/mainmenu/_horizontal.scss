@@ -1,0 +1,66 @@
+/*menu horizontal*/
+@include media-breakpoint-up(lg) {
+    .main-menu{
+        position: static;
+        padding-left: 0;
+    }
+    .top-menu {
+        a {
+            display: inline-block;
+            width: auto;
+            padding: 0;
+        }
+        &[data-depth="0"]{
+            > li{
+                display: inline-block;
+                vertical-align: middle;
+                > a {
+                    color: inherit;
+                    position: relative;
+                    font-size: 13px;
+                    font-weight: 500;
+                    padding: 32px 1.75em;
+                    transition: background .3s;
+                    &.with-ul {
+                        &:after{
+                            display: inline-block;
+                            content: '\30';
+                            font-family: $second-icon-font;
+                            padding-left: 3px;
+                            line-height: 1;
+                            font-size: 10px;
+                        }
+                    }
+                }
+                &:hover {
+                    > a {
+                        background: rgba($white, 0.97);
+                        color: $clr-twenty-one;
+                    }
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .top-menu{
+        &[data-depth="0"]{
+             > li{
+                 > a {
+                    font-size: 14px;
+                 }
+             }
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .top-menu {
+        &[data-depth="0"]{
+            > li{
+                > a{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

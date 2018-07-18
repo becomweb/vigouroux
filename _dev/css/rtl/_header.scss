@@ -1,0 +1,12 @@
+@include media-breakpoint-down(md) {
+    .lang-rtl {
+        .menu-show{
+            #mobile_top_menu_wrapper{
+                left: 48px;
+            }
+            .header-nav,#wrapper,#notifications,#footer{
+                transform: translateX(calc(-100% + 48px));
+            }
+        }
+    }
+}

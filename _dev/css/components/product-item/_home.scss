@@ -1,0 +1,117 @@
+//grid
+.view-grid {
+	.products{
+		align-items: flex-start;
+	}
+}
+//min 576
+.view-grid {
+    .product-miniature{
+        width: (100%/2);
+    }
+}
+//min 992
+@include media-breakpoint-up(md) {
+    .view-grid {
+        .product-miniature{
+            width: (100%/3);
+        }
+    }
+}
+//min 992
+@include media-breakpoint-up(lg) {
+    .view-grid {
+        .product-miniature{
+            width: (100%/4);
+        }
+    }
+}
+//single
+.none-in-tab, .view-carousel{
+    margin-top: 40px;
+}
+//in tabs
+.productstabs-section__inner{
+    position: relative;
+}
+.productstabs-section {
+    margin-top: 112px;
+    .wrapper-tabs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+    .headline-section {
+        text-align: inherit;
+        margin: 0;
+    }
+    .container {
+        position: static;
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+    }
+    .none-in-tabs {
+        position: relative;
+    }
+    .view-carousel {
+        margin-top: 0;
+    }
+    .tab-pane {
+        .headline-section {
+            display: none;
+        }
+    }
+}
+@include media-breakpoint-between(md, md) {
+    .productstabs-section {
+        .headline-section {
+            font-size: 40px;
+        }
+    }
+}
+@include media-breakpoint-between(sm, sm) {
+    .productstabs-section {
+        .headline-section {
+            font-size: 27px;
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .productstabs-section {
+        margin-top: 50px;
+        .wrapper-tabs {
+            margin-bottom: 40px;
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .view-grid {
+        .products {
+            display: block;
+            visibility: visible;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: none;
+            overflow: -moz-scrollbars-none;
+            white-space: nowrap;
+            margin-bottom: 10px;
+        }
+        .product-miniature {
+            white-space: normal;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+@include media-breakpoint-down(xs) {
+    .productstabs-section {
+        .headline-section {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,150 @@
+.htmlbanners1-inner{
+	margin: 0;
+}
+.top-banner {
+	padding: 0;
+	font-size: 18px;
+	.owl-item &{
+	    flex: 0 0 100%;
+	    max-width: 100%;
+	}
+	.img-banner {
+		width: 100%;
+	}
+	figure {
+		margin: 0;
+	}
+	p {
+		line-height: 1.2;
+		margin-bottom: 19px;
+		font-size: 0.83em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.title-one {
+		text-transform: uppercase;
+		font-size: 0.83em;
+		font-weight: 300;
+	}
+	.title-two {
+		font-size: 2.777em;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+	.banner-link {
+		display: block;
+		position: relative;
+		color: $white;
+        &:before {
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            background: rgba($black, .4);
+            z-index: 1;
+        }
+	}
+	.banner-description {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translate(0, -50%);
+		z-index: 2;
+	    padding-left: 8.7%;
+	}
+	.promo {
+		padding-left: 1.9em;
+		position: absolute;
+		left: 0;
+		top: 5%;
+		font-size: 1.95em;
+		font-weight: 600;
+		line-height: 1.35;
+		margin: 0;
+		span {
+			font-size: 1.2em;
+		}
+	}
+}
+@media (min-width: $screen-2k) {
+	.top-banner {
+		font-size: 20px;
+		.title-two {
+			font-weight: 500;
+		}
+	}
+}
+@include media-breakpoint-up(md){
+	.top-banner {
+		&.text-in-right {
+			.banner-description {
+			    display: flex;
+			    flex-direction: column;
+			    align-items: flex-end;
+			    padding: 0 19% 0 0;
+			}
+			.promo {
+				left: auto;
+				right: 0;
+				padding: 0 1.9em 0 0;
+			}
+		}
+	}
+}
+@media (max-width: 1600px) {
+	.top-banner {
+		font-size: 16px;
+	}
+}
+@include media-breakpoint-between(md, lg){
+	.top-banner {
+		.title-two {
+			font-size: 2.2em;
+		}
+		.banner-description {
+			padding-left: 6%;
+		}
+		&.text-in-right {
+			.banner-description {
+				padding: 0 9% 0 0;
+			}
+		}
+	}
+}
+@include media-breakpoint-between(md, md){
+	.top-banner {
+		font-size: 13px;
+	}
+}
+@include media-breakpoint-down(sm){
+	.top-banner {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+@include media-breakpoint-down(xs){
+	.top-banner {
+		font-size: 13px;
+		.banner-description {
+			padding-left: $grid-gutter-width-base/2;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+}
+@media (max-width: 414px) {
+	.top-banner {
+		p {
+			margin-bottom: 10px;
+		}
+		.title-two {
+			font-size: 1.9em;
+			margin-bottom: 10px;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+//tabs
+.lang-rtl {
+	.htmlcontent-tabs{
+		li{
+			a{
+				&:before{
+					padding: 0 0 0 10px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.lang-rtl{
+	.products{
+		.product-miniature{
+			.comments_note{
+				> span{
+					margin-left: 0;
+					margin-right: auto;
+				}
+			}
+		}
+	}
+}

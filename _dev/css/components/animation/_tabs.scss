@@ -1,0 +1,19 @@
+@keyframes tab-active {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.productstabs-section {
+    .tab-pane {
+        &.active {
+        	.owl-stage-outer {
+            	animation: tab-active .3s linear;
+        	}
+        }
+    }
+}

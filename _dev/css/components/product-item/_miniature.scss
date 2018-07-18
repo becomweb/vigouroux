@@ -1,0 +1,75 @@
+.product-miniature {
+	padding: 0 ($grid-gutter-width-base/2) + 1;
+	text-align: center;
+	.thumbnail-container {
+		position: relative;
+	}
+	.thumbnail-wrapper {
+		position: relative;
+		padding: 40px 0 20px;
+		.thumbnail-img {
+			display: inline-block;
+		}
+	}
+	.product-flags{
+		.new, .online-only, .on-sale, .discount-percentage, .pack {
+			position: absolute;
+		}
+		.new {
+			top: 12px;
+			left: 12px;
+		}
+		.discount-percentage, .on-sale {
+			top: 12px;
+			right: 12px;
+		}
+		.online-only {
+			bottom: 12px;
+			left: 12px;
+		}
+		.pack {
+			bottom: 12px;
+			right: 12px;
+		}
+	}
+	.variant-links{
+        a{
+            display: block;
+            margin-top: 8px;
+            width: 25px;
+            height: 25px;
+        }
+	}
+	.product-title {
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.35;
+		text-transform: capitalize;
+		margin: 15px 0 7px;
+	}
+}
+.catalog-mode-on {
+	.product-miniature {
+		#add-to-cart-or-refresh {
+			display: none;
+		}
+	}
+}
+@include media-breakpoint-down(md) {
+	.product-miniature {
+		.quick-view {
+			display: none!important;
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	.product-miniature {
+		.variant-links {
+			a {
+				width: 18px;
+				height: 18px;
+				margin-top: 5px;
+			}
+		}
+	}
+}

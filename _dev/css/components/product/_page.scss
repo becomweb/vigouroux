@@ -1,0 +1,10 @@
+.page-product{
+	#main{
+		> .row{
+			align-items: flex-start;
+		}
+	}
+	.page-content{
+		position: relative;
+	}
+}

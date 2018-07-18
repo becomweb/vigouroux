@@ -1,0 +1,62 @@
+.social-sharing {
+	display: inline-block;
+	vertical-align: top;
+    ul {
+        margin-bottom: 0;
+    }
+    li {
+    	display: inline-block;
+    	vertical-align: top;
+    	margin-right: 5px;
+        a {
+			background: $white;
+		    border: 1px solid $clr-three;
+		    color: $brand-primary;
+		    display: inline-block;
+		    font-family: $second-icon-font;
+		    font-size: 17px;
+		    height: 38px;
+		    height: 2.625em;
+		    line-height: 40px;
+		    line-height: 2.625em;
+		    padding: 0;
+		    position: relative;
+		    text-align: center;
+		    width: 38px;
+		    width: 2.625em;
+		    &:hover {
+		        background: $brand-primary;
+		        border-color: $brand-primary;
+		        color: $white;
+		    }
+        }
+		&.facebook{
+			a{
+				&:before{
+				    content: '\3b';
+				}
+			}
+		}
+		&.twitter{
+			a{
+				&:before{
+				    content: '\3f';
+				}
+			}
+		}
+		&.googleplus{
+			a{
+				&:before{
+				    content: '\21';
+				}
+			}
+		}
+		&.pinterest{
+			a{
+				&:before{
+				    content: '\3e';
+				}
+			}
+		}
+    }
+}

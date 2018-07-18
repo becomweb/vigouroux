@@ -1,0 +1,10 @@
+.copyright {
+	p {
+		margin: 0;
+	}
+}
+@include media-breakpoint-down(xs) {
+	.copyright {
+		order: 3;
+	}
+}
