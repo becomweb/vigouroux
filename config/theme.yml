@@ -2,5 +2,9 @@ parent: extremestyle
 name: vigouroux
 display_name: Theme enfant Vigouroux
 version: 1.0.0
+author:
+  name: "Agence BeComWeb"
+  email: "contact@agence-becomweb.fr"
+  url: "https://agence-becomweb.fr"
 assets:
   use_parent_assets: true
