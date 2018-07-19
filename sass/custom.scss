@@ -1,3 +1,88 @@
-body{
-    background: red;
+/* Variables */
+@import "import/variables";
+
+/* HEADER */
+#header{
+    nav.header-nav{
+        background-color:#000;
+        /* Telephone header */
+        #_desktop_contact_link .header__contact{
+            #header_contact_phone_label{
+                margin-right:10px;
+            }
+            #header_contact_phone_value{
+                font-weight:700;
+                img{
+                    display: inline-block;
+                    margin-right: 5px;
+                    height: 14px;
+                    width: auto;
+                    position: relative;
+                    top: -3px;
+                }
+            }
+        }
+        /* Recherche */
+        #_desktop_search_bar{
+            .search-btn-toggle{
+                padding: 5px 10px 5px 140px;
+                border: 1px solid #5c5c5c;
+                &:hover{
+                    color:$shiraz;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px){
+    #header{
+        nav.header-nav{
+            padding:8px 0;
+            .search-block{ // Pop-in recherche
+                form.search-form{
+                    background:rgba($shiraz, 0.92);
+                    padding:10vh 10vw;
+
+                }
+                .search-close{
+                    top:10vh;
+                    right:10vw;
+                    width: 40px;
+                    height: 40px;
+                    background:none;
+                    font:40px/1 "fontello";
+                    color:#fff;
+                }
+                .search-field input.input-text{
+                    color:#fff;
+                    border-bottom:2px solid #e5e5e5;
+                    font-family:$lora_font;
+                    &+.search-btn{
+                        color:#fff;
+                    }
+                    &:focus{
+                        border-color: #fff;
+                        color: #fff;
+                        &+.search-btn{
+                            color:#fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* DIVERS */
+body.search-fixed .ui-menu{ // Resultats de recherche (pop-in)
+    background:#fff;
+    border-radius: 0;
+    box-shadow: 0px 3px 6px 0px rgba(40,40,40,0.65);
+    .ui-menu-item a{
+        color:#000;
+        border-radius:0;
+        &.ui-state-focus{
+            background: #f5f5f5;
+        }
+    }
 }
