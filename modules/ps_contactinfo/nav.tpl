@@ -26,7 +26,11 @@
     <div class="header__contact">
         <div class="header__contact__list js-header__contact__list toogle_content">
             <span id="header_contact_phone_label">{l s='Customer service' d='Shop.Theme.Global'}</span>
-            <span id="header_contact_phone_value">{$contact_infos.phone}</span>
+            <span id="header_contact_phone_value">
+                <a href="tel:{$contact_infos.phone}">
+                    <img src="{$urls.img_url}telephone.png" /> {$contact_infos.phone}
+                </a>
+            </span>
         </div>
     </div>
 </div>
