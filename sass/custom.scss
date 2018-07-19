@@ -1,8 +1,19 @@
 /* Variables */
 @import "import/variables";
 
+/* GENERALITES */
+
+    /* Boutons */
+button.btn, a.btn{
+    background:$shiraz;
+    &:hover{
+        background:#000;
+    }
+}
+
 /* HEADER */
 #header{
+    /* Nav */
     nav.header-nav{
         background-color:#000;
         /* Telephone header */
@@ -37,7 +48,9 @@
 @media (min-width: 992px){
     #header{
         nav.header-nav{
+            height:$nav_height_desktop;
             padding:8px 0;
+            border-bottom:0;
             .search-block{ // Pop-in recherche
                 form.search-form{
                     background:rgba($shiraz, 0.92);
@@ -65,6 +78,36 @@
                         color: #fff;
                         &+.search-btn{
                             color:#fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* HOMEPAGE */
+#index{
+    #wrapper{
+        .headerslider{
+            .header-slide{
+                .headerslider-figure{
+                    padding-top:15%;
+                    .caption-description{
+                        height: 100%;
+                        display: flex;
+                        align-items: flex-end;
+                        top: unset;
+                        bottom: 0;
+                        transform: translate(0,0);
+                        padding: 15px 0 0 0;
+                        .container{
+                            align-items: end;
+                            .image{
+                                img{
+                                    max-height:60vh;
+                                }
+                            }
                         }
                     }
                 }

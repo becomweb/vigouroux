@@ -1,5 +1,17 @@
 /* Variables */
+/* GENERALITES */
+/* Boutons */
+button.btn, a.btn {
+  background: #aa1135;
+}
+button.btn:hover, a.btn:hover {
+  background: #000;
+}
+
 /* HEADER */
+#header {
+  /* Nav */
+}
 #header nav.header-nav {
   background-color: #000;
   /* Telephone header */
@@ -29,7 +41,9 @@
 
 @media (min-width: 992px) {
   #header nav.header-nav {
+    height: 50px;
     padding: 8px 0;
+    border-bottom: 0;
   }
   #header nav.header-nav .search-block form.search-form {
     background: rgba(170, 17, 53, 0.92);
@@ -60,6 +74,26 @@
     color: #fff;
   }
 }
+/* HOMEPAGE */
+#index #wrapper .headerslider .header-slide .headerslider-figure {
+  padding-top: 15%;
+}
+#index #wrapper .headerslider .header-slide .headerslider-figure .caption-description {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  top: unset;
+  bottom: 0;
+  transform: translate(0, 0);
+  padding: 15px 0 0 0;
+}
+#index #wrapper .headerslider .header-slide .headerslider-figure .caption-description .container {
+  align-items: end;
+}
+#index #wrapper .headerslider .header-slide .headerslider-figure .caption-description .container .image img {
+  max-height: 60vh;
+}
+
 /* DIVERS */
 body.search-fixed .ui-menu {
   background: #fff;
