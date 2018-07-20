@@ -4,10 +4,30 @@
 /* GENERALITES */
 
     /* Boutons */
-button.btn, a.btn{
+button.btn, a.btn, input.btn{
     background:$shiraz;
+    &.disabled, &:disabled{
+        background:lighten($shiraz, 10%);
+    }
     &:hover{
-        background:#000;
+        background:darken($shiraz,10%);
+    }
+}
+
+    /* Formulaires */
+form{
+    .form-control:focus{ /* input, select, etc */
+        border-color:$shiraz;
+    }
+    .input-group .input-group-btn > .btn{ /* pseudo-bouton upload fichier */
+        background:$shiraz;
+        &:hover{
+            background:darken($shiraz,10%);
+        }
+    }
+    .custom-checkbox input[type="checkbox"]:checked + span{ /* Checkbox */
+        border-color:#131331;
+        background:$shiraz;
     }
 }
 
@@ -33,6 +53,35 @@ button.btn, a.btn{
                 }
             }
         }
+        /* Bloc panier */
+        #_desktop_cart{
+            .blockcart {
+                .cart-header{ /* Icone */
+                    .inner-wrapper{
+                        transition:0.3s all;
+                        &:hover{
+                            color:#fff;
+                            transform: scale(1.1);
+                        }
+                        .cart-products-count{ /* compeur produits */
+                            background: $shiraz;
+                        }
+                    }
+                }
+                .cart-hover-content{ /* Recap panier */
+                    ul{
+                        li.cart-wishlist-item{
+                            .product-price{
+                                color:$shiraz;
+                            }
+                            .remove-from-cart:hover{
+                                color:#131313;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         /* Recherche */
         #_desktop_search_bar{
             .search-btn-toggle{
@@ -44,6 +93,9 @@ button.btn, a.btn{
             }
         }
     }
+}
+body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au theme parent
+    background:#000;
 }
 @media (min-width: 992px){
     #header{
@@ -89,7 +141,7 @@ button.btn, a.btn{
 /* HOMEPAGE */
 #index{
     #wrapper{
-        .headerslider{
+        .headerslider{ /* Slider */
             .header-slide{
                 .headerslider-figure{
                     padding-top:15%;
@@ -109,6 +161,26 @@ button.btn, a.btn{
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+        .testimonials-wrapper{ /* Temoignages */
+            background-image:none;
+            background-color:#000;
+            .headline-section{ /* titre */
+                font-family: $lora_font;
+                font-weight:400;
+                color:#fff;
+            }
+            .testimonials-item{
+                .testimonials-description{
+                    color:#fff;
+                    &:before{ // quote ouvrante
+                        color: $shiraz;
+                    }
+                    .testimonials-author{
+                        color:$shiraz;
                     }
                 }
             }
@@ -187,6 +259,31 @@ button.btn, a.btn{
                 }
 
             }
+        }
+    }
+}
+
+/* PAGES */
+#contact{
+    .contact-rich{ /* Infos de contact (colonne) */
+        h4{
+            color:$shiraz;
+        }
+        .block{
+            .icon{
+                color:$shiraz;
+            }
+            .data{
+                color:#000;
+            }
+        }
+    }
+    .contact-form{ /* Formulaire */
+        #contact_form_page_title{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: #aa1135;
+            margin-bottom: 1rem;
         }
     }
 }
