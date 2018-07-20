@@ -29,6 +29,11 @@ form .custom-checkbox input[type="checkbox"]:checked + span {
   background: #aa1135;
 }
 
+/* Modals */
+.modal .modal-content .close:hover {
+  background: #aa1135;
+}
+
 /* HEADER */
 #header {
   /* Nav */
@@ -234,6 +239,34 @@ body.is-not-index #header {
   }
 }
 /* PAGES */
+/* Tunnel */
+#cart .cart-grid .cart-overview {
+  /* Page recapitulative */
+}
+#cart .cart-grid .cart-overview .cart-items .cart-item {
+  /* prix et caracteristiques */
+}
+#cart .cart-grid .cart-overview .cart-items .cart-item .price, #cart .cart-grid .cart-overview .cart-items .cart-item .product-line-info .value {
+  color: #aa1135;
+}
+#cart .cart-grid .cart-overview .cart-items .cart-item .product-line-actions {
+  /* input quantite */
+  /* bouton + / - */
+}
+#cart .cart-grid .cart-overview .cart-items .cart-item .product-line-actions .js-cart-line-product-quantity:focus {
+  border-color: #aa1135;
+}
+#cart .cart-grid .cart-overview .cart-items .cart-item .product-line-actions .btn {
+  background: #aa1135;
+}
+#cart .cart-grid .cart-overview .cart-items .cart-item .product-line-actions .btn:hover {
+  background: #7c0c27;
+}
+#cart .cart-grid .cart-overview .cart-items .cart-item .remove-from-cart:hover {
+  color: #898989;
+}
+
+/* Contact */
 #contact .contact-rich {
   /* Infos de contact (colonne) */
 }

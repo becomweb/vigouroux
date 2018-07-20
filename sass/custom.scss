@@ -31,6 +31,15 @@ form{
     }
 }
 
+    /* Modals */
+.modal{
+    .modal-content{
+        .close:hover{
+            background:$shiraz;
+        }
+    }
+}
+
 /* HEADER */
 #header{
     /* Nav */
@@ -264,6 +273,37 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
 }
 
 /* PAGES */
+
+    /* Tunnel */
+#cart .cart-grid .cart-overview{ /* Page recapitulative */
+    .cart-items{
+        .cart-item{
+            /* prix et caracteristiques */
+            .price, .product-line-info .value{
+                color:$shiraz;
+            }
+            .product-line-actions{
+                /* input quantite */
+                .js-cart-line-product-quantity:focus{
+                    border-color:$shiraz;
+                }
+                /* bouton + / - */
+                .btn{
+                    background:$shiraz;
+                    &:hover{
+                        background:darken($shiraz, 10%);
+                    }
+                }
+            }
+            .remove-from-cart:hover{
+                color:$midgrey;
+            }
+        }
+    }
+
+}
+
+    /* Contact */
 #contact{
     .contact-rich{ /* Infos de contact (colonne) */
         h4{
