@@ -127,7 +127,40 @@ button.btn:hover, a.btn:hover {
   display: inline-block;
   vertical-align: baseline;
 }
+#footer .footer-container .footer-two {
+  /* Copyright et logos paiement */
+  font-size: 10px;
+  line-height: 35px;
+}
+#footer .footer-container .footer-two .copyright span:first-child {
+  margin-right: 40px;
+}
+#footer .footer-container .footer-two .payment-logos {
+  text-transform: uppercase;
+}
+#footer .footer-container .footer-two .payment-logos img {
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  top: -5px;
+}
 
+@media (max-width: 575px) {
+  #footer .footer-container .footer-two .copyright {
+    order: unset;
+  }
+  #footer .footer-container .footer-two .copyright p {
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+  #footer .footer-container .footer-two .copyright p span {
+    display: inline-block;
+    width: 100%;
+  }
+  #footer .footer-container .footer-two .copyright p span:first-child {
+    margin-right: 0;
+  }
+}
 /* DIVERS */
 body.search-fixed .ui-menu {
   background: #fff;

@@ -150,7 +150,47 @@ button.btn, a.btn{
         display: inline-block;
         vertical-align: baseline;
     }
+    .footer-two{ /* Copyright et logos paiement */
+        font-size:10px;
+        line-height: 35px;
+        .copyright{
+            span:first-child{
+                margin-right:40px;
+            }
+        }
+        .payment-logos{
+            text-transform:uppercase;
+            img{
+                display:inline-block;
+                margin-left:5px;
+                position: relative;
+                top: -5px;
+            }
+        }
+    }
 }
+@media (max-width: 575px) {
+    #footer .footer-container{
+        .footer-two{ 
+            .copyright {
+                order:unset;
+                p{
+                    line-height: 1.6em;
+                    margin-bottom: 0.5em;
+                    span{
+                        display:inline-block;
+                        width:100%;
+                        &:first-child{
+                            margin-right:0;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
 
 /* DIVERS */
 body.search-fixed .ui-menu{ // Resultats de recherche (pop-in)
