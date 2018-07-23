@@ -1,5 +1,10 @@
 /* Variables */
 /* GENERALITES */
+/* Titres */
+h1, .h1 {
+  font-size: 3rem;
+}
+
 /* Boutons */
 button.btn, a.btn, input.btn {
   background: #aa1135;
@@ -10,6 +15,21 @@ button.btn.disabled, button.btn:disabled, a.btn.disabled, a.btn:disabled, input.
 button.btn:hover, button.btn:focus, button.btn:active, a.btn:hover, a.btn:focus, a.btn:active, input.btn:hover, input.btn:focus, input.btn:active {
   background: #7c0c27;
   box-shadow: none;
+}
+
+.grey_btn {
+  display: inline-block;
+  padding: 8px 6px;
+  color: #fff;
+  background: #898989;
+  border: 1px solid transparent;
+  transition: 0.3s all;
+  font-size: 13px;
+}
+.grey_btn:hover, .grey_btn:focus, .grey_btn:active {
+  background: #fff;
+  border-color: #898989;
+  color: #898989;
 }
 
 /* Formulaires */
@@ -25,8 +45,11 @@ form .input-group .input-group-btn > .btn {
 form .input-group .input-group-btn > .btn:hover {
   background: #7c0c27;
 }
-form .custom-checkbox input[type="checkbox"]:checked + span {
+form .custom-checkbox input[type="checkbox"] + span {
   /* Checkbox */
+  border: 1px solid #898989;
+}
+form .custom-checkbox input[type="checkbox"]:checked + span {
   border-color: #131331;
   background: #aa1135;
 }
@@ -40,6 +63,17 @@ form .custom-radio input[type="radio"]:checked + span {
 /* Modals */
 .modal .modal-content .close:hover {
   background: #aa1135;
+}
+
+/* Breadcrumb */
+#page .breadcrumb li a:hover, #page .breadcrumb li:last-child a {
+  color: #aa1135;
+}
+
+/* Tableaux */
+table.table .thead-default th {
+  background: #aa1135;
+  color: #fff;
 }
 
 /* HEADER */
@@ -373,15 +407,14 @@ body.is-not-index #header {
 #order-confirmation {
   /* Confirmation de commande */
 }
-#order-confirmation .h1 {
+#order-confirmation #main .h1 {
   font-weight: 700;
   color: #aa1135;
-  font-size: 3rem;
 }
-#order-confirmation .h3 {
+#order-confirmation #main .h3 {
   color: #aa1135;
 }
-#order-confirmation #content-hook_payment_return #check_address {
+#order-confirmation #main #content-hook_payment_return #check_address {
   display: inline-block;
   padding: 0.75rem 0;
   border-top: 1px solid #898989;
@@ -411,9 +444,96 @@ body.is-not-index #header {
   margin-bottom: 1rem;
 }
 
+/* Mon compte  */
+#my-account .page-header h1 {
+  text-align: center;
+  font-weight: 700;
+  color: #aa1135;
+}
+#my-account #content .links a {
+  transition: 0.2s all;
+}
+#my-account #content .links a .link-item {
+  transition: inherit;
+  border: 2px solid #898989;
+}
+#my-account #content .links a:hover span {
+  background: #aa1135;
+  color: #fff;
+}
+#my-account #content .links a:focus {
+  outline: none;
+}
+#my-account #content .links a:focus span {
+  color: #aa1135;
+}
+
+/* Adresses */
+#addresses #customer_addresses_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+#addresses #customer_addresses_list .customer_address_item {
+  display: flex;
+  position: relative;
+}
+#addresses #customer_addresses_list .customer_address_item .address {
+  padding: 25px 20px 60px 20px;
+  width: 100%;
+  border: 1px solid #898989;
+}
+#addresses #customer_addresses_list .customer_address_item .address .address-footer {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  width: calc(100% - 40px);
+  text-align: center;
+}
+#addresses #customer_addresses_list .customer_address_item .address .address-footer a {
+  background: #aa1135;
+}
+#addresses #customer_addresses_list .customer_address_item .address .address-footer a:hover {
+  background: #d81643;
+}
+#addresses .addresses-footer {
+  text-align: center;
+}
+#addresses .addresses-footer a {
+  font-weight: 700;
+  background: #aa1135;
+}
+#addresses .addresses-footer a:hover {
+  background: #7c0c27;
+}
+
+/* Historique de commandes */
+#history table td.order-actions a {
+  font-weight: 500;
+}
+#history table td.order-actions a:hover, #history table td.order-actions a:focus, #history table td.order-actions a:active {
+  color: #aa1135;
+}
+
+/* details d'une commande */
 /* DIVERS */
 #page .price {
   color: #aa1135;
+}
+
+#page .page-footer {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #e5e5e5;
+}
+#page .page-footer a {
+  background: #898989;
+}
+#page .page-footer a:hover {
+  background: #a3a3a3;
+}
+
+.form-footer {
+  text-align: center;
 }
 
 body.search-fixed .ui-menu {

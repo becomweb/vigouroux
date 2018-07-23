@@ -2,7 +2,10 @@
 @import "import/variables";
 
 /* GENERALITES */
-
+    /* Titres */
+h1, .h1{
+    font-size:3rem;
+}
     /* Boutons */
 button.btn, a.btn, input.btn{
     background:$shiraz;
@@ -12,6 +15,20 @@ button.btn, a.btn, input.btn{
     &:hover, &:focus, &:active{
         background:darken($shiraz,10%);
         box-shadow:none;
+    }
+}
+.grey_btn{
+    display:inline-block;
+    padding:8px 6px;
+    color:#fff;
+    background:$midgrey;
+    border:1px solid transparent;
+    transition:0.3s all;
+    font-size:13px;
+    &:hover, &:focus, &:active{
+        background:#fff;
+        border-color:$midgrey;
+        color:$midgrey;
     }
 }
 
@@ -27,7 +44,10 @@ form{
             background:darken($shiraz,10%);
         }
     }
-    .custom-checkbox input[type="checkbox"]:checked + span{ /* Checkbox */
+    .custom-checkbox input[type="checkbox"] + span{ /* Checkbox */
+        border:1px solid $midgrey;
+    }
+    .custom-checkbox input[type="checkbox"]:checked + span{ 
         border-color:#131331;
         background:$shiraz;
     }
@@ -43,6 +63,23 @@ form{
     .modal-content{
         .close:hover{
             background:$shiraz;
+        }
+    }
+}
+
+    /* Breadcrumb */
+#page .breadcrumb{
+    li a:hover, li:last-child a{
+        color:$shiraz;
+    }
+}
+
+    /* Tableaux */
+table.table{
+    .thead-default{
+        th{
+            background:$shiraz;
+            color:#fff;
         }
     }
 }
@@ -419,24 +456,24 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
     }
 }
 #order-confirmation{ /* Confirmation de commande */
-    .h1{
-        font-weight: 700;
-        color: #aa1135;
-        font-size: 3rem;
-    }
-    .h3{
-        color:#aa1135;
-    }
-    #content-hook_payment_return{
-        #check_address{
-            display: inline-block;
-            padding: 0.75rem 0;
-            border-top: 1px solid $midgrey;
-            border-bottom: 1px solid $midgrey;
+    #main{
+        .h1{
+            font-weight: 700;
+            color: #aa1135;
+        }
+        .h3{
+            color:#aa1135;
+        }
+        #content-hook_payment_return{
+            #check_address{
+                display: inline-block;
+                padding: 0.75rem 0;
+                border-top: 1px solid $midgrey;
+                border-bottom: 1px solid $midgrey;
+            }
         }
     }
 }
-
     /* Contact */
 #contact{
     .contact-rich{ /* Infos de contact (colonne) */
@@ -461,11 +498,110 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
         }
     }
 }
+/* Mon compte  */
+#my-account{
+    .page-header{
+        h1{
+            text-align: center;
+            font-weight:700;
+            color:$shiraz;
+        }
+    }
+    #content .links{
+        a{
+            transition:0.2s all;
+            .link-item{
+                transition:inherit;
+                border:2px solid $midgrey;
+            }
+            &:hover span{
+                background:$shiraz;
+                color:#fff;
+            }
+            &:focus{
+                outline:none;
+                span{
+                    color:$shiraz;
+                }
+            }
+        }
+    }
+}
+/* Adresses */
+#addresses{
+    #customer_addresses_list{
+        display:flex;
+        flex-wrap:wrap;
+        .customer_address_item{
+            display: flex;
+            position:relative;
+            .address{
+                padding:25px 20px 60px 20px;
+                width:100%;
+                border:1px solid $midgrey;
+                .address-footer{
+                    position: absolute;
+                    bottom: 40px;
+                    left: 20px;
+                    width: calc(100% - 40px);
+                    text-align: center;
+                    a{
+                        background:$shiraz;
+                        &:hover{
+                            background:lighten($shiraz,10%);
+                        }
+                    }
+                }
+            }
+        }  
+    }
+    .addresses-footer{
+        text-align:center;
+        a{
+            font-weight:700;
+            background:$shiraz;
+            &:hover{
+                background:darken($shiraz, 10%);
+            }
+        }
+    }
+}
+    /* Historique de commandes */
+#history{
+    table{
+        td.order-actions{
+            a{
+                font-weight:500;
+                &:hover, &:focus, &:active{
+                    color:$shiraz;
+                }
+            }
+        }
+    }
+}
+    /* details d'une commande */
+#order-detail{
+
+}
 
 
 /* DIVERS */
 #page .price{
     color:$shiraz;
+}
+#page .page-footer{
+    text-align:center;
+    padding-top:30px;
+    border-top:1px solid #e5e5e5;
+    a{
+        background:$midgrey;
+        &:hover{
+           background: lighten($midgrey, 10%);
+        }
+    }
+}
+.form-footer{
+    text-align: center;
 }
 body.search-fixed .ui-menu{ // Resultats de recherche (pop-in)
     background:#fff;
