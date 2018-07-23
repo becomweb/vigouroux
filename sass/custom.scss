@@ -9,8 +9,9 @@ button.btn, a.btn, input.btn{
     &.disabled, &:disabled{
         background:lighten($shiraz, 10%);
     }
-    &:hover{
+    &:hover, &:focus, &:active{
         background:darken($shiraz,10%);
+        box-shadow:none;
     }
 }
 
@@ -58,13 +59,18 @@ form{
             }
             #header_contact_phone_value{
                 font-weight:700;
-                img{
-                    display: inline-block;
-                    margin-right: 5px;
-                    height: 14px;
-                    width: auto;
-                    position: relative;
-                    top: -3px;
+                a{
+                    &:hover{
+                        color:$shiraz;
+                    }
+                    img{
+                        display: inline-block;
+                        margin-right: 5px;
+                        height: 14px;
+                        width: auto;
+                        position: relative;
+                        top: -3px;
+                    }
                 }
             }
         }
@@ -284,9 +290,10 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
 #cart .cart-grid .cart-overview{ /* Page recapitulative */
     .cart-items{
         .cart-item{
-            /* prix et caracteristiques */
-            .price, .product-line-info .value{
-                color:$shiraz;
+            .product-line-info{
+                .value{
+                    color:$shiraz;
+                }
             }
             .product-line-actions{
                 /* input quantite */
@@ -335,6 +342,60 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                 }
             }
         }
+        &#checkout-addresses-step{ /* Adresses */
+            .address-item{
+                &.selected{
+                    border:2px solid #898989;
+                }
+                .address-footer{
+                    a{
+                        background:$shiraz;
+                        &:hover{
+                            background:lighten($shiraz, 10%);
+                        }
+                        &:focus, &:active{
+                            background:darken($shiraz, 10%);
+                            color:#fff;
+                        }
+                    }
+                }
+            }
+            .add-address a{
+                display: inline-block;
+                line-height: 1.4em;
+                padding: 4px 8px;
+                color: #fff;
+                background: #898989;
+                border: 1px solid transparent;
+                &:hover{
+                    background:#f2f2f2;
+                    color:#131313;
+                    border-color:#131313;
+                }
+                i{
+                    position:relative;
+                    top:-2px;
+                }
+            }
+        }
+        &#checkout-delivery-step{ /* Livraison */
+            .delivery-options-list .delivery-options{
+                .delivery-option{
+                    background:none;
+                }
+                #delivery_abroad_warning{
+                    background:#f2f2f2;
+                    padding: 15px;
+                    margin:15px 0;
+                    strong{
+                        color:$shiraz;
+                    }
+                }
+            }
+        }
+        &#checkout-payment-step{ /* Paiement */
+
+        }
     }
     /* Colonne de gauche */
     #js-checkout-summary{
@@ -354,6 +415,24 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                     $border-color:$midgrey;
                 }
             }
+        }
+    }
+}
+#order-confirmation{ /* Confirmation de commande */
+    .h1{
+        font-weight: 700;
+        color: #aa1135;
+        font-size: 3rem;
+    }
+    .h3{
+        color:#aa1135;
+    }
+    #content-hook_payment_return{
+        #check_address{
+            display: inline-block;
+            padding: 0.75rem 0;
+            border-top: 1px solid $midgrey;
+            border-bottom: 1px solid $midgrey;
         }
     }
 }
@@ -385,6 +464,9 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
 
 
 /* DIVERS */
+#page .price{
+    color:$shiraz;
+}
 body.search-fixed .ui-menu{ // Resultats de recherche (pop-in)
     background:#fff;
     border-radius: 0;

@@ -7,8 +7,9 @@ button.btn, a.btn, input.btn {
 button.btn.disabled, button.btn:disabled, a.btn.disabled, a.btn:disabled, input.btn.disabled, input.btn:disabled {
   background: #d81643;
 }
-button.btn:hover, a.btn:hover, input.btn:hover {
+button.btn:hover, button.btn:focus, button.btn:active, a.btn:hover, a.btn:focus, a.btn:active, input.btn:hover, input.btn:focus, input.btn:active {
   background: #7c0c27;
+  box-shadow: none;
 }
 
 /* Formulaires */
@@ -57,7 +58,10 @@ form .custom-radio input[type="radio"]:checked + span {
 #header nav.header-nav #_desktop_contact_link .header__contact #header_contact_phone_value {
   font-weight: 700;
 }
-#header nav.header-nav #_desktop_contact_link .header__contact #header_contact_phone_value img {
+#header nav.header-nav #_desktop_contact_link .header__contact #header_contact_phone_value a:hover {
+  color: #aa1135;
+}
+#header nav.header-nav #_desktop_contact_link .header__contact #header_contact_phone_value a img {
   display: inline-block;
   margin-right: 5px;
   height: 14px;
@@ -250,10 +254,7 @@ body.is-not-index #header {
 #cart .cart-grid .cart-overview {
   /* Page recapitulative */
 }
-#cart .cart-grid .cart-overview .cart-items .cart-item {
-  /* prix et caracteristiques */
-}
-#cart .cart-grid .cart-overview .cart-items .cart-item .price, #cart .cart-grid .cart-overview .cart-items .cart-item .product-line-info .value {
+#cart .cart-grid .cart-overview .cart-items .cart-item .product-line-info .value {
   color: #aa1135;
 }
 #cart .cart-grid .cart-overview .cart-items .cart-item .product-line-actions {
@@ -304,6 +305,56 @@ body.is-not-index #header {
 #checkout .checkout-step#checkout-personal-information-step ul[role="tablist"] li a.active, #checkout .checkout-step#checkout-personal-information-step ul[role="tablist"] li a:hover {
   background: #898989;
 }
+#checkout .checkout-step#checkout-addresses-step {
+  /* Adresses */
+}
+#checkout .checkout-step#checkout-addresses-step .address-item.selected {
+  border: 2px solid #898989;
+}
+#checkout .checkout-step#checkout-addresses-step .address-item .address-footer a {
+  background: #aa1135;
+}
+#checkout .checkout-step#checkout-addresses-step .address-item .address-footer a:hover {
+  background: #d81643;
+}
+#checkout .checkout-step#checkout-addresses-step .address-item .address-footer a:focus, #checkout .checkout-step#checkout-addresses-step .address-item .address-footer a:active {
+  background: #7c0c27;
+  color: #fff;
+}
+#checkout .checkout-step#checkout-addresses-step .add-address a {
+  display: inline-block;
+  line-height: 1.4em;
+  padding: 4px 8px;
+  color: #fff;
+  background: #898989;
+  border: 1px solid transparent;
+}
+#checkout .checkout-step#checkout-addresses-step .add-address a:hover {
+  background: #f2f2f2;
+  color: #131313;
+  border-color: #131313;
+}
+#checkout .checkout-step#checkout-addresses-step .add-address a i {
+  position: relative;
+  top: -2px;
+}
+#checkout .checkout-step#checkout-delivery-step {
+  /* Livraison */
+}
+#checkout .checkout-step#checkout-delivery-step .delivery-options-list .delivery-options .delivery-option {
+  background: none;
+}
+#checkout .checkout-step#checkout-delivery-step .delivery-options-list .delivery-options #delivery_abroad_warning {
+  background: #f2f2f2;
+  padding: 15px;
+  margin: 15px 0;
+}
+#checkout .checkout-step#checkout-delivery-step .delivery-options-list .delivery-options #delivery_abroad_warning strong {
+  color: #aa1135;
+}
+#checkout .checkout-step#checkout-payment-step {
+  /* Paiement */
+}
 #checkout #js-checkout-summary .cart-summary-products a[data-target="#cart-summary-product-list"] {
   display: inline-block;
   padding: 4px 8px;
@@ -317,6 +368,24 @@ body.is-not-index #header {
 #checkout #js-checkout-summary .cart-summary-products a[data-target="#cart-summary-product-list"][aria-expanded="true"] {
   background: #fff;
   color: #898989;
+}
+
+#order-confirmation {
+  /* Confirmation de commande */
+}
+#order-confirmation .h1 {
+  font-weight: 700;
+  color: #aa1135;
+  font-size: 3rem;
+}
+#order-confirmation .h3 {
+  color: #aa1135;
+}
+#order-confirmation #content-hook_payment_return #check_address {
+  display: inline-block;
+  padding: 0.75rem 0;
+  border-top: 1px solid #898989;
+  border-bottom: 1px solid #898989;
 }
 
 /* Contact */
@@ -343,6 +412,10 @@ body.is-not-index #header {
 }
 
 /* DIVERS */
+#page .price {
+  color: #aa1135;
+}
+
 body.search-fixed .ui-menu {
   background: #fff;
   border-radius: 0;
