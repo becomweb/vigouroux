@@ -514,7 +514,19 @@ body.is-not-index #header {
   color: #aa1135;
 }
 
-/* details d'une commande */
+/* Blog */
+#module-xipblog-archive .breadcrumb,
+#module-xipblog-single .breadcrumb {
+  display: none;
+}
+
+#blog_archive {
+  /* Liste */
+}
+#blog_archive .blog_post {
+  /*display:flex;*/
+}
+
 /* DIVERS */
 #page .price {
   color: #aa1135;

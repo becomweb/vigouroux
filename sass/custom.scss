@@ -579,9 +579,16 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
         }
     }
 }
-    /* details d'une commande */
-#order-detail{
 
+    /* Blog */
+#module-xipblog-archive .breadcrumb,
+#module-xipblog-single .breadcrumb{ // Bug avec breadcrumb dans ce module donc pas d'affichage
+    display:none;
+}
+#blog_archive{ /* Liste */
+    .blog_post{
+        /*display:flex;*/
+    }
 }
 
 
