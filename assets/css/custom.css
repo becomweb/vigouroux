@@ -250,12 +250,60 @@ body.is-not-index #header {
 #index #wrapper .testimonials-wrapper .testimonials-item .testimonials-description .testimonials-author {
   color: #aa1135;
 }
+#index #wrapper #htmlbanners3 {
+  /* Video */
+}
+#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description {
+  top: 48%;
+}
+#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .headline-section {
+  font-family: "Lora", "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+}
+#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description h3 {
+  font-size: 6rem;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description h4 {
+  font-size: 3rem;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .description-section {
+  font-size: 18px;
+  line-height: 24px;
+}
+#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__poster {
+  background-image: url("../img/homepage_video_bg.jpg");
+}
+#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__button-box .video-promo__play em {
+  color: #aa1135;
+}
+#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__button-box .video-promo__play em:hover {
+  border-color: #aa1135;
+  -webkit-box-shadow: inset 0 0 0 2em #aa1135;
+  box-shadow: inset 0 0 0 2em #aa1135;
+  color: #fff;
+}
 
 @media screen and (max-width: 1365px) {
   #index #wrapper #htmlbanners1 .specialist-banner {
     padding-top: 10rem;
     padding-bottom: 10rem;
     background-size: 20% auto,auto 55%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  #index #wrapper #htmlbanners3 {
+    /* Video */
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description {
+    top: 10%;
+    transform: translate(0, 0);
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__button-box {
+    margin-top: 4%;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -266,6 +314,23 @@ body.is-not-index #header {
   }
   #index #wrapper #htmlbanners1 .specialist-banner .headline-section {
     font-size: 5rem;
+  }
+  #index #wrapper #htmlbanners3 {
+    /* Video */
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description {
+    top: 6%;
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description h4 {
+    margin-bottom: 0.5em;
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .description-section {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__button-box {
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -299,6 +364,29 @@ body.is-not-index #header {
     width: auto;
     margin: 0 50px 10px 0;
   }
+  #index #wrapper #htmlbanners3 {
+    /* Video */
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description {
+    height: 100%;
+    top: 0;
+    padding: 5% 0;
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description h3 {
+    font-size: 3rem;
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description h4 {
+    font-size: 1.5rem;
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .description-section {
+    display: none;
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .video-promo__button-box {
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 599px) {
   #index #wrapper #htmlbanners1 .specialist-banner {
@@ -323,6 +411,13 @@ body.is-not-index #header {
     width: auto;
     height: auto;
     max-width: 160px;
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper {
+    /* Video */
+  }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .video-promo__button-box .video-promo__play em {
+    width: 3em;
+    height: 3em;
   }
 }
 /* FOOTER */

@@ -278,86 +278,200 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                 }
             }
         }
+        #htmlbanners3{ /* Video */
+            .video-promo__wrapper{
+                .video-promo__description{ // Texte
+                    top:48%;
+                    .headline-section{
+                        font-family:$lora_font;
+                        font-weight: 400;
+                    }
+                    h3{
+                        font-size:6rem;
+                        line-height:1.5em;
+                        margin-bottom: 0;
+                    }
+                    h4{
+                        font-size:3rem;
+                        line-height: 1em;
+                        margin-bottom:1em;
+                    }
+                    .description-section{
+                        font-size:18px;
+                        line-height:24px;
+                    }
+                }
+                .video-promo__poster{ // Background du bloc
+                    background-image:url('../img/homepage_video_bg.jpg');
+                }
+                .video-promo__button-box{
+                    .video-promo__play em{
+                        color:$shiraz;
+                        &:hover{
+                            border-color: $shiraz;;
+                            -webkit-box-shadow: inset 0 0 0 2em $shiraz;;
+                            box-shadow: inset 0 0 0 2em $shiraz;
+                            color:#fff;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 @media screen and (max-width:1365px){
-    #index #wrapper #htmlbanners1 .specialist-banner{
-        padding-top:10rem;
-        padding-bottom:10rem;
-        background-size: 20% auto,auto 55%;
+    #index #wrapper{
+        #htmlbanners1 .specialist-banner{
+            padding-top:10rem;
+            padding-bottom:10rem;
+            background-size: 20% auto,auto 55%;
+        }
+    }
+}
+@media screen and (max-width:1199px){
+    #index #wrapper{
+        #htmlbanners3{ /* Video */
+            .video-promo__wrapper{
+                .video-promo__description{
+                    top:10%;
+                    transform: translate(0,0);
+                }
+                .video-promo__button-box{
+                    margin-top:4%;
+                }
+            }
+        }
     }
 }
 @media screen and (max-width:1023px){
-    #index #wrapper #htmlbanners1 .specialist-banner{
-        background-size: 20% auto,auto 50%;
-        padding-top:6rem;
-        padding-bottom:6rem;
-        .headline-section{
-            font-size:5rem;
+    #index #wrapper{
+        #htmlbanners1 .specialist-banner{
+            background-size: 20% auto,auto 50%;
+            padding-top:6rem;
+            padding-bottom:6rem;
+            .headline-section{
+                font-size:5rem;
+            }
+        }
+        #htmlbanners3{ /* Video */
+            .video-promo__wrapper{
+                .video-promo__description{
+                    top:6%;
+                    h4{
+                        margin-bottom: 0.5em;
+                    }
+                    .description-section{
+                        font-size:16px;
+                        line-height:22px;
+                        margin-bottom:20px;
+                    }
+                }
+                .video-promo__button-box{
+                    margin-top:20px;
+                }
+            }
         }
     }
 }
 @media screen and (max-width:768px){
-    #index #wrapper #htmlbanners1 .specialist-banner{
-        background-size: 30% auto;
-        background-image:url(../img/verre_vin_rouge.jpg);
-        background-position:right bottom;
-        padding-bottom:8rem;
-        .banner-description{
-            > .container{
-                padding:0;
+    #index #wrapper{
+        #htmlbanners1 .specialist-banner{
+            background-size: 30% auto;
+            background-image:url(../img/verre_vin_rouge.jpg);
+            background-position:right bottom;
+            padding-bottom:8rem;
+            .banner-description{
+                > .container{
+                    padding:0;
+                }
+                .headline-section{
+                    font-size:4rem;
+                    margin:0 0 2rem 0;
+                    text-align: left;
+                }
+                #specialist_banner_text{
+                    margin:0 0 2rem 0;
+                    font-size:13px;
+                    line-height:18px;
+                    text-align: left;
+                    padding-right:15%;
+                }
+                #specialist_banner_logos{
+                    text-align: left;
+                    margin-bottom:3rem;
+                    img{
+                        height:100px;
+                        width:auto;
+                        margin:0 50px 10px 0;
+                    }
+                }
             }
-            .headline-section{
-                font-size:4rem;
-                margin:0 0 2rem 0;
-                text-align: left;
-            }
-            #specialist_banner_text{
-                margin:0 0 2rem 0;
-                font-size:13px;
-                line-height:18px;
-                text-align: left;
-                padding-right:15%;
-            }
-            #specialist_banner_logos{
-                text-align: left;
-                margin-bottom:3rem;
-                img{
-                    height:100px;
-                    width:auto;
-                    margin:0 50px 10px 0;
+        }
+        #htmlbanners3{ /* Video */
+            .video-promo__wrapper{
+                .video-promo__description{
+                    height: 100%;
+                    top: 0;
+                    padding: 5% 0;
+                    h3{
+                        font-size:3rem;
+                    }
+                    h4{
+                        font-size:1.5rem;
+                    }
+                    .description-section{
+                        display:none;
+                    }
+                    .video-promo__button-box{
+                        position: absolute;
+                        top: 45%;
+                        text-align: center;
+                        width: 100%;
+                    }
                 }
             }
         }
     }
 }
 @media screen and (max-width:599px){
-    #index #wrapper #htmlbanners1 .specialist-banner{
-        padding-top:4rem;
-        padding-bottom:4rem;
-        .banner-description{
-            #specialist_banner_logos img{
-                height:80px;
-                width:auto;
-                margin:0 25px 10px 0;
+    #index #wrapper{
+        #htmlbanners1 .specialist-banner{
+            padding-top:4rem;
+            padding-bottom:4rem;
+            .banner-description{
+                #specialist_banner_logos img{
+                    height:80px;
+                    width:auto;
+                    margin:0 25px 10px 0;
+                }
             }
         }
     }
 }
 @media screen and (max-width:399px){
-    #index #wrapper #htmlbanners1 .specialist-banner{
-        .banner-description{
-            .headline-section{
-                font-size:3rem;
+    #index #wrapper{
+        #htmlbanners1 .specialist-banner{
+            .banner-description{
+                .headline-section{
+                    font-size:3rem;
+                }
+                #specialist_banner_text{
+                    padding-right: 0;
+                }
+                #specialist_banner_logos img{
+                    display:block;
+                    width:auto;
+                    height:auto;
+                    max-width:160px;
+                }
             }
-            #specialist_banner_text{
-                padding-right: 0;
-            }
-            #specialist_banner_logos img{
-                display:block;
-                width:auto;
-                height:auto;
-                max-width:160px;
+        }
+        #htmlbanners3 .video-promo__wrapper{ /* Video */
+            .video-promo__description .video-promo__button-box{
+                .video-promo__play em{
+                    width:3em;
+                    height:3em;
+                }
             }
         }
     }
