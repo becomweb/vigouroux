@@ -223,6 +223,41 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                 }
             }
         }
+        #htmlbanners1{ /* Module "Top Banners" : vins de corbières, cuvées prestige et specialiste vins occitanie */
+            .specialist-banner{
+                background-color:$lightgrey;
+                background-image:url(../img/croix_occitane_logo.gif), url(../img/verre_vin_rouge.jpg);
+                background-position:5% 90%, right bottom;
+                background-repeat:no-repeat;
+                padding-top:12rem;
+                padding-bottom:12rem;
+                .banner-description{
+                    > .container{
+                        padding:0 10%;
+                    }
+                    .headline-section{
+                        font-family:$lora_font;
+                        font-weight:400;
+                        font-size:5rem;
+                        margin:0 0 4rem 0;
+                    }
+                    #specialist_banner_text{
+                        margin:0 0 4rem 0;
+                        font-size:14px;
+                        line-height:2em;
+                        color:#000;
+                    }
+                    #specialist_banner_logos{
+                        text-align: center;
+                        margin-bottom:8rem;
+                        img{
+                            display:inline-block;
+                            margin:0 15px;
+                        }
+                    }
+                }
+            }
+        }
         .testimonials-wrapper{ /* Temoignages */
             background-image:none;
             background-color:#000;
@@ -241,6 +276,88 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                         color:$shiraz;
                     }
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width:1365px){
+    #index #wrapper #htmlbanners1 .specialist-banner{
+        padding-top:10rem;
+        padding-bottom:10rem;
+        background-size: 20% auto,auto 55%;
+    }
+}
+@media screen and (max-width:1023px){
+    #index #wrapper #htmlbanners1 .specialist-banner{
+        background-size: 20% auto,auto 50%;
+        padding-top:6rem;
+        padding-bottom:6rem;
+        .headline-section{
+            font-size:5rem;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    #index #wrapper #htmlbanners1 .specialist-banner{
+        background-size: 30% auto;
+        background-image:url(../img/verre_vin_rouge.jpg);
+        background-position:right bottom;
+        padding-bottom:8rem;
+        .banner-description{
+            > .container{
+                padding:0;
+            }
+            .headline-section{
+                font-size:4rem;
+                margin:0 0 2rem 0;
+                text-align: left;
+            }
+            #specialist_banner_text{
+                margin:0 0 2rem 0;
+                font-size:13px;
+                line-height:18px;
+                text-align: left;
+                padding-right:15%;
+            }
+            #specialist_banner_logos{
+                text-align: left;
+                margin-bottom:3rem;
+                img{
+                    height:100px;
+                    width:auto;
+                    margin:0 50px 10px 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:599px){
+    #index #wrapper #htmlbanners1 .specialist-banner{
+        padding-top:4rem;
+        padding-bottom:4rem;
+        .banner-description{
+            #specialist_banner_logos img{
+                height:80px;
+                width:auto;
+                margin:0 25px 10px 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:399px){
+    #index #wrapper #htmlbanners1 .specialist-banner{
+        .banner-description{
+            .headline-section{
+                font-size:3rem;
+            }
+            #specialist_banner_text{
+                padding-right: 0;
+            }
+            #specialist_banner_logos img{
+                display:block;
+                width:auto;
+                height:auto;
+                max-width:160px;
             }
         }
     }
