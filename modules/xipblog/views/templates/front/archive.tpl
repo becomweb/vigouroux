@@ -10,7 +10,7 @@
 {block name="page_content_container"}
 	<section id="content" class="page-content">
 	{if isset($xipblogpost) && !empty($xipblogpost)}
-    <div id="blog_archive" class="row blog_style_{$xipblogsettings.blog_style} {*column_{$xipblogsettings.blog_no_of_col}*}">
+    <div class="blog_posts_list row blog_style_{$xipblogsettings.blog_style} {*column_{$xipblogsettings.blog_no_of_col}*}">
         {foreach from=$xipblogpost item=xpblgpst}
             <article id="blog_post_{$xpblgpst.id_xipposts}" class="col-12 col-sm-6 col-lg-4 blog_post blog_post_{$xpblgpst.post_format} clearfix">
                 <div class="blog_post_content">
