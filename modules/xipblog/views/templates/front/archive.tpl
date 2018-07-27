@@ -3,7 +3,7 @@
 
 {block name='page_header_container'}
     {block name='page_header'}
-        <h1 class="h1">{block name='page_title'}{l s='Our blog' d='Shop.Theme.Global'}{/block}</h1>
+        <h1 class="h1">{block name='page_title'}{l s='Our blog' d='Shop.Theme.Blog'}{/block}</h1>
     {/block}
 {/block}
 
@@ -68,7 +68,7 @@
 
                             <div class="post_meta_date">
                                 {* <i class="icon-calendar"></i> *}
-                                {$xpblgpst.post_date|date_format:"%b %dTH, %Y"}
+                                {$xpblgpst.post_date|date_format:"%b %d, %Y"}
                             </div>
 
                             <div class="meta_category">
