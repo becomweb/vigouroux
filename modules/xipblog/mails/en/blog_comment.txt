@@ -1,0 +1,9 @@
+[{shop_url}] 
+
+Hello, 
+
+You have received a new comment on one of the blog posts
+
+Sent by : {name} ({email})
+
+Comment : {comment}
