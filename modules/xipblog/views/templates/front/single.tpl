@@ -44,17 +44,10 @@
 							<h3 class="post_title">{$xipblogpost.post_title}</h3>
 							<div class="post_meta clearfix">
 								<div class="meta_author">
-									{* <i class="icon-user"></i> *}
-									<span>{l s='By' mod='xipblog'} {$xipblogpost.post_author_arr.firstname} {$xipblogpost.post_author_arr.lastname}</span>
+									<i class="material-icons">person</i> {$xipblogpost.post_author_arr.firstname} {$xipblogpost.post_author_arr.lastname}
 								</div>
-								<div class="meta_category">
-									{* <i class="icon-tag"></i> *}
-									<span>{l s='In' mod='xipblog'}</span>
-									<span>{$xipblogpost.category_default_arr.name}</span>
-								</div>
-								<div class="meta_comment">
-									{* <i class="icon-eye"></i> *}
-									<span>{l s='Views' mod='xipblog'} ({$xipblogpost.comment_count})</span>
+								<div class="post_meta_date">
+									<i class="material-icons">event</i> {$xipblogpost.post_date|date_format:"%b %d, %Y"}
 								</div>
 							</div>
 							<div class="post_content">
