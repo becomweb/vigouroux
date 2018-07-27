@@ -250,8 +250,21 @@ body.is-not-index #header {
 #index #wrapper .testimonials-wrapper .testimonials-item .testimonials-description .testimonials-author {
   color: #aa1135;
 }
+#index #wrapper .home_blog_post_area {
+  /* Blog */
+  margin-top: 0;
+  padding-top: 15rem;
+  padding-bottom: 12rem;
+}
+#index #wrapper .home_blog_post_area .home_blog_title {
+  font-family: "Lora", "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 5rem;
+  margin-bottom: 8rem;
+}
 #index #wrapper #htmlbanners3 {
   /* Video */
+  margin-top: 0;
 }
 #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description {
   top: 48%;
@@ -718,20 +731,92 @@ body.is-not-index #header {
   color: #aa1135;
 }
 
+/* DIVERS */
 /* Blog */
+/* Blog */
+/* Liste d'articles (page blog et hoempage */
+.blog_posts_list {
+  /* Liste */
+}
+.blog_posts_list .blog_post .blog_post_content .blog_post_content_bottom {
+  padding: 0 10px;
+}
+.blog_posts_list .blog_post .blog_post_content .blog_post_content_bottom .post_title {
+  font-family: "Lora", "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+}
+.blog_posts_list .blog_post .blog_post_content .blog_post_content_bottom .post_title a:hover {
+  color: #aa1135;
+}
+.blog_posts_list .blog_post .blog_post_content .blog_post_content_bottom .read_more:hover {
+  color: #aa1135;
+}
+.blog_posts_list .blog_post .blog_post_content .blog_post_content_bottom .read_more:hover:after {
+  background: #aa1135;
+  border-color: #aa1135;
+}
+.blog_posts_list .blog_post .blog_post_content .blog_post_content_bottom .post_meta {
+  border-top: none;
+}
+
 #module-xipblog-archive .breadcrumb,
 #module-xipblog-single .breadcrumb {
   display: none;
 }
 
-#blog_archive {
-  /* Liste */
+#module-xipblog-archive {
+  /* Page Blog */
 }
-#blog_archive .blog_post {
-  /*display:flex;*/
+#module-xipblog-archive #page .h1 {
+  text-align: center;
+  font-family: Lora;
+  font-weight: 400;
+  font-size: 5rem;
+  margin-bottom: 0.5em;
 }
 
-/* DIVERS */
+#module-xipblog-single {
+  /* Article */
+}
+#module-xipblog-single .blog_post_content_bottom {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+#module-xipblog-single .blog_post_content_bottom .post_title {
+  font-family: "Lora", "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+#module-xipblog-single .blog_post_content_bottom .post_meta {
+  margin-bottom: 20px;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 10px 0;
+}
+#module-xipblog-single .blog_post_content_bottom .post_meta > div {
+  line-height: 1em;
+}
+#module-xipblog-single .comments_area {
+  margin: 0 0 3rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+#module-xipblog-single .comments_area .comments_title {
+  color: #aa1135;
+}
+#module-xipblog-single #respond .comment_reply_title {
+  color: #aa1135;
+}
+
+@media screen and (max-width: 399px) {
+  #module-xipblog-single .comments_area .comment_list .comment_author {
+    /* Article */
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+}
 #page .price {
   color: #aa1135;
 }

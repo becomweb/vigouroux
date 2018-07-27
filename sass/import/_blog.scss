@@ -1,4 +1,37 @@
 /* Blog */
+
+    /* Liste d'articles (page blog et hoempage */
+.blog_posts_list{ /* Liste */
+    .blog_post{
+        .blog_post_content{
+            .blog_post_content_top{
+
+            }
+            .blog_post_content_bottom{
+                padding:0 10px;
+                .post_title{
+                    font-family:$lora_font;
+                    font-weight: 400;
+                    a:hover{
+                        color:$shiraz;
+                    }
+                }
+                .read_more:hover{
+                    color:$shiraz;
+                    &:after{
+                        background:$shiraz;
+                        border-color: $shiraz;
+                    }
+                }
+                .post_meta{
+                    border-top: none;
+
+                }
+            }
+        }
+    }
+}
+
 #module-xipblog-archive .breadcrumb,
 #module-xipblog-single .breadcrumb{ // Bug avec breadcrumb dans ce module donc pas d'affichage
     display:none;
@@ -11,17 +44,6 @@
             font-weight: 400;
             font-size: 5rem;
             margin-bottom: 0.5em;
-        }
-        #blog_archive{ /* Liste */
-            .blog_post{
-                .blog_post_content_bottom{
-                    padding:0 10px;
-                    .post_title{
-                        font-family:$lora_font;
-                        font-weight: 400;
-                    }
-                }
-            }
         }
     }
 }
