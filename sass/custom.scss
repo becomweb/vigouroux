@@ -717,7 +717,7 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
         }
     }
 }
-    /* Contact */
+/* Contact */
 #contact{
     .contact-rich{ /* Infos de contact (colonne) */
         h4{
@@ -809,7 +809,7 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
         }
     }
 }
-    /* Historique de commandes */
+/* Historique de commandes */
 #history{
     table{
         td.order-actions{
@@ -823,8 +823,190 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
     }
 }
 
+/* Editorial (CMS) */
+#cms{
+    #content{
+        h2{
+            color:$shiraz;
+        }
+        > section{
+            margin-bottom:30px;
+            &:last-child{
+                margin-bottom:0;
+            }
+        }
+        ul{
+            list-style-type: disc; padding-left:30px;
+        }
+    }
+    #page .page-footer{
+        display:none;
+    }
+    &.cms-id-4{ /* Notre histoire */
+        .page-header{
+            display:none;
+        }
+        #about_us_intro{
+            h1{
+                text-transform:uppercase;
+            }
+            p{
+                color:#7d7d7d;
+            }
+        }
+        .about_us_row{
+            padding:20px 0;
+            .about_us_date{
+                color:$shiraz;
+                font-weight:700;
+                font-size:24px;
+                line-height: 1em;
+                margin-bottom: 0.5em;
+            }
+            p{
+                line-height: 18px;
+                margin-bottom: 0.25em;
+            }
+            figure{
+                margin:20px 0 0 0;
+                &.about_us_img_banner{
+                    margin:0;
+                }
+                figcaption{
+                    font-weight: 100;
+                    font-style: italic;
+                    margin-top: 20px;
+                    color: $shiraz;
+                }
+            }
+        }
+    }
+    &.cms-id-9{ /* Service client */
+        .customer_service_section{
+            display: flex;
+            .customer_service_section_content{
+                border:1px solid $midgrey;
+                background-color:$lightgrey;
+                text-align:center;
+                padding: 20px 40px;
+                margin:30px;
+                .customer_service_section_icon{
+                    margin-bottom:20px;
+                    i{
+                        font-size:10rem;
+                        color:$shiraz;
+                    }  
+                }
+                > div{
+                    &:last-child{
+                        a:hover{
+                            color:$shiraz;
+                        }
+                        p{
+                            font-size:14px;
+                            &:first-child{
+                                color:$shiraz;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    #cms.cms-id-9{ /* Service client */
+        .customer_service_section .customer_service_section_content{
+            padding: 20px 20px;
+            margin: 15px;
+        }
+    }
+}
+@media (min-width: 992px){
+    #cms.cms-id-4 .about_us_row.about_us_banner_img_row{ /* Notre histoire */
+        padding:20px 0 0 0;
+    }
+}
+@media (max-width: 991px){
+    #cms.cms-id-4 .about_us_row{ /* Notre histoire */
+        padding:20px 15px;
+        &.about_us_banner_img_row{
+            .container{
+                padding-left:0;
+                padding-right:0;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    #cms.cms-id-9{ /* Service client */
+        .customer_service_section .customer_service_section_content{
+            .customer_service_section_icon{
+                margin-bottom:10px;
+                i{
+                    font-size:6rem;
+                }  
+            }
+        }
+    }
+}
+
+/* Nos caves (aka Magasins) */
+#stores{
+    .store-item{
+        .store-name{
+            font-family:$lora_font;
+            margin-bottom:15px;
+            color:$shiraz;
+        }
+        .material-icons{
+            color:$shiraz;
+        }
+        address{
+            margin-bottom:1.5rem;
+        }
+        .strore-phone,
+        .strore-email{
+            margin:0.25rem 0;
+            line-height:1.25em;
+        }
+        .store-infos{
+            color:$midgrey;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    #stores .store-item{
+        .store-picture {
+            img{
+                margin-right: auto;
+                margin-left: auto;
+            }
+            margin-bottom: 20px;
+        }
+        .store-contact{
+            text-align: center;
+            margin-bottom:20px;
+        }
+        .store-infos p{
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width:575px){
+    #stores .store-item{
+        .store-name{
+            font-size:24px;
+        }
+    }
+}
+
 
 /* DIVERS */
+@mixin grey_banner(){
+    background-color:#f8f8f8;
+}
     /* Blog */
     @import "import/blog";
 #page .price{
@@ -877,4 +1059,8 @@ body #page .page-not-found #_desktop_search_bar{ /* Formulaire de recherche 404 
 
 div.btn-to-top{ //Bouton retour top
     background:$shiraz;
+}
+
+.grey_banner{
+    @include grey_banner;
 }

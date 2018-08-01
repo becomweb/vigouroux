@@ -731,6 +731,169 @@ body.is-not-index #header {
   color: #aa1135;
 }
 
+/* Editorial (CMS) */
+#cms #content h2 {
+  color: #aa1135;
+}
+#cms #content > section {
+  margin-bottom: 30px;
+}
+#cms #content > section:last-child {
+  margin-bottom: 0;
+}
+#cms #content ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+#cms #page .page-footer {
+  display: none;
+}
+#cms.cms-id-4 {
+  /* Notre histoire */
+}
+#cms.cms-id-4 .page-header {
+  display: none;
+}
+#cms.cms-id-4 #about_us_intro h1 {
+  text-transform: uppercase;
+}
+#cms.cms-id-4 #about_us_intro p {
+  color: #7d7d7d;
+}
+#cms.cms-id-4 .about_us_row {
+  padding: 20px 0;
+}
+#cms.cms-id-4 .about_us_row .about_us_date {
+  color: #aa1135;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+#cms.cms-id-4 .about_us_row p {
+  line-height: 18px;
+  margin-bottom: 0.25em;
+}
+#cms.cms-id-4 .about_us_row figure {
+  margin: 20px 0 0 0;
+}
+#cms.cms-id-4 .about_us_row figure.about_us_img_banner {
+  margin: 0;
+}
+#cms.cms-id-4 .about_us_row figure figcaption {
+  font-weight: 100;
+  font-style: italic;
+  margin-top: 20px;
+  color: #aa1135;
+}
+#cms.cms-id-9 {
+  /* Service client */
+}
+#cms.cms-id-9 .customer_service_section {
+  display: flex;
+}
+#cms.cms-id-9 .customer_service_section .customer_service_section_content {
+  border: 1px solid #898989;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px 40px;
+  margin: 30px;
+}
+#cms.cms-id-9 .customer_service_section .customer_service_section_content .customer_service_section_icon {
+  margin-bottom: 20px;
+}
+#cms.cms-id-9 .customer_service_section .customer_service_section_content .customer_service_section_icon i {
+  font-size: 10rem;
+  color: #aa1135;
+}
+#cms.cms-id-9 .customer_service_section .customer_service_section_content > div:last-child a:hover {
+  color: #aa1135;
+}
+#cms.cms-id-9 .customer_service_section .customer_service_section_content > div:last-child p {
+  font-size: 14px;
+}
+#cms.cms-id-9 .customer_service_section .customer_service_section_content > div:last-child p:first-child {
+  color: #aa1135;
+}
+
+@media screen and (max-width: 1024px) {
+  #cms.cms-id-9 {
+    /* Service client */
+  }
+  #cms.cms-id-9 .customer_service_section .customer_service_section_content {
+    padding: 20px 20px;
+    margin: 15px;
+  }
+}
+@media (min-width: 992px) {
+  #cms.cms-id-4 .about_us_row.about_us_banner_img_row {
+    /* Notre histoire */
+    padding: 20px 0 0 0;
+  }
+}
+@media (max-width: 991px) {
+  #cms.cms-id-4 .about_us_row {
+    /* Notre histoire */
+    padding: 20px 15px;
+  }
+  #cms.cms-id-4 .about_us_row.about_us_banner_img_row .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #cms.cms-id-9 {
+    /* Service client */
+  }
+  #cms.cms-id-9 .customer_service_section .customer_service_section_content .customer_service_section_icon {
+    margin-bottom: 10px;
+  }
+  #cms.cms-id-9 .customer_service_section .customer_service_section_content .customer_service_section_icon i {
+    font-size: 6rem;
+  }
+}
+/* Nos caves (aka Magasins) */
+#stores .store-item .store-name {
+  font-family: "Lora", "Georgia", "Times New Roman", serif;
+  margin-bottom: 15px;
+  color: #aa1135;
+}
+#stores .store-item .material-icons {
+  color: #aa1135;
+}
+#stores .store-item address {
+  margin-bottom: 1.5rem;
+}
+#stores .store-item .strore-phone,
+#stores .store-item .strore-email {
+  margin: 0.25rem 0;
+  line-height: 1.25em;
+}
+#stores .store-item .store-infos {
+  color: #898989;
+}
+
+@media screen and (max-width: 768px) {
+  #stores .store-item .store-picture {
+    margin-bottom: 20px;
+  }
+  #stores .store-item .store-picture img {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #stores .store-item .store-contact {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #stores .store-item .store-infos p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 575px) {
+  #stores .store-item .store-name {
+    font-size: 24px;
+  }
+}
 /* DIVERS */
 /* Blog */
 /* Blog */
@@ -872,6 +1035,10 @@ body #page .page-not-found #_desktop_search_bar .search-btn {
 }
 div.btn-to-top {
   background: #aa1135;
+}
+
+.grey_banner {
+  background-color: #f8f8f8;
 }
 
 /*# sourceMappingURL=custom.css.map */
