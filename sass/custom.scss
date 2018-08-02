@@ -1002,6 +1002,22 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
     }
 }
 
+/* Sitemap */
+#sitemap{
+    h2{
+        margin-bottom: 10px;
+        color:$shiraz;
+    }
+    a:hover{
+        color:$shiraz;
+    }
+    ul.nested{
+        padding-left:10px;
+        margin-left:10px;
+        border-left:1px solid $lightgrey;
+    }
+}
+
 
 /* DIVERS */
 @mixin grey_banner(){
@@ -1054,6 +1070,35 @@ body #page .page-not-found #_desktop_search_bar{ /* Formulaire de recherche 404 
 @media (max-width: 991px){
     .search-bar form .search-bar__btn{
         background:$shiraz;
+    }
+}
+
+#psagechecker_block #psagechecker-lightbox{ /* Pop-up verification age */
+    background-color:$lightgrey !important;
+    .age_verify_text_content{
+        font-weight:700;
+        input:focus{
+            border-color:$shiraz;
+        }
+        button{
+            background-color:$shiraz !important;
+            &:active,
+            &:hover{
+                background-color:lighten($shiraz,10%) !important;
+            }
+            &:focus{
+                background-color:darken($shiraz,10%) !important;
+            }
+            &#submitAge{
+                margin-left:0;
+            }
+            &:after{
+                display:none;
+            }
+            i{
+                font-family: 'Material Icons' !important;
+            }
+        }
     }
 }
 

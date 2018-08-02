@@ -894,6 +894,20 @@ body.is-not-index #header {
     font-size: 24px;
   }
 }
+/* Sitemap */
+#sitemap h2 {
+  margin-bottom: 10px;
+  color: #aa1135;
+}
+#sitemap a:hover {
+  color: #aa1135;
+}
+#sitemap ul.nested {
+  padding-left: 10px;
+  margin-left: 10px;
+  border-left: 1px solid #f0f0f0;
+}
+
 /* DIVERS */
 /* Blog */
 /* Blog */
@@ -1033,6 +1047,35 @@ body #page .page-not-found #_desktop_search_bar .search-btn {
     background: #aa1135;
   }
 }
+#psagechecker_block #psagechecker-lightbox {
+  /* Pop-up verification age */
+  background-color: #f0f0f0 !important;
+}
+#psagechecker_block #psagechecker-lightbox .age_verify_text_content {
+  font-weight: 700;
+}
+#psagechecker_block #psagechecker-lightbox .age_verify_text_content input:focus {
+  border-color: #aa1135;
+}
+#psagechecker_block #psagechecker-lightbox .age_verify_text_content button {
+  background-color: #aa1135 !important;
+}
+#psagechecker_block #psagechecker-lightbox .age_verify_text_content button:active, #psagechecker_block #psagechecker-lightbox .age_verify_text_content button:hover {
+  background-color: #d81643 !important;
+}
+#psagechecker_block #psagechecker-lightbox .age_verify_text_content button:focus {
+  background-color: #7c0c27 !important;
+}
+#psagechecker_block #psagechecker-lightbox .age_verify_text_content button#submitAge {
+  margin-left: 0;
+}
+#psagechecker_block #psagechecker-lightbox .age_verify_text_content button:after {
+  display: none;
+}
+#psagechecker_block #psagechecker-lightbox .age_verify_text_content button i {
+  font-family: 'Material Icons' !important;
+}
+
 div.btn-to-top {
   background: #aa1135;
 }
