@@ -32,7 +32,7 @@
 		{$blockmanufactureri_description_name|escape:'html':'UTF-8'}
 	</p>
 {if $manufacturers}
-	<ul class="manufacturers-list js-man-carousel{if $text_list} carousel-view{else} grid-view{/if}" {if $text_list}data-carousel="{$text_list}"{/if}>
+	<ul class="clearfix manufacturers-list js-man-carousel{if $text_list} carousel-view{else} grid-view{/if}" {if $text_list}data-carousel="{$text_list}"{/if}>
 	{foreach from=$manufacturers item=manufacturer name=manufacturer_list}
 		{if $smarty.foreach.manufacturer_list.iteration <= $text_list_nb}
 		<li class="manufacturer-items">
