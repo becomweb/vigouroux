@@ -6,6 +6,16 @@ h1, .h1 {
   font-size: 3rem;
 }
 
+/* Liens */
+a:focus {
+  color: #aa1135;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #930f2e;
+  text-decoration: none;
+}
+
 /* Boutons */
 button.btn, a.btn, input.btn {
   background: #aa1135;
@@ -298,6 +308,36 @@ body.is-not-index #header {
   -webkit-box-shadow: inset 0 0 0 2em #aa1135;
   box-shadow: inset 0 0 0 2em #aa1135;
   color: #fff;
+}
+#index #wrapper #manufacturers-home {
+  /* Listes des AOC (marques) */
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+#index #wrapper #manufacturers-home .headline-section {
+  font-family: "Lora", "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+}
+#index #wrapper #manufacturers-home .description-section {
+  font-size: 18px;
+  max-width: unset;
+}
+#index #wrapper #manufacturers-home .manufacturers-list {
+  margin: 0;
+  text-align: center;
+}
+#index #wrapper #manufacturers-home .manufacturers-list li {
+  display: block;
+  width: 20%;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+#index #wrapper #manufacturers-home .manufacturers-list li img {
+  width: 100px;
+  height: auto;
 }
 
 @media screen and (max-width: 1365px) {
@@ -1001,7 +1041,6 @@ body.is-not-index #header {
 #page .page-footer {
   text-align: center;
   padding-top: 30px;
-  border-top: 1px solid #e5e5e5;
 }
 #page .page-footer a {
   background: #898989;
