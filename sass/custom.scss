@@ -235,6 +235,48 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                 }
             }
         }
+        #htmlbanners10{ /* Banniere engagements */
+            background-image: url('/themes/vigouroux/assets/img/banniere_engagements.jpg');
+            margin:10rem 0;
+            .htmlbanners10-inner{
+                padding-left:50px;
+                padding-right:50px;
+                .feature-item-inner{
+                    margin:0 25px;
+                    .banner-description{
+                        .reassurance_picto img{
+                            width:80px;
+                            height:auto;
+                        }
+                        .description p{
+                            font-size:13px;
+                            &.title-one{
+                                font-size:15px; 
+                            }
+                        }
+                        .headline-section{ /* Titre du bloc */
+                            font-family: $lora_font;
+                            font-weight:400;
+                            font-size:48px;
+                            text-align: center;
+                            margin:0 0 0.5em 0;
+                            line-height: 1.25em;
+                        }
+                        .description-section{ /* Phrase sous titre bloc */
+                            max-width:unset;
+                        }
+                    }
+                    .btn{ /* Bouton "Voir tout" */
+                        background: $shiraz;
+                        &:focus,
+                        &:active,
+                        &:hover{
+                            background: lighten($shiraz, 10%);
+                        }
+                    }
+                }
+            }
+        }
         #htmlbanners1{ /* Module "Top Banners" : vins de corbières, cuvées prestige et specialiste vins occitanie */
             .specialist-banner{
                 background-color:$lightgrey;
@@ -399,12 +441,19 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
 }
 @media screen and (max-width:1023px){
     #index #wrapper{
-        #htmlbanners1 .specialist-banner{
+        #htmlbanners1 .specialist-banner{ /* Bannieres Corbieres / Prestige / Specialistes */
             background-size: 20% auto,auto 50%;
             padding-top:6rem;
             padding-bottom:6rem;
             .headline-section{
                 font-size:5rem;
+            }
+        }
+        #htmlbanners10 .htmlbanners10-inner{ /* Engagements */
+            padding-left:0;
+            padding-right:0;
+            .feature-item-inner{ 
+                margin:0 5px;
             }
         }
         #htmlbanners3{ /* Video */
@@ -429,7 +478,33 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
 }
 @media screen and (max-width:768px){
     #index #wrapper{
-        #htmlbanners1 .specialist-banner{
+        #htmlbanners10 .htmlbanners10-inner{ /* Engagements */
+            .feature-item-inner{
+                margin:0 10%;
+                .banner-description{
+                    overflow:hidden;
+                    clear:both;
+                    .headline-section,
+                    .description-section{
+                        text-align:left;
+                    }
+                    .reassurance_picto{
+                        float:left;
+                        width:80px;
+                        margin-right:40px;
+                    }
+                    .description{
+                        float:left;
+                        width: calc(100% - 120px);
+                        text-align: left;
+                        p.title-one{
+                            margin-top:0;
+                        }
+                    }
+                }
+            }
+        }
+        #htmlbanners1 .specialist-banner{  /* Bannieres Corbieres / Prestige / Specialistes */
             background-size: 30% auto;
             background-image:url(../img/verre_vin_rouge.jpg);
             background-position:right bottom;
@@ -489,6 +564,29 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
 }
 @media screen and (max-width:599px){
     #index #wrapper{
+        #htmlbanners10 .htmlbanners10-inner{ /* Engagements */
+            .feature-item-inner{
+                margin:0 5%;
+                .banner-description{
+                    .headline-section{
+                        font-size:36px;
+                    }
+                    .description-section{
+                        margin-bottom:30px;
+                    }
+                    .reassurance_picto{
+                        width:60px;
+                        margin-right:20px;
+                        img{
+                            width:100%;
+                        }
+                    }
+                    .description{
+                        width: calc(100% - 80px);
+                    }
+                }
+            }
+        }
         #htmlbanners1 .specialist-banner{
             padding-top:4rem;
             padding-bottom:4rem;
@@ -504,6 +602,19 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
 }
 @media screen and (max-width:399px){
     #index #wrapper{
+        #htmlbanners10 .htmlbanners10-inner{ /* Engagements */
+            .feature-item-inner{
+                .banner-description{
+                    .reassurance_picto{
+                        width:50px;
+                        margin-right:10px;
+                    }
+                    .description{
+                        width: calc(100% - 60px);
+                    }
+                }
+            }
+        }
         #htmlbanners1 .specialist-banner{
             .banner-description{
                 .headline-section{
