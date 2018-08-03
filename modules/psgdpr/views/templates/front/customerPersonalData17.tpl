@@ -17,21 +17,23 @@
 {extends file='customer/page.tpl'}
 
 {block name='page_title'}
-    {l s='My personal data' d='Shop.Theme.Customeraccount'}}
+    {l s='My personal data' d='Shop.Theme.Customeraccount'}
 {/block}
 
 {block name='page_content'}
 <div class="container">
     <section class="page_content">
         <div class="col-xs-12 psgdprinfo17">
-            <h2>{l s='Access to my data' d='Shop.Theme.Customeraccount'}}</h2>
-            <p>{l s='At any time, you have the right to retrieve the data you have provided to our site. Click on "Get my data" to automatically download a copy of your personal data on a pdf or csv file.' d='Shop.Theme.Customeraccount'}}.</p>
-            <a id="exportDataToCsv" class="btn btn-primary psgdprgetdatabtn17" target="_blank" href="{$psgdpr_csv_controller|escape:'htmlall':'UTF-8'}">{l s='Get my data to CSV' d='Shop.Theme.Customeraccount'}}</a>
-            <a id="exportDataToPdf" class="btn btn-primary psgdprgetdatabtn17" target="_blank" href="{$psgdpr_pdf_controller|escape:'htmlall':'UTF-8'}">{l s='Get my data to PDF' d='Shop.Theme.Customeraccount'}}</a>
+            <h2>{l s='Access to my data' d='Shop.Theme.Customeraccount'}</h2>
+            <p>{l s='At any time, you have the right to retrieve the data you have provided to our site. Click on "Get my data" to automatically download a copy of your personal data on a pdf or csv file.' d='Shop.Theme.Customeraccount'}.</p>
+            <div class="text-center">
+                <a id="exportDataToCsv" class="btn btn-primary psgdprgetdatabtn17" target="_blank" href="{$psgdpr_csv_controller|escape:'htmlall':'UTF-8'}">{l s='Get my data to CSV' d='Shop.Theme.Customeraccount'}</a>
+                <a id="exportDataToPdf" class="btn btn-primary psgdprgetdatabtn17" target="_blank" href="{$psgdpr_pdf_controller|escape:'htmlall':'UTF-8'}">{l s='Get my data to PDF' d='Shop.Theme.Customeraccount'}</a>
+            </div>
         </div>
         <div class="col-xs-12 psgdprinfo17">
-            <h2>{l s='Rectification & Erasure requests' d='Shop.Theme.Customeraccount'}}</h2>
-            <p>{l s='You have the right to modify all the personal information found in the "My Account" page. For any other request you might have regarding the rectification and/or erasure of your personal data, please contact us through our' d='Shop.Theme.Customeraccount'}} <a href="{$psgdpr_contactUrl|escape:'htmlall':'UTF-8'}">{l s='contact page' d='Shop.Theme.Customeraccount'}}</a>. {l s='We will review your request and reply as soon as possible.' d='Shop.Theme.Customeraccount'}}.</p>
+            <h2>{l s='Rectification & Erasure requests' d='Shop.Theme.Customeraccount'}</h2>
+            <p>{l s='You have the right to modify all the personal information found in the "My Account" page. For any other request you might have regarding the rectification and/or erasure of your personal data, please contact us through our' d='Shop.Theme.Customeraccount'} <a href="{$psgdpr_contactUrl|escape:'htmlall':'UTF-8'}">{l s='contact page' d='Shop.Theme.Customeraccount'}</a>. {l s='We will review your request and reply as soon as possible.' d='Shop.Theme.Customeraccount'}.</p>
         </div>
     </section>
 </div>
