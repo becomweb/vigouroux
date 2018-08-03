@@ -882,6 +882,13 @@ body.is-not-index #header {
   color: #aa1135;
 }
 
+/* Mes donnees perso (RGPD dans mon compte) */
+#module-psgdpr-gdpr .psgdprinfo17 .psgdprgetdatabtn17 {
+  float: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 /* Editorial (CMS) */
 #cms #content h2 {
   color: #aa1135;
