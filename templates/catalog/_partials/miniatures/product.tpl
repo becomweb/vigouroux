@@ -71,7 +71,7 @@
           {hook h='displayProductListReviews' product=$product}
         {/block}
         {block name='product_name'}
-          <h1 class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:48:'...'}</a></h1>
+          <h3 class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:48:'...'}</a></h3>
         {/block}
         {block name='product_description'}
           <p class="product_desc">{$product.description|strip_tags:'UTF-8'|truncate:200:'...'}</p>
@@ -94,6 +94,12 @@
           </div>
         {/if}
         {/block}
+        {* Conditionnement (ex : carton de x bouteilles) *}
+        <div class="product_conditioning">
+          {if isset($product.conditioning) && ($product.conditioning  != '')}
+            {$product.conditioning|truncate:36:'...'}
+          {/if}
+        </div>
     </div>
         <div class="highlighted-informations{if !$product.main_variants} no-variants{/if}">
           <div class="inner">
