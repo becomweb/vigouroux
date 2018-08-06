@@ -1264,6 +1264,20 @@ body #page .page-not-found #_desktop_search_bar{ /* Formulaire de recherche 404 
     }
 }
 
+.comments_note .star_content{ /* Etoiles evaluation */
+    .star{
+        &.star_on{
+            color:$shiraz;
+        }
+    }
+    .comments_counter{
+        font-size: 12px;
+        margin-left: 4px;
+        vertical-align: middle;
+        font-family: Roboto;
+    }
+}
+
 div.btn-to-top{ //Bouton retour top
     background:$shiraz;
 }

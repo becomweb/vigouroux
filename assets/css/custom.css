@@ -1233,6 +1233,19 @@ body #page .page-not-found #_desktop_search_bar .search-btn {
   font-family: 'Material Icons' !important;
 }
 
+.comments_note .star_content {
+  /* Etoiles evaluation */
+}
+.comments_note .star_content .star.star_on {
+  color: #aa1135;
+}
+.comments_note .star_content .comments_counter {
+  font-size: 12px;
+  margin-left: 4px;
+  vertical-align: middle;
+  font-family: Roboto;
+}
+
 div.btn-to-top {
   background: #aa1135;
 }
