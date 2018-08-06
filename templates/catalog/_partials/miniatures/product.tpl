@@ -73,6 +73,13 @@
         {block name='product_name'}
           <h3 class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:48:'...'}</a></h3>
         {/block}
+        {* Appellation et couleur du vin *}
+        {if isset($product.wine_origin) && isset($product.wine_color)}
+        <p class="wine_color_and_origin">
+          {if !empty($product.wine_origin)}<span class="wine_origin">{l s='PDO' d='Shop.Theme.Catalog'} {$product.wine_origin}</span> - {/if}
+          {if !empty($product.wine_color)}<span class="wine_color">{$product.wine_color}</span>{/if}
+        </p>
+        {/if}
         {block name='product_description'}
           <p class="product_desc">{$product.description|strip_tags:'UTF-8'|truncate:200:'...'}</p>
         {/block}
@@ -90,6 +97,11 @@
 
               {hook h='displayProductPriceBlock' product=$product type='unit_price'}
 
+              <div class="product_unit_price">
+                {if (isset($product.unit_price) && !empty($product.unit_price != '')) && (isset($product.unity) && ($product.unity != ''))}
+                ({l s='So' d='Shop.Theme.Global'} {$product.unit_price} / {$product.unity})
+                {/if}
+              </div>
             {hook h='displayProductPriceBlock' product=$product type='weight'}
           </div>
         {/if}
