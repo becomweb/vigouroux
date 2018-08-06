@@ -81,7 +81,7 @@
         </p>
         {/if}
         {block name='product_description'}
-          <p class="product_desc">{$product.description|strip_tags:'UTF-8'|truncate:200:'...'}</p>
+          <p class="product_desc">{$product.description|strip_tags:'UTF-8'|truncate:100:'...'}</p>
         {/block}
         {block name='product_price_and_shipping'}
           {if $product.show_price}
@@ -113,21 +113,16 @@
           {/if}
         </div>
     </div>
-        <div class="highlighted-informations{if !$product.main_variants} no-variants{/if}">
+        <div class="{*highlighted-informations*} {if !$product.main_variants} no-variants{/if}">
           <div class="inner">
             {if !$configuration.is_catalog}
                 {include file='catalog/_partials/custom/add-to-cart-product-list.tpl' product=$product name_module='product-list'}
             {/if}
+            {* Bouton ajout au panier *}
             {hook h='displayProductListFunctionalButtons' product=$product}
-            {block name='quick_view'}
-              <a class="quick-view" href="#" data-link-action="quickview">
-                <i class="font-eye"></i><span>{l s='Quick view' d='Shop.Theme.Actions'}</span>
-              </a>
-            {/block}
             {block name='more_info'}
                 <a href="{$product.url}" class="link-view">
-                  <i class="font-more"></i>
-                    <span>{l s='More info' d='Shop.Interioractions'}</span>
+                  <span>{l s='Discover this product' d='Shop.Theme.Catalog'}</span>
                 </a>
             {/block}
           </div>
