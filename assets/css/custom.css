@@ -87,6 +87,30 @@ table.table .thead-default th {
   color: #fff;
 }
 
+/* Liste de produits */
+.products .product-miniature .thumbnail-container .product-desc .product-title {
+  font-weight: 400;
+}
+.products .product-miniature .thumbnail-container .product-desc .wine_color_and_origin {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.products .product-miniature .thumbnail-container .product-desc .product_desc {
+  /* resume */
+  display: block;
+  font-size: 13px;
+  line-height: 20px;
+  color: #898989;
+}
+.products .product-miniature .thumbnail-container .product-desc .product_unit_price {
+  font-size: 12px;
+  color: #898989;
+}
+.products .product-miniature .thumbnail-container .product-desc .product_conditioning {
+  font-size: 13px;
+  font-weight: 700;
+}
+
 /* HEADER */
 #header {
   /* Nav */
