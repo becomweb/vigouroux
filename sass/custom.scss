@@ -989,6 +989,39 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
     }
 }
 
+/* Mes recompenses (module allinone_rewards) */
+#module-allinone_rewards-rewards #main{
+    #content{
+        box-shadow: none;
+        padding:0;
+        #rewards_account{
+            ul.idTabs{ /* Onglets */
+                margin-bottom:0;
+                li{
+                    padding-right:0;
+                    a{
+                        border:1px solid #898989;
+                        font-size:12px;
+                        &.selected{
+                            color:$shiraz;
+                        }
+                        &:hover{
+                            border-bottom-color:$shiraz;
+                        }
+                    }
+                }
+            }
+            .sheets{ /* Contenus */
+                table{
+                    th, td{
+                        font-size:12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* Editorial (CMS) */
 #cms{
     #content{

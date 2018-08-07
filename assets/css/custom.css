@@ -913,6 +913,35 @@ body.is-not-index #header {
   margin-bottom: 1rem;
 }
 
+/* Mes recompenses (module allinone_rewards) */
+#module-allinone_rewards-rewards #main #content {
+  box-shadow: none;
+  padding: 0;
+}
+#module-allinone_rewards-rewards #main #content #rewards_account ul.idTabs {
+  /* Onglets */
+  margin-bottom: 0;
+}
+#module-allinone_rewards-rewards #main #content #rewards_account ul.idTabs li {
+  padding-right: 0;
+}
+#module-allinone_rewards-rewards #main #content #rewards_account ul.idTabs li a {
+  border: 1px solid #898989;
+  font-size: 12px;
+}
+#module-allinone_rewards-rewards #main #content #rewards_account ul.idTabs li a.selected {
+  color: #aa1135;
+}
+#module-allinone_rewards-rewards #main #content #rewards_account ul.idTabs li a:hover {
+  border-bottom-color: #aa1135;
+}
+#module-allinone_rewards-rewards #main #content #rewards_account .sheets {
+  /* Contenus */
+}
+#module-allinone_rewards-rewards #main #content #rewards_account .sheets table th, #module-allinone_rewards-rewards #main #content #rewards_account .sheets table td {
+  font-size: 12px;
+}
+
 /* Editorial (CMS) */
 #cms #content h2 {
   color: #aa1135;
