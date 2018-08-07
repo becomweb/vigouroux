@@ -1002,11 +1002,8 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                     a{
                         border:1px solid #898989;
                         font-size:12px;
-                        &.selected{
+                        &.selected, &:hover{
                             color:$shiraz;
-                        }
-                        &:hover{
-                            border-bottom-color:$shiraz;
                         }
                     }
                 }
@@ -1019,6 +1016,13 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                 }
             }
         }
+    }
+}
+@media screen and (min-width:576px) and (max-width:800px){
+    #module-allinone_rewards-rewards #main #content #rewards_account ul.idTabs li a{
+        height:4em;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
