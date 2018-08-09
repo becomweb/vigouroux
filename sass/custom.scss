@@ -1304,6 +1304,66 @@ body #page .page-not-found #_desktop_search_bar{ /* Formulaire de recherche 404 
     }
 }
 
+#cookiebanner{ /* Bandeau cookies */
+    visibility: visible !important;
+    .cb-wrapper{ 
+        .text-content{
+            display: flex;
+            margin: 0;
+            align-items: center;
+            i{
+                margin-right:5px;
+            }
+        }
+        .cb-links-wrapper{ /* boutons */
+            .more_link{
+                margin: 0;
+                display: flex;
+                align-items: center;
+                padding: 0 4px;
+            }
+            .cb-btn-wrapper{
+                a{
+                    padding:8px;
+                    &:after{
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+}
+#module-cookiebanner-settings{ /* Page Mes Preferences */
+    section#content{
+        font-size:0.95em;
+        .module-learn-more span{
+            font-size:0.9em;
+        }
+    }
+}
+@media screen and (max-width:1365px){
+    #cookiebanner .cb-wrapper {
+        flex-direction: column;
+        .cb-links-wrapper{
+            display:flex;
+            justify-content: space-between;
+        }
+    }
+}
+@media screen and (max-width:767px){
+    #cookiebanner .cb-wrapper{
+        font-size:13px;
+    }
+}
+@media screen and (max-width:480px){
+    #cookiebanner .cb-wrapper {
+        flex-direction: column;
+        .cb-links-wrapper{
+           flex-direction: row;
+        }
+    }
+}
+
 .comments_note .star_content{ /* Etoiles evaluation */
     .star{
         &.star_on{
