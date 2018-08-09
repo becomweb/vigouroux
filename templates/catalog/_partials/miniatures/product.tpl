@@ -113,7 +113,7 @@
           {/if}
         </div>
     </div>
-        <div class="{*highlighted-informations*} {if !$product.main_variants} no-variants{/if}">
+        <div class="actions_buttons_container {*highlighted-informations*} {if !$product.main_variants} no-variants{/if}">
           <div class="inner">
             {if !$configuration.is_catalog}
                 {include file='catalog/_partials/custom/add-to-cart-product-list.tpl' product=$product name_module='product-list'}
@@ -121,7 +121,7 @@
             {* Bouton ajout au panier *}
             {hook h='displayProductListFunctionalButtons' product=$product}
             {block name='more_info'}
-                <a href="{$product.url}" class="link-view">
+                <a href="{$product.url}" class="link-view btn">
                   <span>{l s='Discover this product' d='Shop.Theme.Catalog'}</span>
                 </a>
             {/block}
