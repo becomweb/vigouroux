@@ -3,6 +3,10 @@
         .product-desc{ // Bloc contenant le titre, le resume, les notes, ...
             .product-title{
                 font-weight:400;
+                font-size:18px;
+                line-height: 25px;
+                height:50px;
+                overflow-y:hidden;
             }
             .wine_color_and_origin{
                 text-transform:uppercase;
@@ -21,6 +25,46 @@
             .product_conditioning{
                 font-size:13px;
                 font-weight:700;
+            }
+        }
+        .actions_buttons_container{ /* Boutons (ajout panier, acces fiche) */
+            height:30px;
+            width:100%;
+            text-align:center;
+            margin-top:1rem;
+            form#add-to-cart-or-refresh{
+                display:inline-block;
+                vertical-align: middle;
+                .add-cart{
+                    display:inline-block;
+                    height:100%;
+                    width:30px;
+                    margin:0 5px;
+                    text-align: center;
+                    padding:5px;
+                    font-size:20px;
+                    line-height: 20px;
+                    color:$shiraz;
+                    border:none;
+                    transition:0.3s all;
+                    &:hover{
+                        transform:scale(1.2);
+                    }
+                }
+            }
+            .link-view{
+                display:inline-block;
+                height:100%;
+                font-size:12px;
+                line-height: 20px;
+                width:auto;
+                margin:0 5px;
+                padding:5px;
+                text-align:center;
+                text-transform: uppercase;
+                &:after{
+                    display:none;
+                }
             }
         }
     }

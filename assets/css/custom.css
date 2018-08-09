@@ -90,6 +90,10 @@ table.table .thead-default th {
 /* Liste de produits */
 .products .product-miniature .thumbnail-container .product-desc .product-title {
   font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  height: 50px;
+  overflow-y: hidden;
 }
 .products .product-miniature .thumbnail-container .product-desc .wine_color_and_origin {
   text-transform: uppercase;
@@ -109,6 +113,47 @@ table.table .thead-default th {
 .products .product-miniature .thumbnail-container .product-desc .product_conditioning {
   font-size: 13px;
   font-weight: 700;
+}
+.products .product-miniature .thumbnail-container .actions_buttons_container {
+  /* Boutons (ajout panier, acces fiche) */
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+.products .product-miniature .thumbnail-container .actions_buttons_container form#add-to-cart-or-refresh {
+  display: inline-block;
+  vertical-align: middle;
+}
+.products .product-miniature .thumbnail-container .actions_buttons_container form#add-to-cart-or-refresh .add-cart {
+  display: inline-block;
+  height: 100%;
+  width: 30px;
+  margin: 0 5px;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #aa1135;
+  border: none;
+  transition: 0.3s all;
+}
+.products .product-miniature .thumbnail-container .actions_buttons_container form#add-to-cart-or-refresh .add-cart:hover {
+  transform: scale(1.2);
+}
+.products .product-miniature .thumbnail-container .actions_buttons_container .link-view {
+  display: inline-block;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  width: auto;
+  margin: 0 5px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.products .product-miniature .thumbnail-container .actions_buttons_container .link-view:after {
+  display: none;
 }
 
 /* HEADER */
@@ -734,6 +779,12 @@ body.is-not-index #header {
   }
 }
 /* PAGES */
+/* Categorie et autres pages "listes" (nouveautes, promos,...) */
+.category-banners .category-banner .banner-description .title-two {
+  font-size: 1.5em;
+  max-width: 75%;
+}
+
 /* Tunnel */
 #cart .cart-grid .cart-overview {
   /* Page recapitulative */
@@ -1181,6 +1232,37 @@ body.is-not-index #header {
   border-left: 1px solid #f0f0f0;
 }
 
+/* Sidebar (gauche) */
+#left-column .h6 {
+  /* Titres des blocs de la colonne de gauche */
+  background: #aa1135;
+  text-transform: uppercase !important;
+}
+#left-column .h6:before {
+  display: none;
+}
+#left-column .products-list .product-miniature .product-desc .comments_note,
+#left-column .products-list .product-miniature .product-desc .wine_color_and_origin,
+#left-column .products-list .product-miniature .product-desc .product_unit_price,
+#left-column .products-list .product-miniature .product-desc .product_conditioning {
+  display: none;
+}
+#left-column .products-list .product-miniature .link-view {
+  display: none;
+}
+#left-column .sidebar-btn {
+  display: inline-block;
+  width: auto;
+}
+#left-column .sidebar-btn:after {
+  font-family: "fontello";
+  content: ':';
+  font-size: 7px;
+  vertical-align: 16%;
+  display: inline-block;
+  padding-left: 1.4em;
+}
+
 /* DIVERS */
 /* Blog */
 /* Blog */
@@ -1427,6 +1509,18 @@ div.btn-to-top {
 
 .grey_banner {
   background-color: #f8f8f8;
+}
+
+.products-selection .products-sort-order .drow-down-wrapper.show .select-title {
+  border-color: #aa1135;
+}
+.products-selection .products-sort-order .drow-down-wrapper.show .select-title i {
+  background: #aa1135;
+}
+.products-selection .pagination ul li.current a,
+.products-selection .pagination ul li a:hover {
+  background: #aa1135;
+  border-color: #930f2e;
 }
 
 /*# sourceMappingURL=custom.css.map */

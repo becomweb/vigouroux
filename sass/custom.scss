@@ -725,6 +725,18 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
 
 /* PAGES */
 
+    /* Categorie et autres pages "listes" (nouveautes, promos,...) */
+.category-banners{
+    .category-banner{
+        .banner-description{
+            .title-two{
+                font-size:1.5em;
+                max-width:75%;
+            }
+        }
+    }
+}
+
     /* Tunnel */
 #cart .cart-grid .cart-overview{ /* Page recapitulative */
     .cart-items{
@@ -1224,8 +1236,46 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
     }
 }
 
+/* Sidebar (gauche) */
+#left-column{
+    .h6{ /* Titres des blocs de la colonne de gauche */
+        background:$shiraz;
+        text-transform:uppercase !important;
+        &:before{
+            display:none;
+        }
+    }
+    .products-list{
+        .product-miniature{
+            .product-desc{
+                .comments_note,
+                .wine_color_and_origin,
+                .product_unit_price,
+                .product_conditioning{
+                    display:none;
+                }
+            }
+            .link-view{
+                display:none;
+            }
+        }
+    }
+    .sidebar-btn{
+        display: inline-block;
+        width:auto;
+        &:after{
+            font-family: "fontello";
+            content: ':';
+            font-size: 7px;
+            vertical-align: 16%;
+            display: inline-block;
+            padding-left: 1.4em;
+        }
+    }
+}
 
 /* DIVERS */
+
 @mixin grey_banner(){
     background-color:#f8f8f8;
 }
@@ -1387,4 +1437,22 @@ div.btn-to-top{ //Bouton retour top
 
 .grey_banner{
     @include grey_banner;
+}
+
+.products-selection{ // Barre contenant le selecteur de tri (pertinence, prix,..) et la pagination sur les pages categories et associees */
+    .products-sort-order .drow-down-wrapper.show{
+        .select-title{
+            border-color:$shiraz;
+            i{
+                background:$shiraz;
+            }
+        }
+    }
+    .pagination ul{
+        li.current a,
+        li a:hover{
+            background:$shiraz;
+            border-color:darken($shiraz,5%);
+        }
+    }
 }
