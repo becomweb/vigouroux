@@ -208,6 +208,64 @@ body.is-not-index #header {
     color: #fff;
   }
 }
+/* Menu */
+#header .main-menu #top-menu li > a {
+  padding: 20px 10px;
+}
+#header .main-menu #top-menu li:hover > a {
+  color: #aa1135;
+}
+#header .main-menu #top-menu li#category-312 {
+  /* offres d'automne */
+}
+#header .main-menu #top-menu li#category-312 > a {
+  color: #aa1135;
+}
+#header .main-menu #top-menu li#category-313 {
+  /* primeurs */
+}
+#header .main-menu #top-menu li#category-313 > a {
+  color: #e8ba00;
+}
+
+@media screen and (min-width: 992px) {
+  #header .inner-wrapper {
+    align-items: stretch;
+  }
+  #header .main-menu {
+    align-items: stretch;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #header .main-menu #top-menu {
+    align-items: stretch;
+  }
+  #header .main-menu #top-menu > li {
+    display: flex;
+    align-items: stretch;
+  }
+  #header .main-menu #top-menu > li > a {
+    display: flex;
+    align-items: center;
+  }
+  #header .main-menu #top-menu > li > .sub-menu .top-menu > li {
+    margin-bottom: 0.5em;
+  }
+  #header .main-menu #top-menu > li > .sub-menu .top-menu > li > a {
+    padding: 6px 0 !important;
+    width: 90%;
+    display: inline-block;
+    border-bottom: 1px solid #eee;
+  }
+  #header .main-menu #top-menu[data-depth="0"] > li > a.with-ul:after {
+    margin-left: 4px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #header .main-menu #top-menu li a {
+    padding: 20px 7px;
+  }
+}
 /* HOMEPAGE */
 #index #wrapper .headerslider {
   /* Slider */
