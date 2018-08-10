@@ -166,6 +166,11 @@ table.table .thead-default th {
   /* Bloc panier */
   /* Recherche */
 }
+#header nav.header-nav #_desktop_contact_link {
+  float: none;
+  align-items: center;
+  display: flex;
+}
 #header nav.header-nav #_desktop_contact_link .header__contact #header_contact_phone_label {
   margin-right: 10px;
 }
@@ -182,6 +187,10 @@ table.table .thead-default th {
   width: auto;
   position: relative;
   top: -3px;
+}
+#header nav.header-nav #_desktop_cart {
+  display: flex;
+  align-items: center;
 }
 #header nav.header-nav #_desktop_cart .blockcart .cart-header {
   /* Icone */
@@ -1138,6 +1147,27 @@ body.is-not-index #header {
 }
 #cms.cms-id-9 .customer_service_section .customer_service_section_content > div:last-child p:first-child {
   color: #aa1135;
+}
+#cms.cms-id-11 {
+  /* FAQ */
+}
+#cms.cms-id-11 .faq_item {
+  border-radius: 0;
+}
+#cms.cms-id-11 .faq_item .card-header {
+  border-radius: 0;
+  background-color: #f0f0f0;
+}
+#cms.cms-id-11 .faq_item .card-header .faq_question {
+  margin-bottom: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+#cms.cms-id-11 .faq_item .faq_answer {
+  padding: 15px;
+}
+#cms.cms-id-11 .faq_item .faq_answer p:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1024px) {

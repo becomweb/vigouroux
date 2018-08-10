@@ -105,29 +105,36 @@ table.table{
     nav.header-nav{
         background-color:#000;
         /* Telephone header */
-        #_desktop_contact_link .header__contact{
-            #header_contact_phone_label{
-                margin-right:10px;
-            }
-            #header_contact_phone_value{
-                font-weight:700;
-                a{
-                    &:hover{
-                        color:$shiraz;
-                    }
-                    img{
-                        display: inline-block;
-                        margin-right: 5px;
-                        height: 14px;
-                        width: auto;
-                        position: relative;
-                        top: -3px;
+        #_desktop_contact_link{
+            float: none;
+            align-items: center;
+            display: flex;
+            .header__contact{
+                #header_contact_phone_label{
+                    margin-right:10px;
+                }
+                #header_contact_phone_value{
+                    font-weight:700;
+                    a{
+                        &:hover{
+                            color:$shiraz;
+                        }
+                        img{
+                            display: inline-block;
+                            margin-right: 5px;
+                            height: 14px;
+                            width: auto;
+                            position: relative;
+                            top: -3px;
+                        }
                     }
                 }
             }
         }
         /* Bloc panier */
         #_desktop_cart{
+            display: flex;
+            align-items: center;
             .blockcart {
                 .cart-header{ /* Icone */
                     .inner-wrapper{
@@ -1128,6 +1135,26 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                         }
 
                     }
+                }
+            }
+        }
+    }
+    &.cms-id-11{ /* FAQ */
+        .faq_item {
+            border-radius: 0;
+            .card-header{
+                border-radius:0;
+                background-color:$lightgrey;
+                .faq_question{
+                    margin-bottom:0;
+                    font-size:16px;
+                    cursor:pointer;
+                }
+            }
+            .faq_answer {
+                padding:15px;
+                p:last-child{
+                    margin-bottom:0;
                 }
             }
         }
