@@ -57,8 +57,25 @@
           {foreach from=$product.flags item=flag}
             <li class="{$flag.type}">{$flag.label}</li>
           {/foreach}
+          {if isset($product.is_selected) && $product.is_selected}
+            <li class="is_selected">{l s='Selected for you' d='Shop.Theme.Catalog'}</li>
+          {/if}
+          {if isset($product.is_ready_to_drink) && $product.is_ready_to_drink}
+            <li class="is_ready_to_drink">{l s='Ready to drink' d='Shop.Theme.Catalog'}</li>
+          {/if}
+          {if isset($product.is_pack) && $product.is_pack}
+            <li class="pack">{l s='Pack' d='Shop.Theme.Catalog'}</li>
+          {/if}
         </ul>
         {/block}
+        {* Affichage des medailles et du label bio *}
+        <ul class="product_labels">
+          {if isset($product.has_ab_label) && $product.has_ab_label}
+          <li class="has_ab_label">
+              <img src="{$urls.img_url}logo_label_AB.gif" class="img-responsive" />
+          </li>
+          {/if}
+        </ul>
       </div>
         {block name='product_variants'}
         {if $product.main_variants}
@@ -74,12 +91,12 @@
           <h3 class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:48:'...'}</a></h3>
         {/block}
         {* Appellation et couleur du vin *}
-        {if isset($product.wine_origin) && isset($product.wine_color)}
         <p class="wine_color_and_origin">
+        {if isset($product.wine_origin) && isset($product.wine_color)}
           {if !empty($product.wine_origin)}<span class="wine_origin">{l s='PDO' d='Shop.Theme.Catalog'} {$product.wine_origin}</span> - {/if}
           {if !empty($product.wine_color)}<span class="wine_color">{$product.wine_color}</span>{/if}
-        </p>
         {/if}
+        </p>
         {block name='product_description'}
           <p class="product_desc">{$product.description|strip_tags:'UTF-8'|truncate:100:'...'}</p>
         {/block}
