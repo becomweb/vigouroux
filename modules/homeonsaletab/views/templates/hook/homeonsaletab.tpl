@@ -23,8 +23,8 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<section class="tab-pane fade view-grid" id="homenewtab">
-    <p class="headline-section">{$homenewtab_category_name|escape:'html':'UTF-8'}</p>
+<section class="tab-pane fade view-grid" id="homeonsaletab">
+    <p class="headline-section">{$homeonsaletab_category_name|escape:'html':'UTF-8'}</p>
     <div class="products grid row js-carousel-products-index carousel-products">
         {if $products}
             {foreach from=$products item="product"}
@@ -33,12 +33,12 @@
         {else}
             <div class="col-md-12">
                 <div class="alert alert-warning">
-                    {l s='No products found' d='Shop.Theme.Catalog'}
+                    {l s='No products with dropped prices' d='Shop.Interiorspecials'}
                 </div>
             </div>
         {/if}
     </div>
     <div class="text-center">
-        <a class="more-btn btn big" href="{$allnewProductsLink}">{l s='All products' d='Shop.Interiorfeaturedproducts'}</a>
+        <a class="more-btn btn big" href="{$allonsaleProductsLink}">{l s='All products' d='Shop.Interiorfeaturedproducts'}</a>
     </div>
 </section>

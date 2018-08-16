@@ -23,15 +23,15 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<section class="tab-pane fade view-grid" id="homenewtab">
-    <p class="headline-section">{$homenewtab_category_name|escape:'html':'UTF-8'}</p>
-    <div class="products grid row js-carousel-products-index carousel-products">
+<section class="tab-pane view-grid fade" id="homebestsellerstab">
+    <p class="headline-section">{$homebestsellerstab_category_name|escape:'html':'UTF-8'}</p>
+    <div class="products grid row js-carousel-products-index carousel-products"> 
         {if $products}
             {foreach from=$products item="product"}
                 {include file="catalog/_partials/miniatures/product.tpl" product=$product}
             {/foreach}
         {else}
-            <div class="col-md-12">
+            <div class="col-12">
                 <div class="alert alert-warning">
                     {l s='No products found' d='Shop.Theme.Catalog'}
                 </div>
@@ -39,6 +39,6 @@
         {/if}
     </div>
     <div class="text-center">
-        <a class="more-btn btn big" href="{$allnewProductsLink}">{l s='All products' d='Shop.Interiorfeaturedproducts'}</a>
+        <a class="more-btn btn big" href="{$allbestProductsLink}">{l s='All products' d='Shop.Interiorfeaturedproducts'}</a>
     </div>
 </section>
