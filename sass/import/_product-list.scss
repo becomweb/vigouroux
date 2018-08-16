@@ -9,6 +9,8 @@
                 overflow-y:hidden;
             }
             .wine_color_and_origin{
+                height:18px;
+                line-height:18px;
                 text-transform:uppercase;
                 font-size: 12px;
             }
@@ -67,5 +69,46 @@
                 }
             }
         }
+        .product-flags{
+            position: absolute;
+            top:10px;
+            left:10px;
+            width:100%;
+            text-align: left;
+            li{
+                display: inline-block;
+                position:static;
+                padding:5px;
+                font-size:10px;
+                line-height:1em;
+                margin-right:5px;
+                margin-bottom:5px;
+                text-transform:uppercase;
+                vertical-align:top;
+                &.new, &.pack{
+                    background:$shiraz;
+                }
+                &.is_selected{
+                    background: #e8ba00;
+                }
+                &.is_ready_to_drink{
+                    background: #faa500;
+                }
+            }
+            .discount-percentage{
+                display: none; // pas de place pour afficher le label de remise (to do : voir avec GK)
+            }
+        }
+        .product_labels{ /* medailles et du label bio */
+            position:absolute;
+            top:60px;
+            right:10px;
+            width:60px;
+            height:auto;
+            li{
+                display:inline-block;
+                margin-bottom:10px;
+            }
+        } 
     }
 }

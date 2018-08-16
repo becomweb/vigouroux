@@ -96,6 +96,8 @@ table.table .thead-default th {
   overflow-y: hidden;
 }
 .products .product-miniature .thumbnail-container .product-desc .wine_color_and_origin {
+  height: 18px;
+  line-height: 18px;
   text-transform: uppercase;
   font-size: 12px;
 }
@@ -154,6 +156,48 @@ table.table .thead-default th {
 }
 .products .product-miniature .thumbnail-container .actions_buttons_container .link-view:after {
   display: none;
+}
+.products .product-miniature .thumbnail-container .product-flags {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  text-align: left;
+}
+.products .product-miniature .thumbnail-container .product-flags li {
+  display: inline-block;
+  position: static;
+  padding: 5px;
+  font-size: 10px;
+  line-height: 1em;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+.products .product-miniature .thumbnail-container .product-flags li.new, .products .product-miniature .thumbnail-container .product-flags li.pack {
+  background: #aa1135;
+}
+.products .product-miniature .thumbnail-container .product-flags li.is_selected {
+  background: #e8ba00;
+}
+.products .product-miniature .thumbnail-container .product-flags li.is_ready_to_drink {
+  background: #faa500;
+}
+.products .product-miniature .thumbnail-container .product-flags .discount-percentage {
+  display: none;
+}
+.products .product-miniature .thumbnail-container .product_labels {
+  /* medailles et du label bio */
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 60px;
+  height: auto;
+}
+.products .product-miniature .thumbnail-container .product_labels li {
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 /* HEADER */
@@ -341,6 +385,22 @@ body.is-not-index #header {
 }
 #index #wrapper .headerslider .header-slide .headerslider-figure .caption-description .container .image img {
   max-height: 60vh;
+}
+#index #wrapper .wrapper-tabs {
+  /* Onglets (meilleures ventes, nouveautes,..) */
+}
+#index #wrapper .wrapper-tabs .headline-section {
+  font-family: "Lora", "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+}
+#index #wrapper .wrapper-tabs .nav-tabs .nav-item a.nav-link {
+  padding: 20px;
+}
+#index #wrapper .wrapper-tabs .nav-tabs .nav-item a.nav-link:hover {
+  color: #aa1135;
+}
+#index #wrapper .wrapper-tabs .nav-tabs .nav-item a.nav-link:after {
+  border-color: #aa1135;
 }
 #index #wrapper #htmlbanners10 {
   /* Banniere engagements */

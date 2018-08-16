@@ -248,6 +248,25 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                 }
             }
         }
+        .wrapper-tabs{ /* Onglets (meilleures ventes, nouveautes,..) */
+            .headline-section{
+                font-family:$lora_font;
+                font-weight:400;
+            }
+            .nav-tabs{
+                .nav-item{
+                    a.nav-link{
+                        padding:20px;
+                        &:hover{
+                            color:$shiraz;
+                        }
+                        &:after{
+                            border-color:$shiraz;
+                        }
+                    }
+                }
+            }
+        }
         #htmlbanners10{ /* Banniere engagements */
             background-image: url('/themes/vigouroux/assets/img/banniere_engagements.jpg');
             margin:10rem 0;

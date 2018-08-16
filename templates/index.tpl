@@ -31,9 +31,9 @@
     <div class=" container home-two-section js-wrap-products-tabs productstabs-section clearfix">
         <div class="productstabs-section__inner">
         <div class="wrapper-tabs">
-            <h3 class="headline-section">
+            <h2 class="headline-section">
                 {l s='Our wines' d='Shop.Theme.Global'}
-            </h3>
+            </h2>
             <ul class="js-products-tabs nav nav-tabs">
             {hook h='displayHomeTab'}
             </ul>
