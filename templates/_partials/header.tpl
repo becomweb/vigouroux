@@ -31,14 +31,16 @@
           <div id="_desktop_logo" class="col-md-2">
               {if $page.page_name == 'index'}
                 <h1>
+              {/if}
                   <a href="{$urls.base_url}">
-                    <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+                    <picture>
+                      <source media="(min-width: 992px)" srcset="{$shop.logo}">
+                      <source media="(max-width: 991px)" srcset="{$urls.img_url}logo_vigouroux_mobile.png">
+                      <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+                    </picture>
                   </a>
+              {if $page.page_name == 'index'}
                 </h1>
-              {else}
-                  <a href="{$urls.base_url}">
-                    <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-                  </a>
               {/if}
           </div>
         {hook h='displayTop'}
