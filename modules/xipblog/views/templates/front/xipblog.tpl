@@ -2,9 +2,9 @@
 	<div class="home_blog_post container">
 		<div class="page_title_area">
 			{if isset($xipbdp_title)}
-				<h3 class="h3 home_blog_title">
+				<div class="h3 home_blog_title">
 					{$xipbdp_title}
-				</h3>
+				</div>
 			{/if}
 		</div>
 		<div class="row home_blog_post_inner carousel">
@@ -47,34 +47,21 @@
 							</div>
 						</div>
 						<div class="blog_post_content_bottom">
-							<h3 class="post_title"><a href="{$xipblgpst.link}">{$xipblgpst.post_title}</a></h3>
-							<div class="post_meta clearfix">
-								<p class="meta_author">
-									{* <i class="icon-user"></i> *}
-									{l s='Posted by' mod='xipblog'}
-									<span>{$xipblgpst.post_author_arr.firstname} {$xipblgpst.post_author_arr.lastname}</span>
-								</p>
-								<p class="meta_date">
-									{* <i class="icon-calendar"></i> *}
-									{$xipblgpst.post_date|date_format:"%b %d, %Y"}
-								</p>
-								
-								<p class="meta_category">
-									{* <i class="icon-tag"></i> *}
-									{l s='IN' mod='xipblog'}
-									<a href="{$xipblgpst.category_default_arr.link}">{$xipblgpst.category_default_arr.name}</a>
-								</p>
-							</div>
-							
+							<div class="post_title"><a href="{$xipblgpst.link}">{$xipblgpst.post_title|truncate:30:"..."}</a></div>
 							<div class="post_content">
 								{if isset($xipblgpst.post_excerpt) && !empty($xipblgpst.post_excerpt)}
-									<p>{$xipblgpst.post_excerpt|truncate:100:' ...'|escape:'html':'UTF-8'}</p>
+									<p>{$xipblgpst.post_excerpt|truncate:120:' ...'|escape:'html':'UTF-8'}</p>
 								{else}
-									<p>{$xipblgpst.post_content|truncate:100:' ...'|escape:'html':'UTF-8'}</p>
+									<p>{$xipblgpst.post_content|truncate:120:' ...'|escape:'html':'UTF-8'}</p>
 								{/if}
 							</div>
 							<div class="content_more">
-								<a class="read_more" href="{$xipblgpst.link}">{l s='Continue' mod='xipblog'}</a>
+								<a class="read_more" href="{$xipblgpst.link}">{l s='Read more' mod='xipblog'}</a>
+							</div>
+							<div class="post_meta clearfix">
+								<span class="meta_date">{$xipblgpst.post_date|date_format:"%D"}</span>
+								<span class="comment_count"><i class="material-icons">comment</i> {$xipblgpst.comment_count}</span>
+								<span class="meta_author">{$xipblgpst.post_author_arr.firstname} {$xipblgpst.post_author_arr.lastname}</span>
 							</div>
 						</div>
 					</div>
