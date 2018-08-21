@@ -26,7 +26,7 @@
 {if $facebookurl != ''}
 <div id="fb-root"></div>
 <div id="facebook_block" class="col-lg-4 links wrapper">
-	<h3 class="text-uppercase block-contact-title hidden-md-down">{l s='Follow us on Facebook' d='Shop.Theme.Global'}</h3>
+	<div class="h3 text-uppercase block-contact-title hidden-md-down footer_column_title">{l s='Follow us on Facebook' d='Shop.Theme.Global'}</div>
 	<div class="title clearfix hidden-lg-up" data-target="#facebook-fanbox" data-toggle="collapse">
 	  <span class="h3">{l s='Follow us on Facebook' d='Shop.Theme.Global'}</span>
 	  <span class="pull-xs-right">
