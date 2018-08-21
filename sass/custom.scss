@@ -104,7 +104,7 @@ table.table{
     /* Nav */
     nav.header-nav{
         background-color:#000;
-        /* Telephone header */
+        /* infos contact header */
         #_desktop_contact_link{
             float: none;
             align-items: center;
@@ -113,21 +113,18 @@ table.table{
                 #header_contact_phone_label{
                     margin-right:10px;
                 }
-                #header_contact_phone_value{
+                #header_contact_phone_value,
+                #header_contact_email_value{
                     font-weight:700;
                     a{
                         &:hover{
                             color:$shiraz;
-                        }
-                        img{
-                            display: inline-block;
-                            margin-right: 5px;
-                            height: 14px;
-                            width: auto;
-                            position: relative;
-                            top: -3px;
-                        }
+                        } 
                     }
+                }
+                #header_contact_email_value{
+                    margin-left:5px;
+                    text-transform: none;
                 }
             }
         }
@@ -142,9 +139,6 @@ table.table{
                         &:hover{
                             color:#fff;
                             transform: scale(1.1);
-                        }
-                        .cart-products-count{ /* compeur produits */
-                            background: $shiraz;
                         }
                     }
                 }
@@ -162,6 +156,9 @@ table.table{
                 }
             }
         }
+        .cart-products-count{ /* compeur produits */
+            background: $shiraz;
+        }
         /* Recherche */
         #_desktop_search_bar{
             .search-btn-toggle{
@@ -173,49 +170,21 @@ table.table{
             }
         }
     }
+    #header_contact_phone_value img{
+        display: inline-block;
+        margin-right: 5px;
+        height: 14px;
+        width: auto;
+        position: relative;
+        top: -3px;
+    }
+    #header_contact_email_value i{
+        font-size:16px;
+        vertical-align: text-bottom;
+    }
 }
 body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au theme parent
     background:#000;
-}
-@media (min-width: 992px){
-    #header{
-        nav.header-nav{
-            height:$nav_height_desktop;
-            padding:8px 0;
-            border-bottom:0;
-            .search-block{ // Pop-in recherche
-                form.search-form{
-                    background:rgba($shiraz, 0.92);
-                    padding:10vh 10vw;
-
-                }
-                .search-close{
-                    top:10vh;
-                    right:10vw;
-                    width: 40px;
-                    height: 40px;
-                    background:none;
-                    font:40px/1 "fontello";
-                    color:#fff;
-                }
-                .search-field input.input-text{
-                    color:#fff;
-                    border-bottom:2px solid #e5e5e5;
-                    font-family:$lora_font;
-                    &+.search-btn{
-                        color:#fff;
-                    }
-                    &:focus{
-                        border-color: #fff;
-                        color: #fff;
-                        &+.search-btn{
-                            color:#fff;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 /* Menu */
@@ -246,6 +215,18 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                         }
                     }
                 }
+            }
+            .owl-dots{
+                bottom:40px;
+            }
+            &:after{
+                content:"";
+                position:absolute;
+                bottom:20px;
+                left:calc(50% - 20px);
+                width: 40px;
+                height:20px;
+                background:url('../img/arrow_down.png') transparent no-repeat center;
             }
         }
         .wrapper-tabs{ /* Onglets (meilleures ventes, nouveautes,..) */
@@ -363,6 +344,11 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                     }
                 }
             }
+            #testimonials-dots{
+                .owl-dot.active:before{
+                    background-color:$shiraz;
+                }
+            }
         }
         .home_blog_post_area { /* Blog */
             margin-top:0;
@@ -377,6 +363,7 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
         }
         #htmlbanners3{ /* Video */
             margin-top:0;
+            position:relative;
             .video-promo__wrapper{
                 .video-promo__description{ // Texte
                     top:48%;
@@ -413,6 +400,15 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                         }
                     }
                 }
+            }
+            &:after{
+                content:"";
+                position:absolute;
+                bottom:20px;
+                left:calc(50% - 20px);
+                width: 40px;
+                height:20px;
+                background:url('../img/arrow_down.png') transparent no-repeat center;
             }
         }
         #manufacturers-home{ /* Listes des AOC (marques) */
@@ -473,6 +469,9 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
 }
 @media screen and (max-width:1023px){
     #index #wrapper{
+        .headerslider .header-slide .headerslider-figure .description{
+            padding:0 20px;
+        }
         #htmlbanners1 .specialist-banner{ /* Bannieres Corbieres / Prestige / Specialistes */
             background-size: 20% auto,auto 50%;
             padding-top:6rem;
@@ -508,8 +507,115 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
         }
     }
 }
+@media (min-width: 992px){
+    #header{
+        nav.header-nav{
+            height:$nav_height_desktop;
+            padding:8px 0;
+            border-bottom:0;
+            .search-block{ // Pop-in recherche
+                form.search-form{
+                    background:rgba($shiraz, 0.92);
+                    padding:10vh 10vw;
+
+                }
+                .search-close{
+                    top:10vh;
+                    right:10vw;
+                    width: 40px;
+                    height: 40px;
+                    background:none;
+                    font:40px/1 "fontello";
+                    color:#fff;
+                }
+                .search-field input.input-text{
+                    color:#fff;
+                    border-bottom:2px solid #e5e5e5;
+                    font-family:$lora_font;
+                    &+.search-btn{
+                        color:#fff;
+                    }
+                    &:focus{
+                        border-color: #fff;
+                        color: #fff;
+                        &+.search-btn{
+                            color:#fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:991px){
+    #header{
+        .top-logo{
+            img{
+                max-height:50px;
+            }
+        }
+        #_mobile_contact_link{
+            .header__contact{
+                border:none;
+                margin-bottom: 0;
+                .header__contact__list{
+                    > span{
+                        display: inline-block;
+                        width:100%;
+                        &:first-child{
+                            font-weight:700;
+                        }
+                    }
+                }
+            }
+        }
+        .wrapper-nav{
+            position:relative;
+            .header_user_info{
+                position:absolute;
+                top:0;
+                right:0;
+                .header_user_info__list{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    a{
+                        text-align:right;
+                        &.account{
+                            margin-bottom:5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #index #wrapper{
+        .wrapper-tabs{
+            .headline-section{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0.5em;
+            }
+            ul.nav-tabs{
+                width:100%;
+                text-align: center;
+                display: block;
+            }
+        }
+    } 
+}
 @media screen and (max-width:768px){
     #index #wrapper{
+        .headerslider .header-slide .headerslider-figure{
+            .caption-description{
+                align-items:center;
+                .container .image img{
+                    display:none;
+                }
+            }
+        } 
+        .wrapper-tabs ul.nav-tabs .nav-item a.nav-link{
+            padding:15px 10px;
+        }
         #htmlbanners10 .htmlbanners10-inner{ /* Engagements */
             .feature-item-inner{
                 margin:0 10%;
@@ -568,6 +674,14 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                 }
             }
         }
+        .home_blog_post_area{
+            padding-top:8rem;
+            padding-bottom:6rem;
+            .home_blog_title{
+                margin-bottom:4rem;
+                font-size:36px;
+            }
+        }
         #htmlbanners3{ /* Video */
             .video-promo__wrapper{
                 .video-promo__description{
@@ -591,6 +705,10 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                     }
                 }
             }
+        }
+        #manufacturers-home{
+            padding-top:6rem;
+            padding-bottom:6rem;
         }
     }
 }
@@ -630,10 +748,30 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                 }
             }
         }
+        #manufacturers-home .manufacturers-list li{
+            width:calc(100% / 3);
+        }
     }
 }
 @media screen and (max-width:399px){
+    #header{
+        .wrapper-nav{
+            padding-top:30px;
+            .header_user_info .header_user_info__list{
+                flex-direction: row;
+            }
+        }
+    }
     #index #wrapper{
+        #index #wrapper .headerslider .header-slide .headerslider-figure .description{
+            .slide_title-two{
+                font-size:32px;
+                margin-bottom:15px;
+            }
+            .btn-box{
+                margin-top:15px;
+            }
+        }
         #htmlbanners10 .htmlbanners10-inner{ /* Engagements */
             .feature-item-inner{
                 .banner-description{
@@ -673,7 +811,13 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
         }
     }
 }
-
+@media screen and (max-width:359px){
+    #index{
+        #htmlbanners1 .top-banner .description p:not(.title-two){
+            display:none;
+        }
+    }
+}
 /* FOOTER */
 #footer .footer-container{
     #facebook_block{ /* Blocs FB et liens reseaux sociaux */
@@ -727,7 +871,22 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
         }
     }
 }
+@media (min-width: 992px) {
+    .footer-one{
+        .footer_column_title{
+            display:none;
+        }
+    }
+}
 @media (max-width: 575px) {
+    #index #wrapper .wrapper-tabs ul.nav-tabs{
+        margin-top:15px;
+        .nav-item a.nav-link.active{
+            background:transparent;
+            color:#131313;
+            border-bottom: 2px solid $shiraz;
+        }
+    }
     #footer .footer-container{
         .footer-two{ 
             .copyright {
@@ -745,6 +904,11 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                 }
 
             }
+        }
+    }
+    #stores .store-item{
+        .store-name{
+            font-size:24px;
         }
     }
 }
@@ -1221,6 +1385,7 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
     .store-item{
         .store-name{
             font-family:$lora_font;
+            font-size:22px;
             margin-bottom:15px;
             color:$shiraz;
         }
@@ -1255,13 +1420,6 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
         }
         .store-infos p{
             text-align: center;
-        }
-    }
-}
-@media screen and (max-width:575px){
-    #stores .store-item{
-        .store-name{
-            font-size:24px;
         }
     }
 }
