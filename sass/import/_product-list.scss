@@ -112,3 +112,11 @@
         } 
     }
 }
+@media screen and (max-width:399px){
+    #page .products{
+        .product-miniature{
+            width:100%;
+            display:block;
+        }
+    }
+}
