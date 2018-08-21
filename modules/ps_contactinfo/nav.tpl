@@ -31,6 +31,11 @@
                     <img src="{$urls.img_url}telephone.png" /> {$contact_infos.phone}
                 </a>
             </span>
+            <span id="header_contact_email_value">
+                <a href="{$urls.pages.contact}">
+                    <i class="material-icons">mail</i> {$contact_infos.email}
+                </a>
+            </span>
         </div>
     </div>
 </div>
