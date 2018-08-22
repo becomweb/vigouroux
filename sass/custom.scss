@@ -291,6 +291,17 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
             }
         }
         #htmlbanners1{ /* Module "Top Banners" : vins de corbières, cuvées prestige et specialiste vins occitanie */
+            .top-banner{
+                .title-two{
+                    margin-bottom:15px;
+                    font-family:$lora_font;
+                    font-weight:400;
+                }
+                p{
+                    margin-bottom:0;
+                    line-height:1.5em;
+                }
+            }
             .specialist-banner{
                 background-color:$lightgrey;
                 background-image:url(../img/croix_occitane_logo.gif), url(../img/verre_vin_rouge.jpg);
@@ -371,15 +382,16 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                         font-family:$lora_font;
                         font-weight: 400;
                     }
-                    h3{
+                    .video-title-1{
                         font-size:6rem;
                         line-height:1.5em;
                         margin-bottom: 0;
                     }
-                    h4{
+                    .video-title-2{
                         font-size:3rem;
                         line-height: 1em;
                         margin-bottom:1em;
+                        overflow:visible;
                     }
                     .description-section{
                         font-size:18px;
@@ -491,7 +503,7 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
             .video-promo__wrapper{
                 .video-promo__description{
                     top:6%;
-                    h4{
+                    .video-title-2{
                         margin-bottom: 0.5em;
                     }
                     .description-section{
@@ -688,10 +700,10 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                     height: 100%;
                     top: 0;
                     padding: 5% 0;
-                    h3{
+                    .video-title-1{
                         font-size:3rem;
                     }
-                    h4{
+                    .video-title-2{
                         font-size:1.5rem;
                     }
                     .description-section{

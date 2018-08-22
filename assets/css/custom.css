@@ -440,6 +440,15 @@ body.is-not-index #header {
 #index #wrapper #htmlbanners1 {
   /* Module "Top Banners" : vins de corbi├¿res, cuv├®es prestige et specialiste vins occitanie */
 }
+#index #wrapper #htmlbanners1 .top-banner .title-two {
+  margin-bottom: 15px;
+  font-family: "Lora", "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+}
+#index #wrapper #htmlbanners1 .top-banner p {
+  margin-bottom: 0;
+  line-height: 1.5em;
+}
 #index #wrapper #htmlbanners1 .specialist-banner {
   background-color: #f0f0f0;
   background-image: url(../img/croix_occitane_logo.gif), url(../img/verre_vin_rouge.jpg);
@@ -518,15 +527,16 @@ body.is-not-index #header {
   font-family: "Lora", "Georgia", "Times New Roman", serif;
   font-weight: 400;
 }
-#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description h3 {
+#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .video-title-1 {
   font-size: 6rem;
   line-height: 1.5em;
   margin-bottom: 0;
 }
-#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description h4 {
+#index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .video-title-2 {
   font-size: 3rem;
   line-height: 1em;
   margin-bottom: 1em;
+  overflow: visible;
 }
 #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .description-section {
   font-size: 18px;
@@ -630,7 +640,7 @@ body.is-not-index #header {
   #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description {
     top: 6%;
   }
-  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description h4 {
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .video-title-2 {
     margin-bottom: 0.5em;
   }
   #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .description-section {
@@ -806,10 +816,10 @@ body.is-not-index #header {
     top: 0;
     padding: 5% 0;
   }
-  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description h3 {
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .video-title-1 {
     font-size: 3rem;
   }
-  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description h4 {
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .video-title-2 {
     font-size: 1.5rem;
   }
   #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__description .description-section {
