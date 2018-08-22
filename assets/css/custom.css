@@ -821,6 +821,9 @@ body.is-not-index #header {
     text-align: center;
     width: 100%;
   }
+  #index #wrapper #htmlbanners3 .video-promo__wrapper .video-promo__stop:hover {
+    color: #aa1135;
+  }
   #index #wrapper #manufacturers-home {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1502,7 +1505,7 @@ body.is-not-index #header {
 /* DIVERS */
 /* Blog */
 /* Blog */
-/* Liste d'articles (page blog et hoempage */
+/* Liste d'articles (page blog et homepage */
 .blog_posts_list {
   /* Liste */
 }
@@ -1568,7 +1571,7 @@ body.is-not-index #header {
 }
 #module-xipblog-archive #page .h1 {
   text-align: center;
-  font-family: Lora;
+  font-family: "Lora", "Georgia", "Times New Roman", serif;
   font-weight: 400;
   font-size: 5rem;
   margin-bottom: 0.5em;

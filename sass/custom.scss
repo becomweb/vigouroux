@@ -704,6 +704,9 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                         width: 100%;
                     }
                 }
+                .video-promo__stop:hover{
+                    color:$shiraz;
+                }
             }
         }
         #manufacturers-home{

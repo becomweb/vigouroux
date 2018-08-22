@@ -1,13 +1,10 @@
 /* Blog */
 
-    /* Liste d'articles (page blog et hoempage */
+    /* Liste d'articles (page blog et homepage */
 .blog_posts_list{ /* Liste */
     .blog_post{
         display:block !important;
         .blog_post_content{
-            .blog_post_content_top{
-
-            }
             .blog_post_content_bottom{
                 padding:0 10px;
                 .post_title{
@@ -70,7 +67,7 @@
     #page{
         .h1{
             text-align: center;
-            font-family: Lora;
+            font-family: $lora_font;
             font-weight: 400;
             font-size: 5rem;
             margin-bottom: 0.5em;
