@@ -1,0 +1,41 @@
+.page-product{
+    /* Image et galerie */
+    .images-container{
+        .product-cover{
+            .zoom-in{
+                background:$shiraz;
+            }
+        }
+        .wrapper-thumbnails{
+            .scroll-box-arrows{
+                display:block;
+                i{
+                    background:$shiraz;
+                }
+            }
+        }
+        .product-images{
+            > .thumb-container .thumb {
+                &:hover,
+                &.selected{
+                    border-color:$shiraz;
+                }
+            }
+        }
+    }
+    .product-information{
+        form#add-to-cart-or-refresh{
+            #quantity_wanted:focus{
+                border-color:$shiraz;
+            }
+            .qty{
+                .btn{
+                    background:$shiraz;
+                }
+            }
+        }
+    }
+    #block-reassurance{ // Pas de reasurrance sur les maquettes... mais ca pourrait changer
+        display: none;
+    }
+}
