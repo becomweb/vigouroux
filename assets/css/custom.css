@@ -206,6 +206,32 @@ table.table .thead-default th {
     display: block;
   }
 }
+/* Fiche article */
+.page-product {
+  /* Image et galerie */
+}
+.page-product .images-container .product-cover .zoom-in {
+  background: #aa1135;
+}
+.page-product .images-container .wrapper-thumbnails .scroll-box-arrows {
+  display: block;
+}
+.page-product .images-container .wrapper-thumbnails .scroll-box-arrows i {
+  background: #aa1135;
+}
+.page-product .images-container .product-images > .thumb-container .thumb:hover, .page-product .images-container .product-images > .thumb-container .thumb.selected {
+  border-color: #aa1135;
+}
+.page-product .product-information form#add-to-cart-or-refresh #quantity_wanted:focus {
+  border-color: #aa1135;
+}
+.page-product .product-information form#add-to-cart-or-refresh .qty .btn {
+  background: #aa1135;
+}
+.page-product #block-reassurance {
+  display: none;
+}
+
 /* HEADER */
 #header {
   /* Nav */
