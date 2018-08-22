@@ -1,12 +1,11 @@
 {* Version "light" d'un item produit pour les listes (sans conditionnement / "labels nouveau, pack, pret-a-boire,... ") *}
-{* Et sur demande SEO le nom du produit n'est pas un titre *}
 {* Utilisé par les modules qui se greffent dans la colonne de gauche (nouveautes, meilleurs ventes,...) *}
 {block name='product_miniature_item'}
   <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
     <div class="thumbnail-container">
       <div class="thumbnail-wrapper">
       {block name='product_thumbnail'}
-        <a href="{$product.canonical_url}" class="thumbnail product-thumbnail">
+        <a href="{$product.url}" class="thumbnail product-thumbnail">
           {foreach name="thumbnails" from=$product.images item=image}
             {if $smarty.foreach.thumbnails.iteration == 2}
               <img
@@ -36,7 +35,7 @@
           {hook h='displayProductListReviews' product=$product}
         {/block}
         {block name='product_name'}
-          <div class="h3 product-title" itemprop="name"><a href="{$product.canonical_url}">{$product.name|truncate:48:'...'}</a></div>
+          <div class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:48:'...'}</a></div>
         {/block}
         {block name='product_description'}
           <p class="product_desc">{$product.description|strip_tags:'UTF-8'|truncate:100:'...'}</p>
@@ -73,7 +72,7 @@
             {* Bouton ajout au panier *}
             {hook h='displayProductListFunctionalButtons' product=$product}
             {block name='more_info'}
-                <a href="{$product.canonical_url}" class="link-view btn">
+                <a href="{$product.url}" class="link-view btn">
                   <span>{l s='Discover this product' d='Shop.Theme.Catalog'}</span>
                 </a>
             {/block}
