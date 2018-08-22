@@ -23,13 +23,13 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <section class="featured-products column-block clearfix">
-  <h2 class="h6 text-uppercase">
+  <div class="h6 text-uppercase">
     {l s='Best Sellers' d='Shop.Theme.Catalog'}
-  </h2>
+  </div>
     <div class="toggle-block">
       <div class="products-list">
         {foreach from=$products item="product"}
-          {include file="catalog/_partials/miniatures/product.tpl" product=$product}
+          {include file="catalog/_partials/miniatures/product_light.tpl" product=$product}
         {/foreach}
       </div>
       <a class="all-product-link btn sidebar-btn" href="{$allBestSellers}">
