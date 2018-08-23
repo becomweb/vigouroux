@@ -10,7 +10,7 @@
           </a>
         {else}
           <a href="{$my_account_url}" title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}" rel="nofollow">
-            <span>{l s='Sign in' d='Shop.Theme.Actions'}</span>
+            <span>{l s='My Account' d='Shop.Theme.Global'}</span>
           </a>
         {/if}
       </div>
