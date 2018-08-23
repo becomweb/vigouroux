@@ -32,7 +32,7 @@
 		<input type="hidden" name="qty" id="quantity_wanted" value="1" class="input-group"  min="1"  />
 	</div>
      <a href="javascript:void(0);" name-module="{$name_module}" id="{$name_module}-cart-id-product-{$product.id_product}" id_product_atrr="{$product.id_product}" class="add-cart {if !$product.add_to_cart_url}disabled{/if}" data-button-action="add-to-cart">
-     	<i class="font-cart"></i>
+     	<i class="font-cart"></i> <span class="d-inline d-sm-none">{l s='Add to cart' d='Shop.Theme.Actions'}</span>
 	 </a>
 </form>
 
