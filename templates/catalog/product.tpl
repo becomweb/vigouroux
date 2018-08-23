@@ -22,6 +22,25 @@
             {block name='page_header'}
               <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
             {/block}
+            {block name='product_description_short'}
+              <div id="product-description-short-{$product.id}" class="product-description-short" itemprop="description">
+                <p>{$product.description_short|strip_tags}</p>
+              </div>
+            {/block}
+            <div>
+              {$product_average_grade|@var_dump}
+              {$product_nb_comments|@var_dump}
+              {if isset($wine_color) || isset($wine_orgin)}
+              <span id="winecolor_and_origin">
+                {if isset($wine_origin) && $wine_origin != ''}
+                <span id="wine_origin">AOC {$wine_origin}</span>
+                {/if}
+                {if isset($wine_color) && $wine_color != ''}
+                <span id="wine_color">{$wine_color}</span>
+                {/if}
+              </span>
+              {/if}
+            </div>
           {/block}
           {block name='product_details_info'}
                 {if isset($product_manufacturer->id)}
@@ -83,10 +102,7 @@
                     <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
                   {/block}
                 </form>
-              {/block}
-              {block name='product_description_short'}
-              <div id="product-description-short-{$product.id}" class="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
-            {/block}              
+              {/block}           
             </div>
 
 
