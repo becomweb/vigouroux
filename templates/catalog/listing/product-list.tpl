@@ -61,24 +61,7 @@
       {/if}
       {/block}
       {if $page.page_name == 'category'}
-     {block name='category_subcategories'}
-        <aside class="clearfix">
-          {if $subcategories|count}
-          <p class="subcategory-heading">{l s='Subcategories' d='Shop.Interiorcatalog'}</p>
-            <nav class="subcategories">
-              <ul>
-                {foreach from=$subcategories item="subcategory"}
-                  <li>
-                    {block name='category_miniature'}
-                      {include file='catalog/_partials/miniatures/category.tpl' category=$subcategory}
-                    {/block}
-                  </li>
-                {/foreach}
-              </ul>
-            </nav>
-          {/if}
-        </aside>
-      {/block}
+        {* pas d'affichage des sous-categories *}
       {/if}
     <section id="products" class="grid">
       {if $listing.products|count}
