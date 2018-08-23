@@ -94,6 +94,16 @@
                 &.is_ready_to_drink{
                     background: #faa500;
                 }
+                &.is_fruity{
+                    background:#ff003c;
+                    color:#fff;
+                }
+                &.is_rose{
+                    background:#ffd1dc;
+                }
+                &.is_dry_and_white{
+                    background:#e1ecdc;
+                }
             }
             .discount-percentage{
                 display: none; // pas de place pour afficher le label de remise (to do : voir avec GK)
