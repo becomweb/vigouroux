@@ -184,6 +184,16 @@ table.table .thead-default th {
 .products .product-miniature .thumbnail-container .product-flags li.is_ready_to_drink {
   background: #faa500;
 }
+.products .product-miniature .thumbnail-container .product-flags li.is_fruity {
+  background: #ff003c;
+  color: #fff;
+}
+.products .product-miniature .thumbnail-container .product-flags li.is_rose {
+  background: #ffd1dc;
+}
+.products .product-miniature .thumbnail-container .product-flags li.is_dry_and_white {
+  background: #e1ecdc;
+}
 .products .product-miniature .thumbnail-container .product-flags .discount-percentage {
   display: none;
 }
@@ -292,6 +302,10 @@ table.table .thead-default th {
 #header nav.header-nav #_desktop_search_bar .search-btn-toggle {
   padding: 5px 10px 5px 140px;
   border: 1px solid #5c5c5c;
+  background: #fff;
+}
+#header nav.header-nav #_desktop_search_bar .search-btn-toggle:before {
+  color: #131313;
 }
 #header nav.header-nav #_desktop_search_bar .search-btn-toggle:hover {
   color: #aa1135;
@@ -1764,6 +1778,33 @@ body #page .page-not-found #_desktop_search_bar .search-btn {
   font-family: 'Material Icons' !important;
 }
 
+@media screen and (max-width: 479px) {
+  #psagechecker_block #psagechecker-lightbox {
+    min-height: unset;
+    height: auto !important;
+    width: 90% !important;
+    left: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-width: unset;
+    padding-bottom: 5rem;
+  }
+  #psagechecker_block #psagechecker-lightbox .lightbox-content {
+    height: auto;
+  }
+  #psagechecker_block #psagechecker-lightbox .lightbox-content .age_verify_text_content button {
+    padding: 12px 10px;
+  }
+  #psagechecker_block #psagechecker-lightbox .lightbox-content .age_verify_text_content button i {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 359px) {
+  #psagechecker_block #psagechecker-lightbox .lightbox-content .age_verify_text_content button {
+    width: 90%;
+    margin: 1em auto;
+  }
+}
 #cookiebanner {
   /* Bandeau cookies */
   visibility: visible !important;

@@ -167,6 +167,10 @@ table.table{
             .search-btn-toggle{
                 padding: 5px 10px 5px 140px;
                 border: 1px solid #5c5c5c;
+                background:#fff;
+                &:before{
+                    color:#131313;
+                }
                 &:hover{
                     color:$shiraz;
                 }
@@ -1576,6 +1580,33 @@ body #page .page-not-found #_desktop_search_bar{ /* Formulaire de recherche 404 
                 font-family: 'Material Icons' !important;
             }
         }
+    }
+}
+@media screen and (max-width:479px){
+    #psagechecker_block #psagechecker-lightbox{
+        min-height:unset;
+        height:auto !important;
+        width: 90% !important;
+        left: 0;
+        margin-left: 5%;
+        margin-right: 5%;
+        min-width: unset;
+        padding-bottom: 5rem;
+        .lightbox-content{
+            height:auto;
+            .age_verify_text_content button{
+                padding:12px 10px;
+                i{
+                    font-size:20px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:359px){
+    #psagechecker_block #psagechecker-lightbox .lightbox-content .age_verify_text_content button{
+        width: 90%;
+        margin: 1em auto;
     }
 }
 
