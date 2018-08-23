@@ -57,6 +57,15 @@
           {foreach from=$product.flags item=flag}
             <li class="{$flag.type}">{$flag.label}</li>
           {/foreach}
+          {if isset($product.is_fruity) && $product.is_fruity != false}
+            <li class="is_fruity">{l s='Fruity' d='Shop.Theme.Catalog'}</li>
+          {/if}
+          {if isset($product.is_rose) && $product.is_rose != false}
+            <li class="is_rose">{l s='Rosé' d='Shop.Theme.Catalog'}</li>
+          {/if}
+          {if (isset($product.is_dry) && $product.is_dry != false) && (isset($product.is_white) && $product.is_white != false)}
+            <li class="is_dry_and_white">{l s='Dry white' d='Shop.Theme.Catalog'}</li>
+          {/if}
           {if isset($product.is_selected) && $product.is_selected}
             <li class="is_selected">{l s='Selected for you' d='Shop.Theme.Catalog'}</li>
           {/if}
