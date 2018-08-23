@@ -116,7 +116,7 @@
         {/if}
         </p>
         {block name='product_description'}
-          <p class="product_desc">{$product.description|strip_tags:'UTF-8'|truncate:100:'...'}</p>
+          <p class="product_desc">{$product.description|strip_tags:'UTF-8'|truncate:90:'...'}</p>
         {/block}
         {block name='product_price_and_shipping'}
           {if $product.show_price}
@@ -156,7 +156,7 @@
             {* Bouton ajout au panier *}
             {hook h='displayProductListFunctionalButtons' product=$product}
             {block name='more_info'}
-                <a href="{$product.url}" class="link-view btn">
+                <a href="{$product.url}" class="link-view btn d-none d-sm-inline">
                   <span>{l s='Discover this product' d='Shop.Theme.Catalog'}</span>
                 </a>
             {/block}
