@@ -57,6 +57,9 @@
           {foreach from=$product.flags item=flag}
             <li class="{$flag.type}">{$flag.label}</li>
           {/foreach}
+          {if isset($product.is_selected) && $product.is_selected}
+            <li class="is_selected">{l s='Selected for you' d='Shop.Theme.Catalog'}</li>
+          {/if}
           {if isset($product.is_fruity) && $product.is_fruity != false}
             <li class="is_fruity">{l s='Fruity' d='Shop.Theme.Catalog'}</li>
           {/if}
@@ -65,9 +68,6 @@
           {/if}
           {if (isset($product.is_dry) && $product.is_dry != false) && (isset($product.is_white) && $product.is_white != false)}
             <li class="is_dry_and_white">{l s='Dry white' d='Shop.Theme.Catalog'}</li>
-          {/if}
-          {if isset($product.is_selected) && $product.is_selected}
-            <li class="is_selected">{l s='Selected for you' d='Shop.Theme.Catalog'}</li>
           {/if}
           {if isset($product.is_ready_to_drink) && $product.is_ready_to_drink}
             <li class="is_ready_to_drink">{l s='Ready to drink' d='Shop.Theme.Catalog'}</li>
@@ -83,6 +83,15 @@
           <li class="has_ab_label">
               <img src="{$urls.img_url}logo_label_AB.gif" class="img-responsive" />
           </li>
+          {/if}
+          {if isset($product.medals) && $product.medals}
+          {foreach from=$product.medals item=medal}
+          {if $medal.image_url != ''}
+          <li>
+            <img src="{$medal.image_url}" class="img-responsive" />
+          </li>
+          {/if}
+          {/foreach}
           {/if}
         </ul>
       </div>
