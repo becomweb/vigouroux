@@ -6,6 +6,11 @@ h1, .h1 {
   font-size: 3rem;
 }
 
+@media screen and (max-width: 991px) {
+  .page-heading {
+    margin-bottom: 20px;
+  }
+}
 /* Liens */
 a:focus {
   color: #aa1135;
@@ -1097,6 +1102,51 @@ body.is-not-index #header {
   max-width: 75%;
 }
 
+/* Categories */
+#category .subcategories_list .subcategory-heading {
+  font-size: 20px;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Lora", "Georgia", "Times New Roman", serif;
+}
+#category .subcategories_list .subcategories ul li {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#category .subcategories_list .subcategories ul li .category-miniature {
+  border: none;
+}
+#category .subcategories_list .subcategories ul li .category-miniature .subcategory_title {
+  font-size: 13px;
+  margin-bottom: 0;
+  padding: 10px 0;
+  margin: 0 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+@media screen and (min-width: 991px) {
+  #category .subcategories_list {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  #category .subcategories_list .subcategories ul li {
+    padding: 5px 10px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  #category .subcategories_list .subcategories ul li .category-miniature .subcategory_title {
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 479px) {
+  #category .subcategories {
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+}
 /* Tunnel */
 #cart .cart-grid .cart-overview {
   /* Page recapitulative */
@@ -1577,7 +1627,7 @@ body.is-not-index #header {
   display: none;
 }
 #left-column .products-list .product-miniature .link-view {
-  display: none;
+  display: none !important;
 }
 #left-column .sidebar-btn {
   display: inline-block;
@@ -1594,10 +1644,23 @@ body.is-not-index #header {
 #left-column .product-miniature .link-view {
   display: none;
 }
-#left-column #search_filters {
-  /* Navigation ├á facettes */
+#left-column .block-categories {
+  /* Liste des sous-categories */
+}
+#left-column .block-categories .category-sub-menu li a {
+  font-size: 14px;
+  text-transform: none;
+  padding: 12px 5px;
+}
+#left-column .block-categories .category-sub-menu li a:after {
+  border-color: #f0f0f0;
 }
 
+@media screen and (max-width: 992px) {
+  #left-column .block-categories {
+    display: none;
+  }
+}
 /* DIVERS */
 /* Blog */
 /* Blog */
@@ -1942,6 +2005,10 @@ div.btn-to-top {
 .products-selection .pagination ul li a:hover {
   background: #aa1135;
   border-color: #930f2e;
+}
+
+#page .active_filters .filter-block {
+  background: #aa1135;
 }
 
 /*# sourceMappingURL=custom.css.map */

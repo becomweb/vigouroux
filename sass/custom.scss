@@ -6,6 +6,11 @@
 h1, .h1{
     font-size:3rem;
 }
+@media screen and (max-width:991px){
+    .page-heading{
+        margin-bottom:20px;
+    }
+}
     /* Liens */
 a{   
     &:focus{
@@ -949,6 +954,55 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
     }
 }
 
+    /* Categories */
+#category .subcategories_list{
+    .subcategory-heading{
+        font-size: 20px;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: $lora_font;
+    }
+    .subcategories ul li{
+        padding:10px;
+        margin-bottom:10px;
+        .category-miniature{
+            border:none;
+            .subcategory_title{
+                font-size:13px;
+                margin-bottom:0;
+                padding:10px 0;
+                margin:0 15px;
+                border-bottom:1px solid #f0f0f0;
+            }
+        }
+    }
+}
+@media screen and (min-width:991px){
+    #category .subcategories_list{
+        display:none;
+    }
+}
+@media screen and (max-width:767px){
+    #category .subcategories_list .subcategories ul li{
+        padding: 5px 10px;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width:575px){
+    #category .subcategories_list .subcategories ul li{
+        .category-miniature .subcategory_title{
+            margin:0 10px;
+        }
+    }
+}
+@media screen and (max-width:479px){
+    #category .subcategories{
+        max-height:200px;
+        overflow-y: scroll;
+    }
+}
+
     /* Tunnel */
 #cart .cart-grid .cart-overview{ /* Page recapitulative */
     .cart-items{
@@ -1482,7 +1536,7 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
                 }
             }
             .link-view{
-                display:none;
+                display:none !important;
             }
         }
     }
@@ -1501,8 +1555,20 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
     .product-miniature .link-view{
         display:none;
     }
-    #search_filters{ /* Navigation à facettes */
-
+    .block-categories{ /* Liste des sous-categories */
+        .category-sub-menu li a{
+            font-size:14px;
+            text-transform:none;
+            padding:12px 5px;
+            &:after{
+                border-color:$lightgrey;
+            }
+        }
+    }
+}
+@media screen and (max-width:992px){
+    #left-column .block-categories{
+        display:none;
     }
 }
 
@@ -1716,3 +1782,6 @@ div.btn-to-top{ //Bouton retour top
     }
 }
 
+#page .active_filters .filter-block{
+    background:$shiraz;
+}
