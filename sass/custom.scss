@@ -45,7 +45,7 @@ button.btn, a.btn, input.btn{
 }
 
     /* Formulaires */
-form{
+form, #search_filters{
     .form-control:focus{ /* input, select, etc */
         border-color:$shiraz;
         border-width:1px;
@@ -1498,6 +1498,12 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
             padding-left: 1.4em;
         }
     }
+    .product-miniature .link-view{
+        display:none;
+    }
+    #search_filters{ /* Navigation à facettes */
+
+    }
 }
 
 /* DIVERS */
@@ -1709,3 +1715,4 @@ div.btn-to-top{ //Bouton retour top
         }
     }
 }
+

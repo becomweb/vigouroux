@@ -44,27 +44,27 @@ button.btn:hover, button.btn:focus, button.btn:active, a.btn:hover, a.btn:focus,
 }
 
 /* Formulaires */
-form .form-control:focus {
+form .form-control:focus, #search_filters .form-control:focus {
   /* input, select, etc */
   border-color: #aa1135;
   border-width: 1px;
 }
-form .input-group .input-group-btn > .btn {
+form .input-group .input-group-btn > .btn, #search_filters .input-group .input-group-btn > .btn {
   /* pseudo-bouton upload fichier */
   background: #aa1135;
 }
-form .input-group .input-group-btn > .btn:hover {
+form .input-group .input-group-btn > .btn:hover, #search_filters .input-group .input-group-btn > .btn:hover {
   background: #7c0c27;
 }
-form .custom-checkbox input[type="checkbox"] + span {
+form .custom-checkbox input[type="checkbox"] + span, #search_filters .custom-checkbox input[type="checkbox"] + span {
   /* Checkbox */
   border: 1px solid #898989;
 }
-form .custom-checkbox input[type="checkbox"]:checked + span {
+form .custom-checkbox input[type="checkbox"]:checked + span, #search_filters .custom-checkbox input[type="checkbox"]:checked + span {
   border-color: #131331;
   background: #aa1135;
 }
-form .custom-radio input[type="radio"]:checked + span {
+form .custom-radio input[type="radio"]:checked + span, #search_filters .custom-radio input[type="radio"]:checked + span {
   /* radios */
   border-color: #000;
   -webkit-box-shadow: inset 0 0 0 6px #aa1135;
@@ -99,13 +99,15 @@ table.table .thead-default th {
   height: 18px;
   line-height: 18px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 11px;
 }
 .products .product-miniature .thumbnail-container .product-desc .product_desc {
   /* resume */
   display: block;
   font-size: 13px;
   line-height: 20px;
+  height: 60px;
+  margin-bottom: 10px;
   color: #898989;
 }
 .products .product-miniature .thumbnail-container .product-desc .product_unit_price {
@@ -134,11 +136,13 @@ table.table .thead-default th {
   margin: 0 5px;
   text-align: center;
   padding: 5px;
-  font-size: 20px;
   line-height: 20px;
   color: #aa1135;
   border: none;
   transition: 0.3s all;
+}
+.products .product-miniature .thumbnail-container .actions_buttons_container form#add-to-cart-or-refresh .add-cart i {
+  font-size: 20px;
 }
 .products .product-miniature .thumbnail-container .actions_buttons_container form#add-to-cart-or-refresh .add-cart:hover {
   transform: scale(1.2);
@@ -210,10 +214,46 @@ table.table .thead-default th {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1199px) {
+  .products .product-miniature .thumbnail-container .product-desc .product_desc {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .products .product-miniature .thumbnail-container .product-desc .product_desc {
+    height: 60px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .products .product-miniature .thumbnail-container .product-desc .product_desc {
+    height: 60px;
+  }
+}
+@media (max-width: 575px) {
+  .products .product-miniature .thumbnail-container .price {
+    font-size: 15px;
+  }
+  .products .product-miniature .thumbnail-container .actions_buttons_container form#add-to-cart-or-refresh .add-cart {
+    width: auto;
+    font-size: 15px;
+  }
+}
 @media screen and (max-width: 399px) {
   #page .products .product-miniature {
     width: 100%;
     display: block;
+  }
+  #page .products .product-miniature .thumbnail-container .thumbnail-wrapper {
+    padding: 30px 0 0 0;
+  }
+  #page .products .product-miniature .thumbnail-container .product-desc .product-title {
+    height: auto;
+    margin: 0.5em 0;
+  }
+  #page .products .product-miniature .thumbnail-container .product-desc .wine_color_and_origin,
+  #page .products .product-miniature .thumbnail-container .product-desc .product_desc {
+    height: auto;
   }
 }
 /* Fiche article */
@@ -1550,6 +1590,12 @@ body.is-not-index #header {
   vertical-align: 16%;
   display: inline-block;
   padding-left: 1.4em;
+}
+#left-column .product-miniature .link-view {
+  display: none;
+}
+#left-column #search_filters {
+  /* Navigation ├á facettes */
 }
 
 /* DIVERS */
