@@ -1,4 +1,4 @@
-.page-product{
+.page-product #wrapper{
     /* Image et galerie */
     .images-container{
         .product-cover{
@@ -23,8 +23,27 @@
             }
         }
     }
+    h1{
+        font-size:28px;
+        margin-bottom:0.5em;
+    }
+    .product-description-short{
+        border-top:none;
+        font-family: inherit;
+        font-style: normal;
+        line-height: 1.5em;
+        margin-top: 0;
+        padding: 0;
+        color:#7d7d7d;
+    }
     .product-information{
         form#add-to-cart-or-refresh{
+            .product-variants{
+                select:disabled{
+                    background-image:none;
+                    background-color:#f0f0f0;
+                }
+            }
             #quantity_wanted:focus{
                 border-color:$shiraz;
             }
