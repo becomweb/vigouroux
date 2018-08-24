@@ -27,6 +27,24 @@
         font-size:28px;
         margin-bottom:0.5em;
     }
+    .product_page_section_title{ /* Titre de rubrique (ex  : description, caractéristiques,... */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-weight: 400;
+        font-size: 25px;
+        text-transform: uppercase;
+        color: #131313;
+        margin: 30px 0;
+        &:after{
+            content: '';
+            display: inline-block;
+            vertical-align: 8px;
+            width: 100%;
+            margin-left: 15px;
+            border-top: 1px solid #131313;
+        }
+    }
     .product-description-short{
         border-top:none;
         font-family: inherit;
@@ -35,6 +53,20 @@
         margin-top: 0;
         padding: 0;
         color:#7d7d7d;
+    }
+    #ratings_and_wine_infos{ /* Notes et infos (AOC / Couleur) */
+        margin-left:0;
+        margin-right:0;
+        .comments_note{
+            margin-right:15px;
+        }
+        #winecolor_and_origin{
+            text-transform: uppercase;
+            > span{
+                display:inline-block;
+                vertical-align:middle;
+            }
+        }
     }
     .product-information{
         form#add-to-cart-or-refresh{
@@ -54,7 +86,86 @@
             }
         }
     }
-    #block-reassurance{ // Pas de reasurrance sur les maquettes... mais ca pourrait changer
-        display: none;
+    .product-description{ /* Description longue */
+        margin-top:30px;
+        h3{
+            font-size:16px;
+            font-weight:500;
+            margin:0 0 0.5em 0;
+        }
+        p{
+            font-size:14px;
+            line-height: 20px;
+        }
+    }
+    .product-features{ /* Caracteristiques */
+        #product_features_list{
+            margin:0;
+            li{
+                font-size:15px;
+                line-height:24px;
+                span{
+                    color:#7d7d7d;
+                }
+            }
+        }
+    }
+    .product-rewards{ /* Recompenses */
+        #product_rewards_list{
+            margin:0;
+            padding:10px 20px;
+            border:1px solid #e3e3e3;
+            li{
+                margin:5px 0;
+                height:40px;
+                line-height:40px;
+                > span{
+                    display:inline-block;
+                    text-transform:uppercase;
+                    text-align: center;
+                    font-size:16px;
+                    color:#fff;
+                    &.reward_year{
+                        width:15%;
+                        margin-right:10px;
+                        background:$shiraz;
+                    }
+                    &.reward_level{
+                        width:15%;
+                        margin-right:30px;
+                        background:$lightgrey;
+                        &.gold{
+                            background:#fbdb67;
+                        }
+                        &.silver{
+                            background:#dedbd6;
+                        }
+                        &.bronze{
+                            background:#f49556;
+                        }
+                    }
+                    &.reward_name{
+                        color:#131313;
+                    }
+                }
+            }
+        }
+    }
+    #block-reassurance ul{
+        li .block-reassurance-item{
+            img{
+                float:left;
+                margin-right: 5px;
+            }
+            .reassurance_item_text{
+                float: left;
+                width: calc(100% - 30px);
+                font-size:11px;
+                &::first-line{
+                    font-size:14px;
+                    font-weight:bold;
+                }
+            }
+        }
     }
 }

@@ -27,19 +27,18 @@
                 <p>{$product.description_short|strip_tags}</p>
               </div>
             {/block}
-            <div>
-              {$product_average_grade|@var_dump}
-              {$product_nb_comments|@var_dump}
-              {if isset($wine_color) || isset($wine_orgin)}
-              <span id="winecolor_and_origin">
-                {if isset($wine_origin) && $wine_origin != ''}
-                <span id="wine_origin">AOC {$wine_origin}</span>
+            <div id="ratings_and_wine_infos" class="row">
+                {include file="module:productcomments/productcomments_reviews.tpl" averageTotal=$product_average_grade nbComments=$product_nb_comments}
+                {if isset($wine_color) || isset($wine_orgin)}
+                <div id="winecolor_and_origin">
+                  {if isset($wine_origin) && $wine_origin != ''}
+                  <span id="wine_origin">AOC {$wine_origin}</span>
+                  {/if}
+                  {if isset($wine_color) && $wine_color != ''}
+                  <span id="wine_color">{$wine_color}</span>
+                  {/if}
+                </div>
                 {/if}
-                {if isset($wine_color) && $wine_color != ''}
-                <span id="wine_color">{$wine_color}</span>
-                {/if}
-              </span>
-              {/if}
             </div>
           {/block}
           {block name='product_details_info'}
@@ -109,34 +108,114 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        {if $product.description}
-            {block name='product_description'}
-              <section class="product-description">
-                <div class="product_page_section_title">
-                  {l s='Description' d='Shop.Theme.Catalog'}
-                </div>
-                {$product.description nofilter}
-              </section>
-            {/block}
-        {/if}
-        {if $product.features}
-        <!-- Caracteristiques -->
-        <section class="product-features">
+
+      {if $product.description}
+      <!-- Description logue -->
+      {block name='product_description'}
+        <section class="product-description">
           <div class="product_page_section_title">
-            {l s='Features' d='Shop.Theme.Catalog'}
+            {l s='Description' d='Shop.Theme.Catalog'}
           </div>
-          <ul id="product_features_list">
-            {foreach from=$product.features item=feature}
-            <li>
-                <strong>{$feature.name} : </strong>
-                <span>{$feature.value}</span>
-            </li>
-            {/foreach}
-          </ul>
+          {$product.description nofilter}
         </section>
+      {/block}
+      {/if}
+
+      {if $product.features}
+      <!-- Caracteristiques -->
+      <section class="product-features">
+        <div class="product_page_section_title">
+          {l s='Features' d='Shop.Theme.Catalog'}
+        </div>
+        <ul id="product_features_list">
+          {foreach from=$product.features item=feature}
+          <li>
+              <strong>{$feature.name} : </strong>
+              <span>{$feature.value}</span>
+          </li>
+          {/foreach}
+        </ul>
+      </section>
+      {/if}
+
+      {if isset($medals) && $medals}
+      <!-- Recompenses / Medailles -->
+      <section class="product-rewards">
+        <div class="product_page_section_title">
+          {l s='Rewards' d='Shop.Theme.Catalog'}
+        </div>
+        <ul id="product_rewards_list">
+          {foreach from=$medals item=medal}
+          <li>
+            <span class="reward_year">{$medal.year}</span>
+            <span class="reward_level {$medal.color}">
+              {if $medal.level == '1'}
+                {l s='Gold' d='Shop.Theme.Catalog'}
+              {elseif $medal.level == '2'}
+                {l s='Silver' d='Shop.Theme.Catalog'}
+              {elseif $medal.level == '3'}
+                {l s='Bronze' d='Shop.Theme.Catalog'}
+              {else}
+                N/A
+              {/if}
+            </span>
+            <span class="reward_name">
+              {$medal.name}
+            </span>
+          </li>
+          {/foreach}
+        </ul>
+      </section>
+      {/if}
+
+      {block name='hook_display_reassurance'}
+        <!-- Reassurance -->
+        {hook h='displayReassurance'}
+      {/block}
+
+      {block name='product_accessories'}
+      {if $accessories}
+        <!-- Accessoires -->
+        <section class="product-accessories carousel-products single-carousel products clearfix">
+          <div class="product_page_section_title">{l s='Accessories' d='Shop.Interiorcatalog'}</div>
+          <div class="grid row js-carousel-accessories">
+            {foreach from=$accessories item="product_accessory"}
+              {block name='product_miniature'}
+                {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
+              {/block}
+            {/foreach}
+          </div>
+        </section>
+      {/if}
+      {/block}
+
+
+      {block name='product_attachments'}
+        {if $product.attachments}
+          <!-- Documents joints -->
+          <section class="product-attachments">
+            <div class="product_page_section_title">{l s='Download' d='Shop.Theme.Actions'}</div>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                  <tbody>
+                    {foreach from=$product.attachments item=attachment}
+                    <tr>
+                        <td>{$attachment.name}</td>
+                        <td>{$attachment.description} ({$attachment.file_size_formatted})</td>
+                        <td>
+                            <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
+                              <i class="material-icons">cloud_download</i>
+                            </a>
+                        </td>
+                    </tr>
+                    {/foreach}
+                  </tbody>
+              </table>
+            </div>
+          </section>
         {/if}
-      </div>
+      {/block}
+
 
     {block name='product_tabs'}
          <div class="more-info">
@@ -146,23 +225,11 @@
                  {l s='Product Details' d='Shop.Theme.Catalog'}
                </a>
              </li>
-             {if $product.attachments}
-             <li class="nav-item">
-               <a class="nav-link {if !$product.condition && !$product.show_quantities && !$product.availability_date && !($product.show_availability && $product.availability_message) && !$product.minimal_quantity > 1 && !$product.features && !$product.specific_references && !$product.description} active{/if}" data-toggle="tab" href="#attachments">
-                 {l s='Attachments' d='Shop.Theme.Catalog'}
-               </a>
-             </li>
-             {/if}
              {foreach from=$product.extraContent item=extra key=extraKey}
              <li class="nav-item">
                <a class="nav-link" data-toggle="tab" href="#extra-{$extraKey}">{$extra.title}</a>
              </li>
              {/foreach}
-             {if $accessories}
-            <li class="nav-item">
-               <a class="nav-link" data-toggle="tab" href="#accessories">{l s='Accessories' d='Shop.Interiorcatalog'}</a>
-             </li>
-             {/if}
             {if $product.is_customizable && count($product.customizations.fields)}
               <li class="nav-item">
                  <a class="nav-link" data-toggle="tab" href="#customization">{l s='Product customization' d='Shop.Theme.Catalog'}</a>
@@ -178,24 +245,7 @@
               {include file='catalog/_partials/product-details.tpl'}
             {/block}
 
-            {block name='product_attachments'}
-              {if $product.attachments}
-               <div class="tab-pane fade in{if !$product.condition && !$product.show_quantities && !$product.availability_date && !($product.show_availability && $product.availability_message) && !$product.minimal_quantity > 1 && !$product.features && !$product.specific_references && !$product.description} active{/if}" id="attachments">
-                  <section class="product-attachments tab-pane-inner">
-                    <h3 class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</h3>
-                    {foreach from=$product.attachments item=attachment}
-                      <div class="attachment">
-                        <h4><a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a></h4>
-                        <p>{$attachment.description}</p
-                        <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                          {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
-                        </a>
-                      </div>
-                    {/foreach}
-                  </section>
-                </div>
-              {/if}
-            {/block}
+
 
             {foreach from=$product.extraContent item=extra key=extraKey}
             <div class="tab-pane fade in {$extra.attr.class}" id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
@@ -204,21 +254,7 @@
               </div>
             </div>
             {/foreach}
-            {block name='product_accessories'}
-              {if $accessories}
-                <div id="accessories" class="tab-pane fade in">
-                    <section class="product-accessories carousel-products single-carousel products clearfix">
-                      <div class="grid row js-carousel-accessories">
-                        {foreach from=$accessories item="product_accessory"}
-                          {block name='product_miniature'}
-                            {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
-                          {/block}
-                        {/foreach}
-                      </div>
-                    </section>
-                </div>
-              {/if}
-            {/block}
+
             {if $product.is_customizable && count($product.customizations.fields)}
               {block name='product_customization'}
                 {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
@@ -229,10 +265,7 @@
             {/block}
          </div>
     {/block}
-    {block name='hook_display_reassurance'}
-      <!-- Reassurance -->
-      {hook h='displayReassurance'}
-    {/block}
+
     {block name='product_footer'}
       {hook h='displayFooterProduct' product=$product category=$category}
     {/block}

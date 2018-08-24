@@ -281,6 +281,25 @@ table.table .thead-default th {
   font-size: 28px;
   margin-bottom: 0.5em;
 }
+.page-product #wrapper .product_page_section_title {
+  /* Titre de rubrique (ex  : description, caract├®ristiques,... */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #131313;
+  margin: 30px 0;
+}
+.page-product #wrapper .product_page_section_title:after {
+  content: '';
+  display: inline-block;
+  vertical-align: 8px;
+  width: 100%;
+  margin-left: 15px;
+  border-top: 1px solid #131313;
+}
 .page-product #wrapper .product-description-short {
   border-top: none;
   font-family: inherit;
@@ -289,6 +308,21 @@ table.table .thead-default th {
   margin-top: 0;
   padding: 0;
   color: #7d7d7d;
+}
+.page-product #wrapper #ratings_and_wine_infos {
+  /* Notes et infos (AOC / Couleur) */
+  margin-left: 0;
+  margin-right: 0;
+}
+.page-product #wrapper #ratings_and_wine_infos .comments_note {
+  margin-right: 15px;
+}
+.page-product #wrapper #ratings_and_wine_infos #winecolor_and_origin {
+  text-transform: uppercase;
+}
+.page-product #wrapper #ratings_and_wine_infos #winecolor_and_origin > span {
+  display: inline-block;
+  vertical-align: middle;
 }
 .page-product #wrapper .product-information form#add-to-cart-or-refresh .product-variants select:disabled {
   background-image: none;
@@ -300,8 +334,86 @@ table.table .thead-default th {
 .page-product #wrapper .product-information form#add-to-cart-or-refresh .qty .btn {
   background: #aa1135;
 }
-.page-product #wrapper #block-reassurance {
-  display: none;
+.page-product #wrapper .product-description {
+  /* Description longue */
+  margin-top: 30px;
+}
+.page-product #wrapper .product-description h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 0.5em 0;
+}
+.page-product #wrapper .product-description p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.page-product #wrapper .product-features {
+  /* Caracteristiques */
+}
+.page-product #wrapper .product-features #product_features_list {
+  margin: 0;
+}
+.page-product #wrapper .product-features #product_features_list li {
+  font-size: 15px;
+  line-height: 24px;
+}
+.page-product #wrapper .product-features #product_features_list li span {
+  color: #7d7d7d;
+}
+.page-product #wrapper .product-rewards {
+  /* Recompenses */
+}
+.page-product #wrapper .product-rewards #product_rewards_list {
+  margin: 0;
+  padding: 10px 20px;
+  border: 1px solid #e3e3e3;
+}
+.page-product #wrapper .product-rewards #product_rewards_list li {
+  margin: 5px 0;
+  height: 40px;
+  line-height: 40px;
+}
+.page-product #wrapper .product-rewards #product_rewards_list li > span {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+.page-product #wrapper .product-rewards #product_rewards_list li > span.reward_year {
+  width: 15%;
+  margin-right: 10px;
+  background: #aa1135;
+}
+.page-product #wrapper .product-rewards #product_rewards_list li > span.reward_level {
+  width: 15%;
+  margin-right: 30px;
+  background: #f0f0f0;
+}
+.page-product #wrapper .product-rewards #product_rewards_list li > span.reward_level.gold {
+  background: #fbdb67;
+}
+.page-product #wrapper .product-rewards #product_rewards_list li > span.reward_level.silver {
+  background: #dedbd6;
+}
+.page-product #wrapper .product-rewards #product_rewards_list li > span.reward_level.bronze {
+  background: #f49556;
+}
+.page-product #wrapper .product-rewards #product_rewards_list li > span.reward_name {
+  color: #131313;
+}
+.page-product #wrapper #block-reassurance ul li .block-reassurance-item img {
+  float: left;
+  margin-right: 5px;
+}
+.page-product #wrapper #block-reassurance ul li .block-reassurance-item .reassurance_item_text {
+  float: left;
+  width: calc(100% - 30px);
+  font-size: 11px;
+}
+.page-product #wrapper #block-reassurance ul li .block-reassurance-item .reassurance_item_text::first-line {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /* HEADER */
@@ -2025,6 +2137,10 @@ div.btn-to-top {
 }
 
 #page .active_filters .filter-block {
+  background: #aa1135;
+}
+
+#page .owl-controls .owl-dot span {
   background: #aa1135;
 }
 
