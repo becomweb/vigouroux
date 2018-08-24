@@ -168,4 +168,71 @@
             }
         }
     }
+    #productCommentsBlock{
+        .comment{
+            padding:0 0 25px 0;
+            margin:25px 0;
+            border-bottom:1px solid #efefef;
+            &:before{
+                display:none;
+            }
+            .comment_date{
+                font-size:11px;
+                margin-bottom:5px;
+            }
+            .comment_title{
+                font-size:16px;
+                font-weight:bold;
+            }
+            .comment_text,
+            .comment_author_infos{
+                font-style:normal;
+                font-size:15px;
+                line-height:20px;
+                color:#7d7d7d;
+                margin-bottom:10px;
+            }
+            .comment_text{
+                font-size:15px;
+            }
+        }
+    }
+}
+@media screen and (max-width:1199px) and (min-width:768px){
+    #block-reassurance .block-reassurance-item{
+        min-height:80px;
+    }
+}
+@media screen and (max-width:767px){
+    .page-product #wrapper{
+        .product-rewards #product_rewards_list li{
+            height:32px;
+            line-height:32px;
+            > span{
+                font-size:14px;
+                &.reward_level{
+                    margin-right:15px;
+                }
+            }
+        }
+    } 
+}
+@media screen and (max-width:767px){
+    .page-product #wrapper{
+        .product-rewards #product_rewards_list li{
+            height:auto;
+            text-align: center;
+            > span{
+                &.reward_level,
+                &.reward_year{
+                    width:auto;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                }
+                &.reward_name{
+                    width:100%;
+                }
+            }
+        }
+    } 
 }

@@ -1782,6 +1782,10 @@ div.btn-to-top{ //Bouton retour top
     }
 }
 
+#criterions_list.cancel{
+    display:none;
+}
+
 #page .active_filters .filter-block{
     background:$shiraz;
 }

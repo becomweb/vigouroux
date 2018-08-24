@@ -415,7 +415,65 @@ table.table .thead-default th {
   font-size: 14px;
   font-weight: bold;
 }
+.page-product #wrapper #productCommentsBlock .comment {
+  padding: 0 0 25px 0;
+  margin: 25px 0;
+  border-bottom: 1px solid #efefef;
+}
+.page-product #wrapper #productCommentsBlock .comment:before {
+  display: none;
+}
+.page-product #wrapper #productCommentsBlock .comment .comment_date {
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+.page-product #wrapper #productCommentsBlock .comment .comment_title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.page-product #wrapper #productCommentsBlock .comment .comment_text,
+.page-product #wrapper #productCommentsBlock .comment .comment_author_infos {
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #7d7d7d;
+  margin-bottom: 10px;
+}
+.page-product #wrapper #productCommentsBlock .comment .comment_text {
+  font-size: 15px;
+}
 
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  #block-reassurance .block-reassurance-item {
+    min-height: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-product #wrapper .product-rewards #product_rewards_list li {
+    height: 32px;
+    line-height: 32px;
+  }
+  .page-product #wrapper .product-rewards #product_rewards_list li > span {
+    font-size: 14px;
+  }
+  .page-product #wrapper .product-rewards #product_rewards_list li > span.reward_level {
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-product #wrapper .product-rewards #product_rewards_list li {
+    height: auto;
+    text-align: center;
+  }
+  .page-product #wrapper .product-rewards #product_rewards_list li > span.reward_level, .page-product #wrapper .product-rewards #product_rewards_list li > span.reward_year {
+    width: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .page-product #wrapper .product-rewards #product_rewards_list li > span.reward_name {
+    width: 100%;
+  }
+}
 /* HEADER */
 #header {
   /* Nav */
@@ -2134,6 +2192,10 @@ div.btn-to-top {
 .products-selection .pagination ul li a:hover {
   background: #aa1135;
   border-color: #930f2e;
+}
+
+#criterions_list.cancel {
+  display: none;
 }
 
 #page .active_filters .filter-block {

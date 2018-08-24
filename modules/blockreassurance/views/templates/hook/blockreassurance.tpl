@@ -29,7 +29,7 @@
     </div>
     <ul>
       {foreach from=$elements item=element}
-        <li class="col-12 col-sm-6">
+        <li class="col-12 col-md-6">
           <div class="block-reassurance-item">
             <img src="{$element.image}" alt="{$element.text}">
             <div class="reassurance_item_text">
