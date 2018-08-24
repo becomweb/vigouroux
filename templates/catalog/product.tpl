@@ -6,7 +6,7 @@
     <meta itemprop="url" content="{$product.url}">
 
     <div class="row">
-      <div class="col-lg-5 l-column p-page">
+      <div class="col-md-5 l-column p-page">
         {block name='page_content_container'}
           <section class="page-content" id="content">
             {block name='page_content'}
@@ -17,7 +17,7 @@
           </section>
         {/block}
         </div>
-        <div class="col-lg-7 r-column">
+        <div class="col-md-7 r-column">
           {block name='page_header_container'}
             {block name='page_header'}
               <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
@@ -28,7 +28,9 @@
               </div>
             {/block}
             <div id="ratings_and_wine_infos" class="row">
+                {if isset($product_nb_comments) && $product_nb_comments > 0}
                 {include file="module:productcomments/productcomments_reviews.tpl" averageTotal=$product_average_grade nbComments=$product_nb_comments}
+                {/if}
                 {if isset($wine_color) || isset($wine_orgin)}
                 <div id="winecolor_and_origin">
                   {if isset($wine_origin) && $wine_origin != ''}
@@ -103,14 +105,12 @@
                 </form>
               {/block}           
             </div>
-
-
           </div>
         </div>
       </div>
 
       {if $product.description}
-      <!-- Description logue -->
+      <!-- Description longue -->
       {block name='product_description'}
         <section class="product-description">
           <div class="product_page_section_title">
@@ -189,6 +189,12 @@
       {/if}
       {/block}
 
+      {block name='product_details'}
+        <!-- Details (conditions, reference,...) -->
+        {* Non present sur les maquettes dont caché avec classe "d-none" *}
+        {include file='catalog/_partials/product-details.tpl'}
+      {/block}
+
 
       {block name='product_attachments'}
         {if $product.attachments}
@@ -218,52 +224,38 @@
 
 
     {block name='product_tabs'}
-         <div class="more-info">
-           <ul class="nav nav-tabs_alternative">
-             <li class="nav-item">
-               <a class="data-sheet-tab nav-link{if $product.condition || $product.show_quantities || $product.availability_date || ($product.show_availability && $product.availability_message) || $product.minimal_quantity > 1 || $product.features || isset($product.specific_references)} active{/if}" data-toggle="tab" href="#product-details">
-                 {l s='Product Details' d='Shop.Theme.Catalog'}
-               </a>
-             </li>
-             {foreach from=$product.extraContent item=extra key=extraKey}
-             <li class="nav-item">
-               <a class="nav-link" data-toggle="tab" href="#extra-{$extraKey}">{$extra.title}</a>
-             </li>
-             {/foreach}
-            {if $product.is_customizable && count($product.customizations.fields)}
-              <li class="nav-item">
-                 <a class="nav-link" data-toggle="tab" href="#customization">{l s='Product customization' d='Shop.Theme.Catalog'}</a>
-             </li>
-             {/if}
-            {block name='product_tab'}
-                {hook h='productTab'}
-            {/block}
-           </ul>
-
-
-            {block name='product_details'}
-              {include file='catalog/_partials/product-details.tpl'}
-            {/block}
-
-
-
-            {foreach from=$product.extraContent item=extra key=extraKey}
-            <div class="tab-pane fade in {$extra.attr.class}" id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
-              <div class="tab-pane-inner">
-              {$extra.content nofilter}
-              </div>
-            </div>
-            {/foreach}
-
-            {if $product.is_customizable && count($product.customizations.fields)}
-              {block name='product_customization'}
-                {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
-              {/block}
-            {/if}
-            {block name='product_tab_content'}
-              {hook h='productTabContent'}
-            {/block}
-         </div>
+    <div class="more-info">
+      <ul class="nav nav-tabs_alternative">
+        {foreach from=$product.extraContent item=extra key=extraKey}
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#extra-{$extraKey}">{$extra.title}</a>
+        </li>
+        {/foreach}
+      {if $product.is_customizable && count($product.customizations.fields)}
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#customization">{l s='Product customization' d='Shop.Theme.Catalog'}</a>
+        </li>
+        {/if}
+      {block name='product_tab'}
+          {hook h='productTab'}
+      {/block}
+      </ul>
+      {foreach from=$product.extraContent item=extra key=extraKey}
+      <div class="tab-pane fade in {$extra.attr.class}" id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
+        <div class="tab-pane-inner">
+        {$extra.content nofilter}
+        </div>
+      </div>
+      {/foreach}
+      {if $product.is_customizable && count($product.customizations.fields)}
+        {block name='product_customization'}
+          {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
+        {/block}
+      {/if}
+      {block name='product_tab_content'}
+        {hook h='productTabContent'}
+      {/block}
+    </div>
     {/block}
 
     {block name='product_footer'}
