@@ -1,4 +1,3 @@
-
 [{shop_url}] 
 
 Votre message à l'attention du service client de {shop_name} 
@@ -13,6 +12,19 @@ PIÈCE JOINTE : {attached_file}
 
 Nous vous répondrons dans les meilleurs délais. 
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+Pourquoi choisir nos vins? 
+
+La famille Vigouroux est passionnée par les vins d’Occitanie depuis 1855. Bertrand-Gabriel Vigouroux, fort de son expérience de vigneron et d’œnologue s’attache ainsi à sélectionner plusieurs domaines et propriétés d’Occitanie.
+
+Vous pouvez aller sur notre site {shop_url} pour découvrir nos vins et accéder à votre compte via la rubrique  Mon compte .
+
+Je me tiens à votre entière disposition au 05 65 20 80 99 ou sur web@g-vigouroux.fr pour vous conseiller.
+
+
+Je vais sur Atrium Vigouroux {shop_url} 
+
+
+A très bientôt
+
+Mickaël
 

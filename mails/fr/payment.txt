@@ -1,23 +1,22 @@
-
 [{shop_url}] 
 
 Bonjour {firstname} {lastname},
 
-Merci d'avoir effectué vos achats sur {shop_name}! 
+Nous vous remercions d’avoir commandé nos vins d’Occitanie.
 
-Le paiement pour votre commande ayant pour référence
-{order_name} a été accepté. 
+Nous vous confirmons que le paiement de votre commande ayant pour référence {order_name} a bien été acceptée.
 
-Vous pouvez accéder à tout moment au suivi de votre commande et
-télécharger votre facture dans "Historique des commandes"
-[{history_url}] de la rubrique "Mon compte"
-[{my_account_url}] sur notre site. 
+La commande sera traiter par Anne du service ADV. Vous recevrez prochainement un nouveau mail vous informant de la préparation de votre commande {order_name}
 
-Si vous avez un compte invité, vous pouvez suivre votre commande
-dans la section "Suivi invité"
-[{guest_tracking_url}?id_order={order_name}] de
-notre site. 
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+Vous avez une question sur la livraison et le suivi de votre commande ?
+Vous pouvez la contacter au 05 65 20 80 88 ou sur facturation@g-vigouroux.fr
+
+Vous pouvez accéder à tout moment au suivi de votre commande et télécharger votre facture dans "Historique des commandes" [{history_url}] de la rubrique "Mon compte" [{my_account_url}] sur notre site. 
+
+
+A très bientôt !
+
+Mickaël
+
 

@@ -1,4 +1,3 @@
-
 [{shop_url}] 
 
 Bonjour {firstname} {lastname}, 
@@ -16,6 +15,6 @@ dans la section "Suivi invité"
 [{guest_tracking_url}?id_order={order_name}] de
 notre site. 
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+A très bientôt
 
+Mickaël

@@ -1,4 +1,3 @@
-
 [{shop_url}] 
 
 Bonjour {firstname} {lastname}, 
@@ -10,7 +9,9 @@ Vous pouvez accéder à cet avoir et télécharger votre facture
 dans "Historique des commandes" [{history_url}] de
 la rubrique "Mon compte" [{my_account_url}] sur
 notre site. 
+Je me tiens à votre entière disposition au 05 65 20 80 99 ou sur web@g-vigouroux.fr pour vous conseiller.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+A très bientôt
+
+Mickaël
 

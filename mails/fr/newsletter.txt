@@ -1,10 +1,16 @@
-
 [{shop_url}] 
 
 Bonjour {firstname} {lastname}, 
 
-{message} 
+Votre inscription à notre newsletter a bien été prise en compte.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+Vous recevrez prochainement nos bons plans pour acheter vos produits préférés aux meilleurs prix.
+
+Nos nouveautés vous seront présentées en exclusivité.
+
+Je me tiens à votre entière disposition au 05 65 20 80 99 ou sur web@g-vigouroux.fr pour vous conseiller.
+
+A très vite sur {shop_url}
+
+Mickaël
 

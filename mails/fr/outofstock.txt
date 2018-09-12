@@ -1,27 +1,16 @@
-
 [{shop_url}] 
 
 Bonjour {firstname} {lastname},
 
-Merci pour votre commande ayant pour référence {order_name} sur
-{shop_name} 
+Vous désirez un produit qui est malheureusement victime de son succès… {products}
 
-Malheureusement, un ou plusieurs des produits que vous avez
-commandés sont actuellement en rupture de stock. Ceci peut entraîner
-un léger retard de livraison. Veuillez nous excuser pour ce délai et
-soyez assurés que nous faisons nos meilleurs efforts pour rectifier
-la situation rapidement. 
+Pas de panique il sera bientôt en stock !
 
-Vous pouvez accéder à tout moment au suivi de votre commande et
-télécharger votre facture dans "Historique des commandes"
-[{history_url}] de la rubrique "Mon compte"
-[{my_account_url}] sur notre site. 
+Vous serez informés dès que ce produit sera à nouveau disponible sur notre boutique.
 
-Si vous avez un compte invité, vous pouvez suivre votre commande
-dans la section "Suivi invité"
-[{guest_tracking_url}?id_order={order_name}] de
-notre site. 
+Je me tiens à votre entière disposition au 05 65 20 80 99 ou sur web@g-vigouroux.fr 
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+A très bientôt !
+
+Mickaël
 

@@ -1,28 +1,24 @@
-
 [{shop_url}] 
 
 Bonjour {firstname} {lastname},
+Bienvenue dans la communauté des grands vins d’Occitanie . 
 
 Merci d'avoir créé votre compte client sur {shop_name}. 
 
 Vos codes d'accès :
 
-ADRESSE E-MAIL : {email} 		 
+ADRESSE E-MAIL : {email} 	
+Mot de passe : {passwd}	 
 
-Conseils de sécurité importants :
+Mot de passe : {passwd}
 
-* Vos informations de compte doivent rester confidentielles.
+Pourquoi choisir nos vins? 
+La famille Vigouroux est passionnée par les vins d’Occitanie depuis 1855. Bertrand-Gabriel Vigouroux, fort de son expérience de vigneron et d’œnologue s’attache ainsi à sélectionner plusieurs domaines et propriétés d’Occitanie.
 
-* Ne les communiquez jamais à qui que ce soit.
+Vous pouvez aller sur notre site {shop_url} pour découvrir nos vins et accéder à votre compte via la rubrique {shop_url}. Je me tiens à votre entière disposition au 05 65 20 80 99 ou sur web@g-vigouroux.fr pour vous conseiller.
 
-* Changez votre mot de passe régulièrement.
+Je vais sur Atrium Vigouroux {shop_url} 
 
-* Si vous pensez que quelqu'un utilise votre compte illégalement,
-veuillez nous prévenir immédiatement.
+A très bientôt
 
-Vous pouvez dès à présent passer commande sur notre boutique :
-{shop_name} [{shop_url}] 
-
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Mickaël

@@ -1,5 +1,4 @@
-
-[{shop_url}] 
+[{shop_url}] Bulu
 
 Bonjour {firstname} {lastname}, 
 

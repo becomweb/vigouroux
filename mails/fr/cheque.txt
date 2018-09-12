@@ -1,35 +1,30 @@
-
 [{shop_url}] 
 
 Bonjour {firstname} {lastname},
 
 Merci d'avoir effectué vos achats sur {shop_name}! 
 
-Nous avons bien enregistré votre commande ayant pour référence
-{order_name}. Celle-ci vous sera ENVOYÉE DÈS RÉCEPTION DE VOTRE
-PAIEMENT. 
+Nous avons bien enregistré votre commande {order_name}. Celle-ci vous sera envoyée dès réception de votre paiement.
 
-Vous avez choisi de payer par chèque. 
+Pour rappel, vous avez choisi de régler votre commande par chèque :
 
-Voici les informations dont vous avez besoin pour effectuer le
-paiement :
+Voici les informations dont vous avez besoin pour effectuer le paiement :
 
-MONTANT : {total_paid}
 
-À L'ORDRE DE : {check_name}
+Montant : {total_paid}
+À l'ordre de : {cheque_name}
+Veuillez envoyer votre chèque à l'adresse suivante : {cheque_address_html}
 
-VEUILLEZ ENVOYER VOTRE CHÈQUE À L'ADRESSE SUIVANTE :
-{check_address} 		 
 
-Vous pouvez accéder à tout moment au suivi de votre commande et
-télécharger votre facture dans "Historique des commandes"
-[{history_url}] de la rubrique "Mon compte"
-[{my_account_url}] sur notre site. 
+Vous pouvez accéder au suivi de votre commande et télécharger votre facture dans  "Historique des commandes"[{history_url}]  de la rubrique "Mon compte"{my_account_url}  sur notre site.
 
-Si vous avez un compte invité, vous pouvez suivre votre commande
-via la section "Suivi invité"
-[{guest_tracking_url}] sur notre boutique. 
+Si vous avez un compte invité, vous pouvez suivre votre commande dans la section "Suivi invité" de notre site.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+Dès la réception de votre chèque, notre équipe préparera et expédiera votre commande dans les plus brefs délais.
+
+
+Merci pour votre confiance.
+
+A très bientôt ! 
+
 

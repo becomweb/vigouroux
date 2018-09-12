@@ -1,7 +1,10 @@
-
 [{shop_url}] 
 
 Message de la part d'un client de {shop_name} 
+
+Bonjour, 
+
+Vous avez reçu un message depuis votre site Internet de la part d'un client. Voici les informations : 
 
 ADRESSE E-MAIL DU CLIENT : {email}
 

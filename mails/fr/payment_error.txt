@@ -1,4 +1,3 @@
-
 [{shop_url}] 
 
 Bonjour {firstname} {lastname}, 
@@ -7,19 +6,34 @@ Un problème a été constaté pour le paiement de votre commande sur
 {shop_name} ayant pour référence {order_name}. Veuillez nous
 contacter le plus rapidement possible.
 
-NOUS NE POUVONS MALHEUREUSEMENT PAS EXPÉDIER VOTRE COMMANDE TANT QUE
-NOUS N'AVONS PAS REÇU VOTRE PAIEMENT. 		 
+Les raisons peuvent être les suivantes :
 
-Vous pouvez accéder à tout moment au suivi de votre commande et
-télécharger votre facture dans "Historique des commandes"
-[{history_url}] de la rubrique "Mon compte"
-[{my_account_url}] sur notre site. 
+1 : Peut-être que votre plafond d’achat sur internet est atteint, nous vous invitons à contacter votre banque.
 
-Si vous avez un compte invité, vous pouvez suivre votre commande
-dans la section "Suivi invité"
-[{guest_tracking_url}?id_order={order_name}] de
-notre site. 
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+2 : Peut-être qu’il y a un défaut de provisions sur votre compte, nous vous invitons à contacter votre banque.
+
+
+3 : Vous avez dépassé le temps imparti pour inscrire votre code sécure, nous vous invitons à repasser votre commande en remettant vos produits dans le panier.
+
+
+4 : Vous n’avez pas reçu votre code sécure, nous vous conseillons de vérifier le numéro de votre téléphone portable sur lequel vous devez recevoir le code. 
+Si vos coordonnées sont exactes, nous vous invitons à contacter votre banque.
+
+
+5 : Vous avez cliqué sur la page blanche à la fin de la transaction, dans ce cas votre commande n’est pas réglée donc invalidée, nous vous invitons à repasser votre commande.
+
+Ne vous inquiétez pas, votre commande sera désactivée par notre service client.
+
+Vous pouvez dès maintenant repasser votre commande.
+
+D’autres options de paiement sécurisées sont disponibles sur www.atrium-vigouroux.fr si besoin.
+
+Vous pouvez également me contacter au 05 65 20 80 99 ou sur web@g-vigouroux.fr pour effectuer le règlement.
+
+
+
+A très vite sur {shop_url}
+
+Mickaël
 
