@@ -49,6 +49,7 @@
                 {if $slide.description}
                   <div class="testimonials-description">
                       {$slide.description nofilter}
+                      <p class="testimonials-author"><span>{$slide.title}</span></p>
                   </div>
                 {/if}
               </div>
