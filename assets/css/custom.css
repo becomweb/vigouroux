@@ -347,6 +347,10 @@ table.table .thead-default th {
   font-size: 14px;
   line-height: 20px;
 }
+.page-product #wrapper .product-additional-info #loyalty {
+  color: #aa1135;
+  font-size: 14px;
+}
 .page-product #wrapper .product-features {
   /* Caracteristiques */
 }
@@ -1335,6 +1339,9 @@ body.is-not-index #header {
   }
 }
 /* Tunnel */
+#cart .cart-grid {
+  /* Contenu principal */
+}
 #cart .cart-grid .cart-overview {
   /* Page recapitulative */
 }
@@ -1356,6 +1363,69 @@ body.is-not-index #header {
 }
 #cart .cart-grid .cart-overview .cart-items .cart-item .remove-from-cart:hover {
   color: #898989;
+}
+#cart .cart-grid #reward_loyalty {
+  font-size: 95%;
+  padding-left: 40px;
+  background: url("../img/loyalty_cart.png") no-repeat transparent top left;
+  margin-top: 2rem;
+}
+#cart .cart-grid #reward_loyalty span {
+  font-size: 90%;
+}
+#cart .cart-grid-right {
+  /* Conne de droite */
+}
+#cart .cart-grid-right .cart-voucher a.promo-code-button {
+  color: #aa1135;
+  margin-bottom: 5px;
+}
+#cart .cart-grid-right .cart-voucher a.promo-code-button:hover {
+  color: #7c0c27;
+}
+#cart .cart-grid-right .cart-voucher #promo-code {
+  background: transparent;
+  padding-top: 10px;
+}
+#cart .cart-grid-right .cart-voucher #promo-code form {
+  display: flex;
+}
+#cart .cart-grid-right .cart-voucher #promo-code form .promo-input {
+  border: none;
+  background: #e3e3e3;
+  font-weight: 700;
+  height: 50px;
+  padding: 15px 10px;
+}
+#cart .cart-grid-right .cart-voucher #promo-code form .promo-input:focus {
+  outline: #232323;
+}
+#cart .cart-grid-right .cart-voucher #promo-code form button[type="submit"]:after {
+  display: none;
+}
+#cart .cart-grid-right hr {
+  display: none;
+}
+#cart .cart-grid-right #block-reassurance .product_page_section_title {
+  display: none;
+}
+#cart .cart-grid-right #block-reassurance ul li {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+#cart .cart-grid-right #block-reassurance ul li .block-reassurance-item img {
+  float: left;
+  margin-right: 10px;
+}
+#cart .cart-grid-right #block-reassurance ul li .block-reassurance-item .reassurance_item_text {
+  font-size: 0;
+}
+#cart .cart-grid-right #block-reassurance ul li .block-reassurance-item .reassurance_item_text:first-line {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
 }
 
 #checkout {
