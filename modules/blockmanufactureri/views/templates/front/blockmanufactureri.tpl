@@ -36,9 +36,9 @@
 	{foreach from=$manufacturers item=manufacturer name=manufacturer_list}
 		{if $smarty.foreach.manufacturer_list.iteration <= $text_list_nb}
 		<li class="manufacturer-items">
-	        <a href="{$link->getmanufacturerLink($manufacturer.id_manufacturer, $manufacturer.link_rewrite)}" title="{l s='Discover %s PDO wines by' d='Shop.Theme.Global' sprintf=[$manufacturer.name]} {$shop.name}">
+	        {*<a href="{$link->getmanufacturerLink($manufacturer.id_manufacturer, $manufacturer.link_rewrite)}" title="{l s='Discover %s PDO wines by' d='Shop.Theme.Global' sprintf=[$manufacturer.name]} {$shop.name}">*}
 	        	<img src="{if $psversion < '1.7.0.0'}{$img_manu_dir}{else}{$urls.img_manu_url}{/if}{$manufacturer.id_manufacturer}-manufacturer_default.jpg" alt="{l s='%s PDO wines by' d='Shop.Theme.Global' sprintf=[$manufacturer.name]} {$shop.name}" />
-	        </a>
+	        {*</a>*}
         </li>
 		{/if}
 	{/foreach}
