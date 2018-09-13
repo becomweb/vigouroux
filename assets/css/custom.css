@@ -1420,23 +1420,24 @@ body.is-not-index #header {
 #cart .cart-grid-right hr {
   display: none;
 }
-#cart .cart-grid-right #block-reassurance .product_page_section_title {
+
+#cart #block-reassurance .product_page_section_title, #checkout #block-reassurance .product_page_section_title {
   display: none;
 }
-#cart .cart-grid-right #block-reassurance ul li {
+#cart #block-reassurance ul li, #checkout #block-reassurance ul li {
   width: 100%;
   max-width: 100%;
   padding-left: 0;
   padding-right: 0;
 }
-#cart .cart-grid-right #block-reassurance ul li .block-reassurance-item img {
+#cart #block-reassurance ul li .block-reassurance-item img, #checkout #block-reassurance ul li .block-reassurance-item img {
   float: left;
   margin-right: 10px;
 }
-#cart .cart-grid-right #block-reassurance ul li .block-reassurance-item .reassurance_item_text {
+#cart #block-reassurance ul li .block-reassurance-item .reassurance_item_text, #checkout #block-reassurance ul li .block-reassurance-item .reassurance_item_text {
   font-size: 0;
 }
-#cart .cart-grid-right #block-reassurance ul li .block-reassurance-item .reassurance_item_text:first-line {
+#cart #block-reassurance ul li .block-reassurance-item .reassurance_item_text:first-line, #checkout #block-reassurance ul li .block-reassurance-item .reassurance_item_text:first-line {
   font-size: 15px;
   font-weight: 700;
   line-height: 25px;

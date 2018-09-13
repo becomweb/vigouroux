@@ -1092,27 +1092,29 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
         hr{
             display:none;
         }
-        #block-reassurance{
-            .product_page_section_title{
-                display:none;
-            }
-            ul li{
-                width:100%;
-                max-width:100%;
-                padding-left:0;
-                padding-right:0;
-                .block-reassurance-item{
-                    img{
-                        float:left;
-                        margin-right:10px;
-                    }
-                    .reassurance_item_text{
-                        font-size:0;
-                        &:first-line{
-                            font-size:15px;
-                            font-weight:700;
-                            line-height:25px;
-                        }
+    }
+}
+#cart, #checkout{
+    #block-reassurance{
+        .product_page_section_title{
+            display:none;
+        }
+        ul li{
+            width:100%;
+            max-width:100%;
+            padding-left:0;
+            padding-right:0;
+            .block-reassurance-item{
+                img{
+                    float:left;
+                    margin-right:10px;
+                }
+                .reassurance_item_text{
+                    font-size:0;
+                    &:first-line{
+                        font-size:15px;
+                        font-weight:700;
+                        line-height:25px;
                     }
                 }
             }
