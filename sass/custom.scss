@@ -1758,6 +1758,9 @@ body #page .page-not-found #_desktop_search_bar{ /* Formulaire de recherche 404 
 
 div.btn-to-top{ //Bouton retour top
     background:$shiraz;
+    &:hover{
+        background:lighten($shiraz,10%);
+    }
 }
 
 .grey_banner{

@@ -2177,6 +2177,9 @@ body #page .page-not-found #_desktop_search_bar .search-btn {
 div.btn-to-top {
   background: #aa1135;
 }
+div.btn-to-top:hover {
+  background: #d81643;
+}
 
 .grey_banner {
   background-color: #f8f8f8;
