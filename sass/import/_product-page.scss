@@ -99,6 +99,23 @@
         }
     }
     .product-additional-info{
+        #chronopost_delivery_date{
+            margin-top: 1.5rem;
+            p{
+                font-size:15px;
+                &:first-child{
+                    color:$shiraz;
+                }
+                &:last-child{
+                    img{
+                        margin-left:5px;
+                        display:inline-block;
+                        vertical-align: bottom;
+                    }
+                }
+            }
+            
+        }
         #loyalty{
             color:$shiraz;
             font-size:14px;
