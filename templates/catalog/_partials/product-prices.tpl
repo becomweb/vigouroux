@@ -47,7 +47,7 @@
           <span class="price" itemprop="price" content="{$product.price_amount}">{$product.price}</span>
           {* Mention conditionnement *}
           {if isset($product_conditioning) && $product_conditioning != ''}
-          <span class="product_conditioning">{l s='the' d='Shop.Theme.Global'} {$product_conditioning}</span>
+          <span class="product_conditioning">{l s='per' d='Shop.Theme.Global'} {$product_conditioning}</span>
           {/if}
           {* HT / TTC *}
           <span class="d-none"> {if $configuration.display_taxes_label} {$product.labels.tax_long}{/if}</span>
