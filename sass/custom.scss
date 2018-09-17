@@ -1054,38 +1054,7 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
             }
         }
     }
-    .cart-grid-right{ /* Conne de droite */
-        .cart-voucher{
-            a.promo-code-button{
-                color:$shiraz;
-                margin-bottom:5px;
-                &:hover{
-                    color:darken($shiraz,10%);
-                }
-            }
-            #promo-code{
-                background:transparent;
-                padding-top:10px;
-                form{
-                    display:flex;
-                    .promo-input{
-                        border:none;
-                        background:#e3e3e3;
-                        font-weight:700;
-                        height:50px;
-                        padding:15px 10px;
-                        &:focus{
-                            outline:#232323;
-                        }
-                    }
-                    button[type="submit"]{
-                        &:after{
-                            display:none;
-                        }
-                    }    
-                }
-            }
-        }
+    .cart-grid-right{ /* Colonne de droite */
         .checkout a:after{
             display:none;
         }
@@ -1095,6 +1064,37 @@ body.is-not-index #header{ // Menu fixed sans image de fond, contrairement au th
     }
 }
 #cart, #checkout{
+    .cart-voucher{
+        a.promo-code-button{
+            color:$shiraz;
+            margin-bottom:5px;
+            &:hover{
+                color:darken($shiraz,10%);
+            }
+        }
+        #promo-code{
+            background:transparent;
+            padding-top:10px;
+            form{
+                display:flex;
+                .promo-input{
+                    border:none;
+                    background:#e3e3e3;
+                    font-weight:700;
+                    height:50px;
+                    padding:15px 10px;
+                    &:focus{
+                        outline:#232323;
+                    }
+                }
+                button[type="submit"]{
+                    &:after{
+                        display:none;
+                    }
+                }    
+            }
+        }
+    }
     #block-reassurance{
         .product_page_section_title{
             display:none;

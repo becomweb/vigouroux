@@ -347,6 +347,20 @@ table.table .thead-default th {
   font-size: 14px;
   line-height: 20px;
 }
+.page-product #wrapper .product-additional-info #chronopost_delivery_date {
+  margin-top: 1.5rem;
+}
+.page-product #wrapper .product-additional-info #chronopost_delivery_date p {
+  font-size: 15px;
+}
+.page-product #wrapper .product-additional-info #chronopost_delivery_date p:first-child {
+  color: #aa1135;
+}
+.page-product #wrapper .product-additional-info #chronopost_delivery_date p:last-child img {
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: bottom;
+}
 .page-product #wrapper .product-additional-info #loyalty {
   color: #aa1135;
   font-size: 14px;
@@ -1385,34 +1399,7 @@ body.is-not-index #header {
   font-size: 90%;
 }
 #cart .cart-grid-right {
-  /* Conne de droite */
-}
-#cart .cart-grid-right .cart-voucher a.promo-code-button {
-  color: #aa1135;
-  margin-bottom: 5px;
-}
-#cart .cart-grid-right .cart-voucher a.promo-code-button:hover {
-  color: #7c0c27;
-}
-#cart .cart-grid-right .cart-voucher #promo-code {
-  background: transparent;
-  padding-top: 10px;
-}
-#cart .cart-grid-right .cart-voucher #promo-code form {
-  display: flex;
-}
-#cart .cart-grid-right .cart-voucher #promo-code form .promo-input {
-  border: none;
-  background: #e3e3e3;
-  font-weight: 700;
-  height: 50px;
-  padding: 15px 10px;
-}
-#cart .cart-grid-right .cart-voucher #promo-code form .promo-input:focus {
-  outline: #232323;
-}
-#cart .cart-grid-right .cart-voucher #promo-code form button[type="submit"]:after {
-  display: none;
+  /* Colonne de droite */
 }
 #cart .cart-grid-right .checkout a:after {
   display: none;
@@ -1421,6 +1408,33 @@ body.is-not-index #header {
   display: none;
 }
 
+#cart .cart-voucher a.promo-code-button, #checkout .cart-voucher a.promo-code-button {
+  color: #aa1135;
+  margin-bottom: 5px;
+}
+#cart .cart-voucher a.promo-code-button:hover, #checkout .cart-voucher a.promo-code-button:hover {
+  color: #7c0c27;
+}
+#cart .cart-voucher #promo-code, #checkout .cart-voucher #promo-code {
+  background: transparent;
+  padding-top: 10px;
+}
+#cart .cart-voucher #promo-code form, #checkout .cart-voucher #promo-code form {
+  display: flex;
+}
+#cart .cart-voucher #promo-code form .promo-input, #checkout .cart-voucher #promo-code form .promo-input {
+  border: none;
+  background: #e3e3e3;
+  font-weight: 700;
+  height: 50px;
+  padding: 15px 10px;
+}
+#cart .cart-voucher #promo-code form .promo-input:focus, #checkout .cart-voucher #promo-code form .promo-input:focus {
+  outline: #232323;
+}
+#cart .cart-voucher #promo-code form button[type="submit"]:after, #checkout .cart-voucher #promo-code form button[type="submit"]:after {
+  display: none;
+}
 #cart #block-reassurance .product_page_section_title, #checkout #block-reassurance .product_page_section_title {
   display: none;
 }
