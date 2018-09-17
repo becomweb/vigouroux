@@ -45,6 +45,10 @@
 
         <div class="current-price">
           <span class="price" itemprop="price" content="{$product.price_amount}">{$product.price}</span>
+          {* Mention conditionnement *}
+          {if isset($product_conditioning) && $product_conditioning != ''}
+          <span class="product_conditioning">{l s='the' d='Shop.Theme.Global'} {$product_conditioning}</span>
+          {/if}
           {* HT / TTC *}
           <span class="d-none"> {if $configuration.display_taxes_label} {$product.labels.tax_long}{/if}</span>
           {if $product.has_discount}
@@ -60,7 +64,7 @@
 
         {block name='product_unit_price'}
           {if $displayUnitPrice}
-            <p class="product-unit-price sub">{l s='(%unit_price%)' d='Shop.Theme.Catalog' sprintf=['%unit_price%' => $product.unit_price_full]}</p>
+            <p class="product-unit-price sub">({l s='So' d='Shop.Theme.Global'} {l s='%unit_price%' d='Shop.Theme.Catalog' sprintf=['%unit_price%' => $product.unit_price]} {l s='per' d='Shop.Theme.Global'} {l s='%unity%' d='Shop.Theme.Catalog' sprintf=['%unity%' => $product.unity]})</p>
           {/if}
         {/block}
       </div>

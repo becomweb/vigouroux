@@ -309,6 +309,18 @@ table.table .thead-default th {
   padding: 0;
   color: #7d7d7d;
 }
+.page-product #wrapper .product-prices {
+  color: #aa1135;
+}
+.page-product #wrapper .product-prices .current-price > .price {
+  font-weight: 700;
+}
+.page-product #wrapper .product-prices .product-unit-price {
+  margin: 20px 0 5px 0;
+}
+.page-product #wrapper .product-prices .tax-shipping-delivery-label {
+  margin-top: 0;
+}
 .page-product #wrapper #ratings_and_wine_infos {
   /* Notes et infos (AOC / Couleur) */
   margin-left: 0;
@@ -323,6 +335,9 @@ table.table .thead-default th {
 .page-product #wrapper #ratings_and_wine_infos #winecolor_and_origin > span {
   display: inline-block;
   vertical-align: middle;
+}
+.page-product #wrapper .product-information form#add-to-cart-or-refresh .product-variants {
+  margin-top: 5px;
 }
 .page-product #wrapper .product-information form#add-to-cart-or-refresh .product-variants select:disabled {
   background-image: none;
