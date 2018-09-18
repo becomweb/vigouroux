@@ -113,6 +113,33 @@
             line-height: 20px;
         }
     }
+    .product-page-cross-selling-section{ /* Carousels cross-selling */
+        margin:3rem 0;
+        .product-page-cross-selling-section-title{
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 700;
+            text-transform:uppercase;
+            height: 2em;
+            vertical-align: bottom;
+            display: flex;
+            align-items: end;
+        }
+        .owl-controls .owl-nav{
+            .owl-prev,
+            .owl-next{
+                top:25%;
+                
+                color:#131313;
+                i{
+                    font-size:48px;
+                }
+                &:hover{
+                    color:$shiraz;
+                }
+            }
+        }
+    }
     .product-additional-info{
         #chronopost_delivery_date{
             margin-top: 1.5rem;

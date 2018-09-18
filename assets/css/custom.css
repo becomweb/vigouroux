@@ -362,6 +362,33 @@ table.table .thead-default th {
   font-size: 14px;
   line-height: 20px;
 }
+.page-product #wrapper .product-page-cross-selling-section {
+  /* Carousels cross-selling */
+  margin: 3rem 0;
+}
+.page-product #wrapper .product-page-cross-selling-section .product-page-cross-selling-section-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  height: 2em;
+  vertical-align: bottom;
+  display: flex;
+  align-items: end;
+}
+.page-product #wrapper .product-page-cross-selling-section .owl-controls .owl-nav .owl-prev,
+.page-product #wrapper .product-page-cross-selling-section .owl-controls .owl-nav .owl-next {
+  top: 25%;
+  color: #131313;
+}
+.page-product #wrapper .product-page-cross-selling-section .owl-controls .owl-nav .owl-prev i,
+.page-product #wrapper .product-page-cross-selling-section .owl-controls .owl-nav .owl-next i {
+  font-size: 48px;
+}
+.page-product #wrapper .product-page-cross-selling-section .owl-controls .owl-nav .owl-prev:hover,
+.page-product #wrapper .product-page-cross-selling-section .owl-controls .owl-nav .owl-next:hover {
+  color: #aa1135;
+}
 .page-product #wrapper .product-additional-info #chronopost_delivery_date {
   margin-top: 1.5rem;
 }
