@@ -121,6 +121,9 @@
       {/block}
       {/if}
 
+      {* Hook custom pour affichage des listes de cross-selling du module relatedproducts (voir override/modules/relatedproducts.php) *}
+      {hook h='displayCrossSellingProduct'}
+
       {if $product.features}
       <!-- Caracteristiques -->
       <section class="product-features">
