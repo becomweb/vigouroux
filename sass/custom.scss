@@ -1886,3 +1886,12 @@ div.btn-to-top{ //Bouton retour top
 #page .owl-controls .owl-dot span{
     background:$shiraz;
 }
+
+#password{ // Correction bug affichage page reset password
+    .ps-alert-error,
+    .ps-alert-success{
+        svg{
+            display:none;
+        }
+    }
+}

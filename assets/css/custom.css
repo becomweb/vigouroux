@@ -2323,4 +2323,9 @@ div.btn-to-top:hover {
   background: #aa1135;
 }
 
+#password .ps-alert-error svg,
+#password .ps-alert-success svg {
+  display: none;
+}
+
 /*# sourceMappingURL=custom.css.map */
