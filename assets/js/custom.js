@@ -90,20 +90,39 @@ $(document).ready(function(){
 	});
 
 	// Carousel cross-selling sur fiche-article
-	$('.product-page-cross-selling-carousel').owlCarousel({
-		loop:true,
-		margin:0,
-		nav:true,
-		dots:false,
-		navText: ['<i class="material-icons">chevron_left</i>','<i class="material-icons">chevron_right</i>'],
-		responsive:{
+	console.log($('.product-page-cross-selling-carousel').length);
+	if($('.product-page-cross-selling-carousel').length < 2){
+		var ppcss_responsive_config = {
+			0:{
+				items:1
+			},
+			480:{
+				items:2
+			},
+			768:{
+				items:3
+			},
+			1024:{
+				items:4
+			}
+		};
+	} else {
+		var ppcss_responsive_config = {
 			0:{
 				items:1
 			},
 			480:{
 				items:2
 			}
-		}
+		};
+	}
+	$('.product-page-cross-selling-carousel').owlCarousel({
+		loop:true,
+		margin:0,
+		nav:true,
+		dots:false,
+		navText: ['<i class="material-icons">chevron_left</i>','<i class="material-icons">chevron_right</i>'],
+		responsive: ppcss_responsive_config
 	});
 });
 
