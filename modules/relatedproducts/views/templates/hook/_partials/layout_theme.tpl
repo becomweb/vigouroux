@@ -12,11 +12,16 @@
     {block name="lrlp_before_sections"}{/block}
     <div class="row">
     {foreach from=$lineven.rlp.hook.datas.sections key=section_key item=section name=section}
+        {*$section|@var_dump*}
         {if $lineven.rlp.hook.datas.is_separate_results}
             {assign var=section_title value={$section.title}}
         {/if}
         {if $section.products && count($section.products)}
-            <section class="lineven-relatedproducts product-page-cross-selling-section col-12 {if count($section.products) > 1}col-lg-6{/if}">
+            {* Fred - la fiche article peut avoir 2 listes de produits : une liste de produits associee manuellement (facultative) et une liste de produits de la meme categorie*}
+            {* Si on a 2 listes ou +, chaque liste doit fair eune demi-largeur sur les "grands" ecrans et la 1ere liste (selection manuelle) doit avoir une classe particuliere *}
+            {* Sinon la liste unique doit etre full-width *}
+            {* Voir aussi custom.js pour parametrage des carousels *}
+            <section class="lineven-relatedproducts product-page-cross-selling-section col-12 {if count($lineven.rlp.hook.datas.sections) > 1}col-lg-6 {if $smarty.foreach.section.first}selection{/if}{/if}">
                 <div class="rlp-{$lineven.rlp.hook.datas.hook_class_name|escape:'htmlall':'UTF-8'}">
                     {block name="lrlp_header"}
                         <div class="{$lineven.rlp.hook.datas.template_class_name|escape:'htmlall':'UTF-8'}">
