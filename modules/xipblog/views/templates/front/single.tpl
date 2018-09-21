@@ -44,7 +44,7 @@
 							<h3 class="post_title">{$xipblogpost.post_title}</h3>
 							<div class="post_meta clearfix">
 								<div class="meta_author">
-									<i class="material-icons">person</i> {$xipblogpost.post_author_arr.firstname} {$xipblogpost.post_author_arr.lastname}
+									<i class="material-icons">person</i> {$xipblogpost.post_author_arr.firstname} {$xipblogpost.post_author_arr.lastname|substr:0:1}.
 								</div>
 								<div class="post_meta_date">
 									<i class="material-icons">event</i> {$xipblogpost.post_date|date_format:"%b %d, %Y"}

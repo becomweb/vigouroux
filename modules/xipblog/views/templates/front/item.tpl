@@ -49,7 +49,7 @@
             <div class="post_meta clearfix">
                 <span class="meta_date">{$xipblgpst.post_date|date_format:"%D"}</span>
                 <span class="comment_count"><i class="material-icons">comment</i> {$xipblgpst.comment_count}</span>
-                <span class="meta_author">{$xipblgpst.post_author_arr.firstname} {$xipblgpst.post_author_arr.lastname}</span>
+                <span class="meta_author">{$xipblgpst.post_author_arr.firstname} {$xipblgpst.post_author_arr.lastname|substr:0:1}.</span>
             </div>
         </div>
     </div>
