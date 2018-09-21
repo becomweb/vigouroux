@@ -92,6 +92,18 @@ table.table .thead-default th {
   color: #fff;
 }
 
+/* Notifications (succes, avertissements, erreurs, etc... */
+.alert.alert-success {
+  background: #ffd1dc;
+  color: #131313;
+}
+.alert.alert-warning {
+  background: #e8ba00;
+}
+.alert.alert-danger {
+  background: #ff003c;
+}
+
 /* Liste de produits */
 .products .product-miniature .thumbnail-container .product-desc .product-title {
   font-weight: 400;

@@ -101,6 +101,20 @@ table.table{
     }
 }
 
+    /* Notifications (succes, avertissements, erreurs, etc... */
+.alert{
+    &.alert-success{
+        background:#ffd1dc;
+        color:#131313;
+    }
+    &.alert-warning{
+        background:#e8ba00;
+    }
+    &.alert-danger{
+        background:#ff003c;
+    }
+}
+
 /* Liste de produits */
 @import "import/product-list";
 
