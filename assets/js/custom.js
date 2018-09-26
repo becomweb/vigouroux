@@ -90,7 +90,6 @@ $(document).ready(function(){
 	});
 
 	// Carousel cross-selling sur fiche-article
-	console.log($('.product-page-cross-selling-carousel').length);
 	if($('.product-page-cross-selling-carousel').length < 2){
 		var ppcss_responsive_config = {
 			0:{
