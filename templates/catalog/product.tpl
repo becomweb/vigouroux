@@ -159,7 +159,7 @@
               {elseif $medal.level == '3'}
                 {l s='Bronze' d='Shop.Theme.Catalog'}
               {else}
-                N/A
+                {if !empty($medal.level_custom)}{$medal.level_custom}{else}N/A{/if}
               {/if}
             </span>
             <span class="reward_name">

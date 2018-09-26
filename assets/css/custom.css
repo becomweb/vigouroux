@@ -492,7 +492,7 @@ table.table .thead-default th {
 .page-product #wrapper .product-rewards #product_rewards_list li > span.reward_level {
   width: 15%;
   margin-right: 30px;
-  background: #f0f0f0;
+  background: #131313;
 }
 .page-product #wrapper .product-rewards #product_rewards_list li > span.reward_level.gold {
   background: #fbdb67;
