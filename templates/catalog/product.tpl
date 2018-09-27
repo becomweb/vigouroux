@@ -34,7 +34,7 @@
                 {if isset($wine_color) || isset($wine_orgin)}
                 <div id="winecolor_and_origin">
                   {if isset($wine_origin) && $wine_origin != ''}
-                  <span id="wine_origin">AOC {$wine_origin}</span>
+                  <span id="wine_origin">{$wine_origin}</span>
                   {/if}
                   {if isset($wine_color) && $wine_color != ''}
                   <span id="wine_color">{$wine_color}</span>

@@ -111,7 +111,7 @@
         {* Appellation et couleur du vin *}
         <p class="wine_color_and_origin">
         {if isset($product.wine_origin) && isset($product.wine_color)}
-          {if !empty($product.wine_origin)}<span class="wine_origin">{l s='PDO' d='Shop.Theme.Catalog'} {$product.wine_origin}</span> - {/if}
+          {if !empty($product.wine_origin)}<span class="wine_origin">{*l s='PDO' d='Shop.Theme.Catalog'*} {$product.wine_origin}</span> - {/if}
           {if !empty($product.wine_color)}<span class="wine_color">{$product.wine_color}</span>{/if}
         {/if}
         </p>
