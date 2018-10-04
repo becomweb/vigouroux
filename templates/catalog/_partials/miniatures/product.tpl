@@ -86,7 +86,7 @@
           {/if}
           {if isset($product.medals) && $product.medals}
           {foreach from=$product.medals item=medal}
-          {if $medal.image_url != ''}
+          {if isset($medal.image_url) && $medal.image_url != ''}
           <li>
             <img src="{$medal.image_url}" class="img-responsive" />
           </li>
