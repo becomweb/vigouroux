@@ -27,23 +27,25 @@
 {block name='content'}
   <section id="main">
 
-     <h2 class="page-heading product-listing catalog-title">
-      {if $page.page_name == 'category'}
-        {* Ajout "Notre selection" sur demande SEO *}
-        <span>{$category.name} : {l s='Our selection' d='Shop.Theme.Catalog'}</span>
-      {elseif $page.page_name == 'prices-drop'}
-         <span>{l s='Prices drop' d='Shop.Interiorcatalog'}</span>
-      {elseif $page.page_name == 'new-products'}
-         <span>{l s='New products' d='Shop.Interiorcatalog'}</span>
-    {elseif $page.page_name == 'best-sales'}
-         <span>{l s='Best sellers' d='Shop.Interiorcatalog'}</span>
-      {elseif $page.page_name == 'manufacturer'}
-         <span>{$manufacturer.name}</span>
-      {elseif $page.page_name == 'supplier'}
-         <span>{$supplier.name}</span>
-      {elseif $page.page_name == 'search'}
-         <span>{l s='Search' d='Shop.Interiorcatalog'}</span>
-      {/if}
+    <div class="page-heading product-listing catalog-title">
+      <h2>
+        {if $page.page_name == 'category'}
+          {* Ajout "Notre selection" sur demande SEO *}
+          <span>{$category.name} : {l s='Our selection' d='Shop.Theme.Catalog'}</span>
+        {elseif $page.page_name == 'prices-drop'}
+          <span>{l s='Prices drop' d='Shop.Interiorcatalog'}</span>
+        {elseif $page.page_name == 'new-products'}
+          <span>{l s='New products' d='Shop.Interiorcatalog'}</span>
+      {elseif $page.page_name == 'best-sales'}
+          <span>{l s='Best sellers' d='Shop.Interiorcatalog'}</span>
+        {elseif $page.page_name == 'manufacturer'}
+          <span>{$manufacturer.name}</span>
+        {elseif $page.page_name == 'supplier'}
+          <span>{$supplier.name}</span>
+        {elseif $page.page_name == 'search'}
+          <span>{l s='Search' d='Shop.Interiorcatalog'}</span>
+        {/if}
+      </h2>
       <span class="heading-counter">
         {if $listing.pagination.total_items > 1}
           {l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}
@@ -51,7 +53,7 @@
           {l s='There is 1 product.' d='Shop.Theme.Catalog'}
         {/if}
       </span>
-    </h2>
+    </div>
       {block name='product_list_brand_description'}
       {if $page.page_name == 'manufacturer' && $manufacturer.description}
         <div id="manufacturer-short_description">{$manufacturer.short_description nofilter}</div>

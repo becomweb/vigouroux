@@ -28,7 +28,7 @@
       {if $product.has_discount}
         <div class="product-discount">
           {hook h='displayProductPriceBlock' product=$product type="old_price"}
-          <span class="regular-price">{$product.regular_price}</span>
+          
         </div>
       {/if}
     {/block}
@@ -45,12 +45,12 @@
 
         <div class="current-price">
           <span class="price" itemprop="price" content="{$product.price_amount}">{$product.price}</span>
+          {* HT / TTC *}
+          <span> {if $configuration.display_taxes_label} {$product.labels.tax_long}{/if}</span>
           {* Mention conditionnement *}
           {if isset($product_conditioning) && $product_conditioning != ''}
           <span class="product_conditioning">{l s='per' d='Shop.Theme.Global'} {$product_conditioning}</span>
           {/if}
-          {* HT / TTC *}
-          <span class="d-none"> {if $configuration.display_taxes_label} {$product.labels.tax_long}{/if}</span>
           {if $product.has_discount}
             {if $product.discount_type === 'percentage'}
               <span class="discount discount-percentage">{l s='-' d='Shop.Theme.Catalog'} {$product.discount_percentage_absolute}</span>
@@ -59,6 +59,7 @@
                   {l s='-' d='Shop.Theme.Catalog'} {$product.discount_to_display}
               </span>
             {/if}
+            <span class="regular-price">{$product.regular_price}</span>
           {/if}
         </div>
 

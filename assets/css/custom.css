@@ -6,6 +6,16 @@ h1, .h1 {
   font-size: 3rem;
 }
 
+.page-heading h2 {
+  display: inline-block;
+  font: inherit;
+  margin: 0;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  padding-right: 15px;
+}
+
 @media screen and (max-width: 991px) {
   .page-heading {
     margin-bottom: 20px;
@@ -332,6 +342,9 @@ table.table .thead-default th {
 }
 .page-product #wrapper .product-prices .tax-shipping-delivery-label {
   margin-top: 0;
+}
+.page-product #wrapper .product-prices .regular-price {
+  font-size: inherit;
 }
 .page-product #wrapper #ratings_and_wine_infos {
   /* Notes et infos (AOC / Couleur) */
