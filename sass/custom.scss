@@ -58,6 +58,29 @@ button.btn, a.btn, input.btn{
     }
 }
 
+    /* Labels colorés */
+li{
+    &.new, &.pack{
+        background:$shiraz;
+    }
+    &.is_selected{
+        background: #e8ba00;
+    }
+    &.is_ready_to_drink{
+        background: #faa500;
+    }
+    &.is_fruity{
+        background:#ff003c;
+        color:#fff;
+    }
+    &.is_rose{
+        background:#ffd1dc;
+    }
+    &.is_dry_and_white{
+        background:#e1ecdc;
+    }
+}
+
     /* Formulaires */
 form, #search_filters{
     .form-control:focus{ /* input, select, etc */

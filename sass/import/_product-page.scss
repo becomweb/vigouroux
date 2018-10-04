@@ -5,6 +5,43 @@
             .zoom-in{
                 background:$shiraz;
             }
+            .product-flags{
+                position: absolute;
+                top:10px;
+                left:5%;
+                margin:0;
+                li{
+                    display: inline-block;
+                    position: static;
+                    font-size: 13px;
+                    line-height: 16px;
+                    padding: 2px 4px;
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                    &:last-child{
+                        margin-right:0;
+                    }
+                }
+            }
+            #ab_label_container{
+                position: absolute;
+                top:60px;
+                left:5%;
+                width:80px;
+            }
+            #product-cover-medals{
+                position: absolute;
+                top: 60px;
+                right: 5%;
+                width: 80px;
+                margin: 0;
+                li{
+                    margin-bottom:15px;
+                    &:last-child{
+                        margin-bottom:0;
+                    }
+                }
+            }
         }
         .wrapper-thumbnails{
             .scroll-box-arrows{
@@ -336,4 +373,9 @@
             }
         }
     } 
+}
+@media screen and (max-width:399px){
+    .page-product #wrapper .images-container .product-cover #product-cover-medals{
+        width:50px;
+    }
 }
