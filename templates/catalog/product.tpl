@@ -32,14 +32,14 @@
                 {include file="module:productcomments/productcomments_reviews.tpl" averageTotal=$product_average_grade nbComments=$product_nb_comments}
                 {/if}
                 {if isset($wine_color) || isset($wine_orgin)}
-                <div id="winecolor_and_origin">
+                <h2 id="winecolor_and_origin">
                   {if isset($wine_origin) && $wine_origin != ''}
                   <span id="wine_origin">{$wine_origin}</span>
                   {/if}
                   {if isset($wine_color) && $wine_color != ''}
                   <span id="wine_color">{$wine_color}</span>
                   {/if}
-                </div>
+                </h2>
                 {/if}
             </div>
           {/block}

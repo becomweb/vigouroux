@@ -342,7 +342,9 @@ table.table .thead-default th {
   margin-right: 15px;
 }
 .page-product #wrapper #ratings_and_wine_infos #winecolor_and_origin {
+  font: normal 400 15px/20px Montserrat, sans-serif;
   text-transform: uppercase;
+  margin: 0;
 }
 .page-product #wrapper #ratings_and_wine_infos #winecolor_and_origin > span {
   display: inline-block;
