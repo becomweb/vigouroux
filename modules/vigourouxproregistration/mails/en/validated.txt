@@ -1,0 +1,14 @@
+Dear {customer_name},
+
+We are happy to inform you that your company informations have been validated.
+You know benefit from our professional conditions.
+
+We invit you to connect to our e-shop {shop_url}.
+
+Our customer service is also available for you if you have any question
+- By phone : {shop_phone}
+- By e-mail : {shop_email}
+
+Best regards
+
+{shop_name}

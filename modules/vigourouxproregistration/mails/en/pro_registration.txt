@@ -1,0 +1,8 @@
+A new customer has registered as a professionnal.
+
+Here are the details provided :
+- Customer ID : {customer_id}
+- Name : {customer_name}
+- Company : {company}
+- Identification number : {siret}
+- E-Mail : {customer_email}

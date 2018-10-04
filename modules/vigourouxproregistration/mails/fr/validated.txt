@@ -1,0 +1,14 @@
+cher {customer_name},
+
+Nous sommes heureux de vous informer que vos informations professionnelles ont été validées.
+Vous bénéficiez donc maintenant de nos conditions professionnelles.
+
+Nous vous invitons donc à vous connecter sur notre e-boutique {shop_url}.
+
+Notre service-clients est disponible pour vous si vous avez une question.
+- Par téléphone : {shop_phone}
+- Par e-mail : {shop_email}
+
+Cordialement
+
+{shop_name}

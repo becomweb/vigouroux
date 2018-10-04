@@ -1,0 +1,18 @@
+Cher {customer_name},
+
+Pendant votre inscription sur notre e-boutique vous avez fourni les informations suivantes pour votre entreprise :
+- Nom de la société : {company}
+- N° SIRET : {siret}
+
+Notre service-clients va maintenant procéder à la vérification de ces informations.
+Si elles sont conformes, vous recevrez prochainement un nouvel e-mail vous informant que vous bénéficiez de nos conditions professionnelles.
+
+N'oubliez pas que durant ce laps de temps vous pouvez profiter de toutes les fonctionnalités de notre e-boutique mais avec les conditions traditionnelles. 
+
+N'hésitez pas à nous contacter pour toute question ou demande.
+- Par téléphone: {shop_phone}
+- Par e-mail : {shop_email}
+
+Cordialement
+
+{shop_name}

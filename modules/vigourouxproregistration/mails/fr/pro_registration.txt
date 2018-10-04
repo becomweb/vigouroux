@@ -1,0 +1,8 @@
+Un nouveau client s'est inscrit en tant que professionnel.
+
+Voici les informations fournies :
+- ID client : {customer_id}
+- Nom : {customer_name}
+- Société : {company}
+- SIRET : {siret}
+- E-Mail : {customer_email}

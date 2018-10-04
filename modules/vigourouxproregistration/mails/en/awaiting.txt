@@ -1,0 +1,18 @@
+Dear {customer_name},
+
+During your registration on our e-shop you have provided the following professional informations :
+- Company name : {company}
+- Identification number : {siret}
+
+Our customer service will now check those informations.
+If they are valid, you will soon receive another e-mail informing you that you benefit from our professional conditions.
+
+Keep in mind that during this time all our e-shop features are available for you but with standard conditions.
+
+Feel free to contact us if you have any question or request.
+- By phone : {shop_phone}
+- By e-mail : {shop_email}
+
+Best regards
+
+{shop_name}
