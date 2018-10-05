@@ -106,7 +106,11 @@
           {hook h='displayProductListReviews' product=$product}
         {/block}
         {block name='product_name'}
-          <h3 class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:48:'...'}</a></h3>
+          {if $page.page_name == 'product'}
+            <div class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:48:'...'}</a></div>
+          {else}
+            <h3 class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:48:'...'}</a></h3>
+          {/if}
         {/block}
         {* Appellation et couleur du vin *}
         <p class="wine_color_and_origin">
